@@ -1,0 +1,14 @@
+{% macro iconSvg(theme, light=false) %}
+{% if theme == "repair" %}
+<svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="41" cy="26" r="3.5" fill="#080808"/><path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/><path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/></svg>
+{% elif theme == "system" %}
+<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="16" width="48" height="46" rx="3" fill="currentColor" stroke="#080808" stroke-width="3"/><rect x="21" y="22" width="38" height="28" fill="#080808"/><circle cx="32" cy="35" r="3.5" fill="#e6ff00"/><circle cx="48" cy="35" r="3.5" fill="#e6ff00"/><path d="M29 43 Q40 49 51 43" fill="none" stroke="#fffaf0" stroke-width="2.5"/></svg>
+{% elif theme == "diagnostic" %}
+<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="12" fill="currentColor"/><circle cx="40" cy="40" r="5" fill="#32d9ee"/></svg>
+{% else %}
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+{% endif %}
+{% endmacro %}
+
+{% macro themeMark(theme) %}<span class="theme-mark {{ theme }}">{{ iconSvg(theme) | safe }}</span>{% endmacro %}
+{% macro mascotChip(theme,label) %}<span class="mascot-chip {{ theme }}">{{ iconSvg(theme) | safe }}<span>{{ label }}</span></span>{% endmacro %}
