@@ -3,7 +3,7 @@ layout: project.njk
 tags:
 - project
 permalink: archos-gamepad2.html
-num: 09
+num: '09'
 order: 9
 slug: archos-gamepad2
 title: Archos GamePad 2
