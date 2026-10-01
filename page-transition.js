@@ -29,8 +29,13 @@
       'pt-active', 'pt-covered', 'pt-reveal',
       'pt-from-right', 'pt-from-bottom', 'pt-from-left', 'pt-from-top'
     );
-    resolveReady();
-    window.dispatchEvent(new CustomEvent('portfolio:transition-ready'));
+
+    // Give the browser one clean frame with the overlay truly gone
+    // before any RRT4 choreography is allowed to begin.
+    requestAnimationFrame(() => {
+      resolveReady();
+      window.dispatchEvent(new CustomEvent('portfolio:transition-ready'));
+    });
   }
 
   if (!incoming || reduce) {
