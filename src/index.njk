@@ -2,7 +2,7 @@
 permalink: index.html
 ---
 {% from "macros.njk" import themeMark, mascotChip %}<!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Portfolio IT de Nicolas Georget : dépannage, réemploi, systèmes, réseau et outils techniques."><title>Nicolas Georget — Technical Archive</title><link rel="stylesheet" href="styles.css"></head><body>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Portfolio IT de Nicolas Georget : dépannage, réemploi, systèmes, réseau et outils techniques."><title>Nicolas Georget — Technical Archive</title><link rel="stylesheet" href="styles.css"><script src="page-transition.js"></script></head><body>
 {% include "header.njk" %}<main id="content">
 <section class="hero"><div class="hero-main"><div class="hero-kicker meta">{{ site.hero.kicker }}</div><h1>{% for line in site.hero.title %}<span{% if not loop.first %} class="signal"{% endif %}>{{ line }}</span>{% endfor %}</h1><div class="hero-lede"><b>{{ site.hero.field_label }}</b><div>{{ site.hero.lede }}</div></div></div><aside class="hero-side"><strong>{% for line in site.hero.side_slogan %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</strong><div class="jp-big">{{ site.hero.side_jp }}</div><small>{% for line in site.hero.side_meta %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</small></aside></section>
 <div class="motion-strip"><div>OBSERVE / TEST / LOCALIZE / CORRECT / RECORD / REUSE / LEARN</div><div class="right">MODE: PROJECT SELECT</div></div>
