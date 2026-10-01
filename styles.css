@@ -1982,3 +1982,98 @@ html,body{max-width:100%;overflow-x:clip}
 .rr-safe-flow .log .rr-text.rr-armed .rr-char{
   opacity:0;
 }
+
+
+/* =========================================================
+   V9 / PAGE TRANSITION GATE
+   Full black wipe. Incoming RRT4 choreography starts only
+   after the overlay has completely left the viewport.
+   ========================================================= */
+
+html.pt-active {
+  overflow: hidden;
+}
+
+html.pt-active::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: #000;
+  pointer-events: all;
+  will-change: transform;
+}
+
+/* Destination page starts fully covered before first paint. */
+html.pt-covered::before {
+  transform: translate3d(0,0,0);
+}
+
+/* OUTGOING: panel enters from one edge and fills the screen. */
+html.pt-cover.pt-from-right::before {
+  animation: ptCoverFromRight 220ms cubic-bezier(.7,0,.25,1) both;
+}
+html.pt-cover.pt-from-left::before {
+  animation: ptCoverFromLeft 220ms cubic-bezier(.7,0,.25,1) both;
+}
+html.pt-cover.pt-from-top::before {
+  animation: ptCoverFromTop 220ms cubic-bezier(.7,0,.25,1) both;
+}
+html.pt-cover.pt-from-bottom::before {
+  animation: ptCoverFromBottom 220ms cubic-bezier(.7,0,.25,1) both;
+}
+
+/* INCOMING: continue the same movement through the opposite edge. */
+html.pt-covered.pt-reveal.pt-from-right::before {
+  animation: ptRevealToLeft 260ms cubic-bezier(.22,.78,.22,1) both;
+}
+html.pt-covered.pt-reveal.pt-from-left::before {
+  animation: ptRevealToRight 260ms cubic-bezier(.22,.78,.22,1) both;
+}
+html.pt-covered.pt-reveal.pt-from-top::before {
+  animation: ptRevealToBottom 260ms cubic-bezier(.22,.78,.22,1) both;
+}
+html.pt-covered.pt-reveal.pt-from-bottom::before {
+  animation: ptRevealToTop 260ms cubic-bezier(.22,.78,.22,1) both;
+}
+
+@keyframes ptCoverFromRight {
+  from { transform: translate3d(100%,0,0); }
+  to   { transform: translate3d(0,0,0); }
+}
+@keyframes ptCoverFromLeft {
+  from { transform: translate3d(-100%,0,0); }
+  to   { transform: translate3d(0,0,0); }
+}
+@keyframes ptCoverFromTop {
+  from { transform: translate3d(0,-100%,0); }
+  to   { transform: translate3d(0,0,0); }
+}
+@keyframes ptCoverFromBottom {
+  from { transform: translate3d(0,100%,0); }
+  to   { transform: translate3d(0,0,0); }
+}
+
+@keyframes ptRevealToLeft {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-100%,0,0); }
+}
+@keyframes ptRevealToRight {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(100%,0,0); }
+}
+@keyframes ptRevealToBottom {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(0,100%,0); }
+}
+@keyframes ptRevealToTop {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(0,-100%,0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.pt-active::before {
+    display: none !important;
+    animation: none !important;
+  }
+}
