@@ -1,0 +1,72 @@
+name: Preview v9 content architecture
+
+on:
+  push:
+    branches:
+      - v9-content-architecture
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: preview-v9-content-architecture
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+        with:
+          ref: v9-content-architecture
+          path: preview-source
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: preview-source
+        run: npm install --no-audit --no-fund
+
+      - name: Build Eleventy preview
+        working-directory: preview-source
+        run: npm run build
+
+      - name: Checkout current production
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: production-source
+
+      - name: Assemble production + preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p publish
+
+          # Keep the current static master site at the Pages root.
+          find production-source -maxdepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -exec cp {} publish/ \;
+
+          if [ -d production-source/assets ]; then
+            cp -R production-source/assets publish/assets
+          fi
+
+          # Put the generated v9 site in its own stable preview path.
+          mkdir -p publish/previews/v9-content-architecture
+          cp -R preview-source/_site/. publish/previews/v9-content-architecture/
+
+          touch publish/.nojekyll
+
+      - name: Publish preview branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./publish
+          force_orphan: true
+          enable_jekyll: false

@@ -1,0 +1,82 @@
+{
+  "name": "Nicolas Georget",
+  "revision": "REV.09",
+  "hero": {
+    "kicker": "SUPPORT IT / REPAIR / SYSTEMS / NETWORK / 2026",
+    "title": [
+      "Technical",
+      "Archive"
+    ],
+    "field_label": "FIELD NOTE",
+    "lede": "Dossiers de remise en service, systèmes, réseau, Linux, Windows et outils techniques. Chaque projet présente son contexte, son protocole, ses preuves et son état de validation.",
+    "side_slogan": [
+      "Repair",
+      "before",
+      "replace."
+    ],
+    "side_jp": "修復",
+    "side_meta": [
+      "LOCAL / PRACTICAL / DOCUMENTED",
+      "FIELD LOG / EVIDENCE / OUTCOME",
+      "2026 / ACTIVE ARCHIVE"
+    ]
+  },
+  "chapters": {
+    "index": {
+      "en": "01 / PROJECT INDEX",
+      "jp": "案件一覧",
+      "fr": "Index des projets",
+      "badge": "project select",
+      "title": "Select a unit",
+      "intro": "Chaque entrée correspond à un dossier technique structuré autour de l’état réel du projet, de son contexte, de sa démarche, des incidents utiles, des preuves et du résultat.",
+      "title_lines": [
+        "Select a unit"
+      ]
+    },
+    "protocol": {
+      "en": "02 / PROTOCOL",
+      "jp": "手順",
+      "fr": "Méthode",
+      "badge": "REVIEW / DIAG",
+      "title": "Observe → test → localize → correct",
+      "intro": "La forme peut être graphique, mais la méthode reste simple : comprendre avant d’intervenir, réduire le problème, vérifier, puis garder une trace utile.",
+      "title_lines": [
+        "Observe → test → localize → correct"
+      ]
+    },
+    "profile": {
+      "en": "03 / PROFILE",
+      "jp": "経歴",
+      "fr": "Profil",
+      "badge": "PROFILE / ACTIVE",
+      "title": "Technicien en formation. Bricoleur méthodique.",
+      "intro": "Après plusieurs années dans le jeu vidéo, je me forme au support informatique. Mes machines personnelles servent de terrain d’apprentissage autour du réemploi, de Linux, du réseau, des systèmes Windows et du dépannage.",
+      "title_lines": [
+        "Technicien en formation.",
+        "Bricoleur méthodique."
+      ]
+    }
+  },
+  "principles": [
+    {
+      "id": "P.01 / OBSERVE",
+      "title": "Regarder avant de toucher",
+      "text": "Symptôme, environnement, historique et contraintes avant intervention."
+    },
+    {
+      "id": "P.02 / TEST",
+      "title": "Mesurer",
+      "text": "Les outils servent à confirmer, éliminer ou préciser une hypothèse par des observations reproductibles."
+    },
+    {
+      "id": "P.03 / LOCALIZE",
+      "title": "Réduire la zone",
+      "text": "Éviter de tout reconfigurer quand une seule incohérence suffit à expliquer l’écart."
+    },
+    {
+      "id": "P.04 / RECORD",
+      "title": "Garder une trace",
+      "text": "Erreurs, corrections, commandes et décisions doivent rester compréhensibles après coup."
+    }
+  ]
+}
