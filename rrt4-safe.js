@@ -1,5 +1,4 @@
 (() => {
-  const startRRT4 = () => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.body.classList.add('rr-safe-flow');
 
@@ -208,14 +207,16 @@
       ...header.querySelectorAll('.nav a')
     ].filter(Boolean).forEach(el=>buildText(el,10));
 
-    (async()=>{
-      for(const el of header.querySelectorAll('.rr-text')){
-        armText(el);
-        await wait(40);
-        const d=playText(el);
-        await wait(Math.min(d+80,700));
-      }
-    })();
+  }
+
+  async function playHeader(){
+    if(!header) return;
+    for(const el of header.querySelectorAll('.rr-text')){
+      armText(el);
+      await wait(40);
+      const d=playText(el);
+      await wait(Math.min(d+80,700));
+    }
   }
 
   // ---------------------------------------------------------
@@ -639,29 +640,35 @@
 
   const componentMap=new WeakMap(components.map(x=>[x.root,x]));
 
-  const observer=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(!entry.isIntersecting || entry.intersectionRatio<.22) return;
-      const root=entry.target;
-      observer.unobserve(root);
+  function startPlayback(){
+    // Preparation/arming has already happened behind the transition panel.
+    // From this point on, actual motion is allowed to begin.
+    playHeader();
 
-      if(heroData && root===heroData.root) playHero();
-      else if(root.classList.contains('project-row')) playRow(root);
-      else if(chapterData.has(root)) playChapter(root);
-      else if(sectionData.has(root)) playSection(root);
-      else if(componentMap.has(root)) playComponent(componentMap.get(root));
-    });
-  },{threshold:[0,.22,.5],rootMargin:'-4% 0px -8% 0px'});
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting || entry.intersectionRatio<.22) return;
+        const root=entry.target;
+        observer.unobserve(root);
 
-  roots.forEach(root=>observer.observe(root));
-  };
+        if(heroData && root===heroData.root) playHero();
+        else if(root.classList.contains('project-row')) playRow(root);
+        else if(chapterData.has(root)) playChapter(root);
+        else if(sectionData.has(root)) playSection(root);
+        else if(componentMap.has(root)) playComponent(componentMap.get(root));
+      });
+    },{threshold:[0,.22,.5],rootMargin:'-4% 0px -8% 0px'});
 
-  // V9 transition gate: destination choreography must not start while
-  // the black page wipe is still on screen.
+    roots.forEach(root=>observer.observe(root));
+  }
+
+  // V9 transition gate:
+  // build + arm immediately while the page is still covered,
+  // but start no animation until the black wipe is completely gone.
   const gate = window.__portfolioTransitionReady;
   if (gate && typeof gate.then === 'function') {
-    gate.then(startRRT4);
+    gate.then(startPlayback);
   } else {
-    startRRT4();
+    startPlayback();
   }
 })();
