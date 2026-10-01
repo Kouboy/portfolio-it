@@ -1,6 +1,7 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("rrt4-safe.js");
+  eleventyConfig.addPassthroughCopy("page-transition.js");
   eleventyConfig.addPassthroughCopy("motion.js");
   eleventyConfig.addPassthroughCopy("system.html");
   eleventyConfig.addPassthroughCopy("assets");
