@@ -1,4 +1,5 @@
 (() => {
+  const startRRT4 = () => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.body.classList.add('rr-safe-flow');
 
@@ -653,4 +654,14 @@
   },{threshold:[0,.22,.5],rootMargin:'-4% 0px -8% 0px'});
 
   roots.forEach(root=>observer.observe(root));
+  };
+
+  // V9 transition gate: destination choreography must not start while
+  // the black page wipe is still on screen.
+  const gate = window.__portfolioTransitionReady;
+  if (gate && typeof gate.then === 'function') {
+    gate.then(startRRT4);
+  } else {
+    startRRT4();
+  }
 })();
