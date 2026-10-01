@@ -3,7 +3,7 @@ layout: project.njk
 tags:
 - project
 permalink: eureka-stories.html
-num: 08
+num: '08'
 order: 8
 slug: eureka-stories
 title: Eurêka Stories
