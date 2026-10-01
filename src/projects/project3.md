@@ -42,7 +42,7 @@ prev:
 next:
   file: projet2.html
   name: Projet 2 — CAO / Deploy
-feature: true
+feature: false
 overview: 'Projet de formation consacré au déploiement complet d’un petit réseau de médiathèque : équipements filaires, adressage,
   DHCP/DNS, Wi‑Fi interne et visiteurs, authentification centralisée et sécurisation de l’administration du switch.'
 skills:
