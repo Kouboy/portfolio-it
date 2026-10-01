@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Remise en service d’un MacBook Retina 12 pouces de 2016 après disparition du stockage interne, grâce à un système installé sur SSD externe via hub USB-C.">
+<title>UNIT 04 — MacBook A1534</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header">
+  <a class="brand" href="index.html"><span class="brandmark">NG</span><span>NICOLAS GEORGET</span><small>TECHNICAL ARCHIVE / REV.08</small></a>
+  <nav class="nav">
+    <a href="index.html#index">Index</a>
+    <a href="#fieldlog">Field log</a>
+    <a href="#evidence">Evidence</a>
+    <a href="system.html">System</a>
+  </nav>
+</header>
+
+<div class="utility-band">
+  <div class="gray">UNIT 04 / REUSE / REPAIR</div>
+  <div><span class="mascot-chip repair"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg><span>REUSE / REPAIR</span></span></div>
+  <div class="black">LIVE</div>
+</div>
+
+<main id="content">
+<section class="project-head">
+  <div class="project-head-main">
+    <div class="crumb">TECHNICAL ARCHIVE / UNIT 04 / REUSE / REPAIR</div>
+    <span class="status live">LIVE</span>
+    <h1>MacBook A1534</h1>
+    <div class="lede">Remise en service d’un MacBook Retina 12 pouces de 2016 après disparition du stockage interne, grâce à un système installé sur SSD externe via hub USB-C.</div>
+    <div class="lang-ribbon"><span class="tri-label"><span class="en">REPAIR</span><span class="jp">修復</span><span class="fr">Remise en état</span></span>
+<span class="tri-label"><span class="en">REUSE</span><span class="jp">再利用</span><span class="fr">Réemploi</span></span>
+<span class="tri-label"><span class="en">BOOT</span><span class="jp">構築</span><span class="fr">Démarrage externe</span></span></div>
+  </div>
+  <aside class="project-head-side">
+    <div class="fact"><small>MODEL</small>MacBook Retina 12&quot; A1534 · Early 2016</div>
+<div class="fact"><small>MEMORY</small>Environ 8 Go</div>
+<div class="fact"><small>BOOT STORAGE</small>SanDisk Extreme Pro 1 To externe</div>
+<div class="fact"><small>STATE</small>macOS utilisable sur SSD externe</div>
+    <div class="jp-big">修復</div>
+  </aside>
+</section>
+
+
+<section class="project-section">
+  <aside class="rail"><div class="num">01</div><div class="tri-stack"><span class="en">CONTEXT</span><span class="jp">背景</span><span class="fr">Contexte</span></div></aside>
+  <div class="body">
+    <span class="mascot-chip repair"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg><span>PROJECT THEME</span></span>
+    <h2>Context</h2>
+    <div class="prose"><p>La machine présentait des freezes puis le stockage interne a cessé d’apparaître dans l’Utilitaire de disque depuis Recovery. Le reste du matériel restait fonctionnel et permettait d’envisager une remise en service par stockage externe.</p></div>
+  </div>
+</section>
+<section class="project-section">
+  <aside class="rail"><div class="num">02</div><div class="tri-stack"><span class="en">OBJECTIVE</span><span class="jp">目的</span><span class="fr">Objectif</span></div></aside>
+  <div class="body">
+    <div class="side-note gray">scope / formal</div>
+    <h2>Objective</h2>
+    <div class="prose"><p>Rétablir un environnement démarrable sans intervention irréversible sur la machine, tout en assurant simultanément alimentation et stockage par l’unique port USB-C.</p></div>
+  </div>
+</section>
+<section class="project-section" id="fieldlog">
+  <aside class="rail"><div class="num">03</div><div class="tri-stack"><span class="en">FIELD LOG</span><span class="jp">記録</span><span class="fr">Démarche</span></div></aside>
+  <div class="body">
+    <h2>Protocol</h2>
+    <div class="log"><div class="log-item">
+          <div class="log-id">LOG 01</div>
+          <div class="log-copy"><strong>Recovery</strong><p>Confirmer l’absence du stockage interne et vérifier que la machine démarre encore en environnement de récupération.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 02</div>
+          <div class="log-copy"><strong>Support externe</strong><p>Préparer le SSD externe en GUID + APFS.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 03</div>
+          <div class="log-copy"><strong>Connexion</strong><p>Utiliser un hub UGREEN pour alimenter le MacBook et connecter simultanément le SSD.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 04</div>
+          <div class="log-copy"><strong>Installation</strong><p>Installer macOS Monterey depuis Internet Recovery sur le support externe.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 05</div>
+          <div class="log-copy"><strong>Validation</strong><p>Contrôler l’état du SSD de remplacement et vérifier la stabilité de la machine.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 06</div>
+          <div class="log-copy"><strong>Extension</strong><p>Tester ensuite un environnement Linux Omarchy sur support externe séparé.</p></div>
+        </div></div>
+  </div>
+</section>
+<section class="project-section" id="evidence">
+  <aside class="rail"><div class="num">04</div><div class="tri-stack"><span class="en">EVIDENCE</span><span class="jp">証拠</span><span class="fr">Preuves</span></div></aside>
+  <div class="body">
+    <span class="mascot-chip diagnostic"><svg viewBox="0 0 80 80" aria-hidden="true">
+<path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/>
+<circle cx="40" cy="40" r="12" fill="currentColor"/>
+<circle cx="40" cy="40" r="5" fill="#32d9ee"/>
+</svg><span>EVIDENCE / PROOF</span></span>
+    <h2>Evidence</h2>
+    <div class="evidence-grid"><div class="evidence wide"><small>EVIDENCE 01 / 証拠</small><strong>Montage hub + SSD externe</strong></div>
+<div class="evidence"><small>EVIDENCE 02 / 証拠</small><strong>Recovery / Utilitaire de disque</strong></div>
+<div class="evidence"><small>EVIDENCE 03 / 証拠</small><strong>macOS démarré sur SSD externe</strong></div>
+<div class="evidence"><small>EVIDENCE 04 / 証拠</small><strong>État SMART / benchmark du SSD</strong></div></div>
+    <p class="evidence-caption">Ces emplacements sont destinés aux captures et photographies réelles du projet. La structure est déjà prête pour les intégrer sans modifier la mise en page.</p>
+  </div>
+</section>
+<section class="project-section">
+  <aside class="rail"><div class="num">05</div><div class="tri-stack"><span class="en">OUTCOME</span><span class="jp">結果</span><span class="fr">Résultat</span></div></aside>
+  <div class="body">
+    <h2>Outcome</h2>
+    <div class="outcome">
+      <strong>MacBook A1534</strong>
+      <p>Le MacBook est redevenu utilisable avec macOS installé sur un SSD externe. La solution reste réversible, conserve la machine intacte et fournit aussi une base pour des essais Linux externes.</p>
+    </div>
+  </div>
+</section>
+<section class="project-section">
+  <aside class="rail"><div class="num">06</div><div class="tri-stack"><span class="en">LESSONS</span><span class="jp">学び</span><span class="fr">Enseignements</span></div></aside>
+  <div class="body">
+    <h2>What stayed</h2>
+    <div class="lesson-list"><div class="lesson"><b>L01</b><span>Distinguer une panne de stockage d’une panne générale de la machine.</span></div>
+<div class="lesson"><b>L02</b><span>Intégrer la connectique et l’alimentation au raisonnement de diagnostic.</span></div>
+<div class="lesson"><b>L03</b><span>Valider l’état du support de remplacement avant de lui confier le système.</span></div>
+<div class="lesson"><b>L04</b><span>Privilégier une solution réversible quand l’intervention interne est difficile ou peu rentable.</span></div></div>
+  </div>
+</section>
+
+<nav class="nextbar">
+  <a href="imperatordeck.html"><small>← PREVIOUS UNIT</small><strong>ImperatorDeck</strong></a>
+  <a href="n53sv.html"><small>NEXT UNIT →</small><strong>ASUS N53SV</strong></a>
+</nav>
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <strong>UNIT 04<br>MacBook A1534</strong>
+    
+    <div class="project-footer-joke">
+      <span class="theme-mark repair"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg></span>
+      <span><b>LOCAL DUCK / FIELD NOTE 04</b><br>Un port USB-C, c’est très élégant jusqu’au moment où il faut brancher le monde entier dessus.</span>
+    </div>
+
+    <div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div>
+  </div>
+  <div class="footer-side">
+    <div>REUSE / REPAIR<br>修復 / TECHNICAL ARCHIVE</div>
+    <div>REV.08 / 2026</div>
+  </div>
+</footer>
+<script src="rrt4-safe.js"></script>
+</body>
+</html>

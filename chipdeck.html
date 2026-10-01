@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Un PocketCHIP transformé en terminal physique de supervision, conçu autour de Debian Jessie, Python 2.7, PyGTK2, un écran 480×272 et des contrôles matériels.">
+<title>UNIT 02 — CHIPdeck</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header">
+  <a class="brand" href="index.html"><span class="brandmark">NG</span><span>NICOLAS GEORGET</span><small>TECHNICAL ARCHIVE / REV.08</small></a>
+  <nav class="nav">
+    <a href="index.html#index">Index</a>
+    <a href="#fieldlog">Field log</a>
+    <a href="#evidence">Evidence</a>
+    <a href="system.html">System</a>
+  </nav>
+</header>
+
+<div class="utility-band">
+  <div class="gray">UNIT 02 / TOOLS / INTERFACE</div>
+  <div><span class="mascot-chip tool"><svg viewBox="0 0 80 80" aria-hidden="true">
+<polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/>
+<circle cx="40" cy="40" r="7" fill="currentColor"/>
+</svg><span>TOOLS / INTERFACE</span></span></div>
+  <div class="black">LIVE</div>
+</div>
+
+<main id="content">
+<section class="project-head">
+  <div class="project-head-main">
+    <div class="crumb">TECHNICAL ARCHIVE / UNIT 02 / TOOLS / INTERFACE</div>
+    <span class="status live">LIVE</span>
+    <h1>CHIPdeck</h1>
+    <div class="lede">Un PocketCHIP transformé en terminal physique de supervision, conçu autour de Debian Jessie, Python 2.7, PyGTK2, un écran 480×272 et des contrôles matériels.</div>
+    <div class="lang-ribbon"><span class="tri-label"><span class="en">INTERFACE</span><span class="jp">制御</span><span class="fr">Interface</span></span>
+<span class="tri-label"><span class="en">CACHE</span><span class="jp">記録</span><span class="fr">État local</span></span>
+<span class="tri-label"><span class="en">LOCAL TOOL</span><span class="jp">道具</span><span class="fr">Outil local</span></span></div>
+  </div>
+  <aside class="project-head-side">
+    <div class="fact"><small>PLATFORM</small>PocketCHIP</div>
+<div class="fact"><small>DISPLAY</small>480 × 272</div>
+<div class="fact"><small>STACK</small>Python 2.7 · PyGTK2 · Cairo</div>
+<div class="fact"><small>STATE</small>Utilisé au quotidien</div>
+    <div class="jp-big">制御</div>
+  </aside>
+</section>
+
+
+<section class="project-section">
+  <aside class="rail"><div class="num">01</div><div class="tri-stack"><span class="en">CONTEXT</span><span class="jp">背景</span><span class="fr">Contexte</span></div></aside>
+  <div class="body">
+    <span class="mascot-chip tool"><svg viewBox="0 0 80 80" aria-hidden="true">
+<polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/>
+<circle cx="40" cy="40" r="7" fill="currentColor"/>
+</svg><span>PROJECT THEME</span></span>
+    <h2>Context</h2>
+    <div class="prose"><p>Le PocketCHIP conserve un écran, un clavier et des boutons particulièrement adaptés à un petit terminal dédié. CHIPdeck exploite ces contraintes comme cadre d’interface et s’appuie sur KouboyPi pour les collectes réseau plus coûteuses.</p></div>
+  </div>
+</section>
+<section class="project-section">
+  <aside class="rail"><div class="num">02</div><div class="tri-stack"><span class="en">OBJECTIVE</span><span class="jp">目的</span><span class="fr">Objectif</span></div></aside>
+  <div class="body">
+    <div class="side-note gray">scope / formal</div>
+    <h2>Objective</h2>
+    <div class="prose"><p>Fournir une interface rapide, lisible et exploitable sans souris ni navigateur moderne, avec une navigation physique claire et un comportement robuste quand le backend devient momentanément indisponible.</p></div>
+  </div>
+</section>
+<section class="project-section" id="fieldlog">
+  <aside class="rail"><div class="num">03</div><div class="tri-stack"><span class="en">FIELD LOG</span><span class="jp">記録</span><span class="fr">Démarche</span></div></aside>
+  <div class="body">
+    <h2>Protocol</h2>
+    <div class="log"><div class="log-item">
+          <div class="log-id">LOG 01</div>
+          <div class="log-copy"><strong>Écrans</strong><p>Créer HOME, NETWORK, STORAGE, PIHOLE et plusieurs vues secondaires adaptées au petit écran.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 02</div>
+          <div class="log-copy"><strong>Navigation</strong><p>Utiliser boutons, flèches et touches de fonction comme contrôles principaux.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 03</div>
+          <div class="log-copy"><strong>Réseau</strong><p>Confier les opérations réseau lourdes à KouboyPi et garder les appels hors de la boucle graphique.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 04</div>
+          <div class="log-copy"><strong>Cache</strong><p>Mettre en cache les sources séparément et signaler explicitement les informations périmées.</p></div>
+        </div>
+<div class="log-item">
+          <div class="log-id">LOG 05</div>
+          <div class="log-copy"><strong>Résilience</strong><p>Maintenir une interface consultable lorsque le Pi est temporairement indisponible.</p></div>
+        </div></div>
+  </div>
+</section>
+<section class="project-section" id="evidence">
+  <aside class="rail"><div class="num">04</div><div class="tri-stack"><span class="en">EVIDENCE</span><span class="jp">証拠</span><span class="fr">Preuves</span></div></aside>
+  <div class="body">
+    <span class="mascot-chip diagnostic"><svg viewBox="0 0 80 80" aria-hidden="true">
+<path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/>
+<circle cx="40" cy="40" r="12" fill="currentColor"/>
+<circle cx="40" cy="40" r="5" fill="#32d9ee"/>
+</svg><span>EVIDENCE / PROOF</span></span>
+    <h2>Evidence</h2>
+    <div class="evidence-grid"><div class="evidence wide"><small>EVIDENCE 01 / 証拠</small><strong>Photo du PocketCHIP en usage</strong></div>
+<div class="evidence"><small>EVIDENCE 02 / 証拠</small><strong>HOME / vue principale</strong></div>
+<div class="evidence"><small>EVIDENCE 03 / 証拠</small><strong>NETWORK / appareils</strong></div>
+<div class="evidence"><small>EVIDENCE 04 / 証拠</small><strong>STORAGE ou Scanner de Terrain</strong></div></div>
+    <p class="evidence-caption">Ces emplacements sont destinés aux captures et photographies réelles du projet. La structure est déjà prête pour les intégrer sans modifier la mise en page.</p>
+  </div>
+</section>
+<section class="project-section">
+  <aside class="rail"><div class="num">05</div><div class="tri-stack"><span class="en">OUTCOME</span><span class="jp">結果</span><span class="fr">Résultat</span></div></aside>
+  <div class="body">
+    <h2>Outcome</h2>
+    <div class="outcome">
+      <strong>CHIPdeck</strong>
+      <p>CHIPdeck sert de tableau de bord local autonome pour consulter le réseau, le stockage, Pi-hole et plusieurs états techniques. Les données en cache restent identifiables et certaines acquisitions restent volontairement manuelles.</p>
+    </div>
+  </div>
+</section>
+<section class="project-section">
+  <aside class="rail"><div class="num">06</div><div class="tri-stack"><span class="en">LESSONS</span><span class="jp">学び</span><span class="fr">Enseignements</span></div></aside>
+  <div class="body">
+    <h2>What stayed</h2>
+    <div class="lesson-list"><div class="lesson"><b>L01</b><span>Dimensionner l’interface pour le matériel réel plutôt que pour un écran abstrait.</span></div>
+<div class="lesson"><b>L02</b><span>Utiliser une pile logicielle proportionnée aux capacités de la machine.</span></div>
+<div class="lesson"><b>L03</b><span>Découpler les appels réseau de la boucle graphique.</span></div>
+<div class="lesson"><b>L04</b><span>Traiter le mode dégradé comme un comportement normal du système.</span></div></div>
+  </div>
+</section>
+
+<nav class="nextbar">
+  <a href="kouboypi.html"><small>← PREVIOUS UNIT</small><strong>KouboyPi</strong></a>
+  <a href="imperatordeck.html"><small>NEXT UNIT →</small><strong>ImperatorDeck</strong></a>
+</nav>
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <strong>UNIT 02<br>CHIPdeck</strong>
+    
+    <div class="project-footer-joke">
+      <span class="theme-mark tool"><svg viewBox="0 0 80 80" aria-hidden="true">
+<polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/>
+<circle cx="40" cy="40" r="7" fill="currentColor"/>
+</svg></span>
+      <span><b>SPARK / FIELD NOTE 02</b><br>480×272 : quand chaque pixel paie un loyer, l’interface apprend vite à ranger sa chambre.</span>
+    </div>
+
+    <div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div>
+  </div>
+  <div class="footer-side">
+    <div>TOOLS / INTERFACE<br>制御 / TECHNICAL ARCHIVE</div>
+    <div>REV.08 / 2026</div>
+  </div>
+</footer>
+<script src="rrt4-safe.js"></script>
+</body>
+</html>
