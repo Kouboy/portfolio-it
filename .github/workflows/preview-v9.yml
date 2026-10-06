@@ -1,8 +1,9 @@
-name: Preview v9 content architecture
+name: Publish portfolio and v9 preview
 
 on:
   push:
     branches:
+      - master
       - v9-content-architecture
   workflow_dispatch:
 
@@ -10,19 +11,19 @@ permissions:
   contents: write
 
 concurrency:
-  group: preview-v9-content-architecture
+  group: portfolio-gh-pages-publish
   cancel-in-progress: true
 
 jobs:
-  preview:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout preview branch
+      - name: Checkout source branch
         uses: actions/checkout@v4
         with:
-          ref: v9-content-architecture
-          path: preview-source
+          ref: ${{ github.ref_name }}
+          path: source
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,39 +31,46 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: preview-source
+        working-directory: source
         run: npm install --no-audit --no-fund
 
-      - name: Build Eleventy preview
-        working-directory: preview-source
+      - name: Build Eleventy
+        working-directory: source
         run: npm run build
 
-      - name: Checkout current production
+      - name: Checkout current Pages branch
         uses: actions/checkout@v4
         with:
-          ref: master
-          path: production-source
+          ref: gh-pages
+          path: current-pages
 
-      - name: Assemble production + preview
+      - name: Assemble Pages output
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p publish
 
-          # Keep the current static master site at the Pages root.
-          find production-source -maxdepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -exec cp {} publish/ \;
+          if [ "${GITHUB_REF_NAME}" = "master" ]; then
+            # Production: publish the generated Eleventy site at the Pages root.
+            cp -R source/_site/. publish/
 
-          if [ -d production-source/assets ]; then
-            cp -R production-source/assets publish/assets
+            # Keep the existing preview available for comparison/history.
+            if [ -d current-pages/previews ]; then
+              cp -R current-pages/previews publish/previews
+            fi
+          else
+            # Preview branch: preserve the current production root and replace
+            # only this branch's generated preview.
+            cp -R current-pages/. publish/
+            rm -rf publish/.git
+            rm -rf publish/previews/v9-content-architecture
+            mkdir -p publish/previews/v9-content-architecture
+            cp -R source/_site/. publish/previews/v9-content-architecture/
           fi
-
-          # Put the generated v9 site in its own stable preview path.
-          mkdir -p publish/previews/v9-content-architecture
-          cp -R preview-source/_site/. publish/previews/v9-content-architecture/
 
           touch publish/.nojekyll
 
-      - name: Publish preview branch
+      - name: Publish gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
