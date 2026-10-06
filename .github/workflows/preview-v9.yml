@@ -1,0 +1,80 @@
+name: Publish portfolio and v9 preview
+
+on:
+  push:
+    branches:
+      - master
+      - v9-content-architecture
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: portfolio-gh-pages-publish
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          path: source
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: source
+        run: npm install --no-audit --no-fund
+
+      - name: Build Eleventy
+        working-directory: source
+        run: npm run build
+
+      - name: Checkout current Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: current-pages
+
+      - name: Assemble Pages output
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p publish
+
+          if [ "${GITHUB_REF_NAME}" = "master" ]; then
+            # Production: publish the generated Eleventy site at the Pages root.
+            cp -R source/_site/. publish/
+
+            # Keep the existing preview available for comparison/history.
+            if [ -d current-pages/previews ]; then
+              cp -R current-pages/previews publish/previews
+            fi
+          else
+            # Preview branch: preserve the current production root and replace
+            # only this branch's generated preview.
+            cp -R current-pages/. publish/
+            rm -rf publish/.git
+            rm -rf publish/previews/v9-content-architecture
+            mkdir -p publish/previews/v9-content-architecture
+            cp -R source/_site/. publish/previews/v9-content-architecture/
+          fi
+
+          touch publish/.nojekyll
+
+      - name: Publish gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./publish
+          force_orphan: true
+          enable_jekyll: false
