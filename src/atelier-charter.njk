@@ -1,0 +1,90 @@
+---
+permalink: atelier-charter.html
+---
+{% from "macros.njk" import themeMark %}<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Version courte de la Constitution provisoire de l’Atelier : principes de coopération, autonomie, mémoire, sécurité et artisanat.">
+  <title>Workshop Charter — L’Atelier</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css">
+  <script src="page-transition.js"></script>
+</head>
+<body class="theme-workshop">
+{% include "header.njk" %}
+<main id="content">
+
+<section class="charter-hero">
+  <div class="charter-hero-main">
+    <div class="meta">ATELIER / INTERNAL DOCUMENT / PUBLIC SHORT FORM</div>
+    <h1>WORKSHOP<br>CHARTER</h1>
+    <div class="charter-hero-jp">憲章</div>
+    <p>{{ atelier.charter.intro }}</p>
+  </div>
+  <aside class="charter-hero-side">
+    <div class="charter-doc-meta">
+      <span>STATUS</span><b>PROVISIONAL</b>
+      <span>FORM</span><b>ABRIDGED</b>
+      <span>SOURCE</span><b>CONSTITUTION v0.3</b>
+      <span>REVISION</span><b>{{ atelier.revision }}</b>
+    </div>
+    <div class="charter-doc-note">{{ atelier.charter.footer }}</div>
+  </aside>
+</section>
+
+<section class="charter-motto-wall">
+  {% for line in atelier.charter.motto %}
+  <div><span>{{ loop.index | pad2 }}</span><strong>{{ line }}</strong></div>
+  {% endfor %}
+</section>
+
+<section class="charter-preface">
+  <div class="charter-preface-label">
+    <span>READING NOTE</span>
+    <span class="jp">読み方</span>
+  </div>
+  <div class="charter-preface-copy">
+    <p>Cette page n’est pas le texte constitutionnel complet. Elle en garde les principes qui doivent rester compréhensibles au premier regard, sans transformer l’Atelier en palais de justice miniature.</p>
+    <p>Le document canonique reste provisoire : une règle peut évoluer si l’expérience montre qu’elle protège mal, contraint inutilement ou repose sur une mauvaise hypothèse.</p>
+  </div>
+</section>
+
+<section class="charter-grid">
+  {% for item in atelier.charter.principles %}
+  <article class="charter-card">
+    <div class="charter-card-num">{{ item.num }}</div>
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.text }}</p>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="charter-closing">
+  <div class="charter-closing-mark">{{ themeMark("diagnostic") | safe }}</div>
+  <div>
+    <span class="meta">WORKING RULE</span>
+    <strong>VISIBLE / LIMITED / CONTESTABLE / REVERSIBLE</strong>
+    <p>Le but n’est pas de supprimer toute asymétrie. Il est d’éviter qu’un avantage ponctuel devienne silencieusement une domination permanente.</p>
+  </div>
+  <a href="atelier.html">← BACK TO THE ATELIER</a>
+</section>
+
+</main>
+<footer class="footer atelier-footer">
+  <div class="footer-main">
+    <strong>ACTIVE<br>DOCUMENT</strong>
+    <div class="project-footer-joke">
+      {{ themeMark("system") | safe }}
+      <span><b>REVISION NOTE</b><br>{{ atelier.charter.footer }}</span>
+    </div>
+  </div>
+  <div class="footer-side">
+    <div>WORKSHOP CHARTER / SHORT FORM<br>憲章 / 協力 / 記録</div>
+    <div>{{ atelier.revision }} / 2026</div>
+  </div>
+</footer>
+<script src="rrt4-safe.js"></script>
+</body>
+</html>
