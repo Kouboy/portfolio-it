@@ -1,8 +1,11 @@
 {
-  "revision": "BUILD 0.1",
+  "revision": "BUILD 0.2",
   "hero": {
     "kicker": "PORTFOLIO / ATELIER / 2026",
-    "title": ["L’Atelier", "Workshop System"],
+    "title": [
+      "L’Atelier",
+      "Workshop System"
+    ],
     "jp": "工房",
     "lede": "Un petit espace de fabrication pour des jeux, des outils, des expériences et les systèmes qui permettent de les construire.",
     "sublede": "On y prototype vite, on teste beaucoup, on jette sans remords quand il le faut, puis on construit proprement ce qui mérite de rester.",
@@ -12,15 +15,44 @@
     "label": "PREPARING",
     "note": "ça se branche",
     "machines": [
-      {"name": "WAR RIG", "role": "WORKSTATION", "state": "INCOMING", "tone": "warm"},
-      {"name": "IMPERATOR", "role": "LOCAL NODE", "state": "ACTIVE", "tone": "live"},
-      {"name": "KOUBOYPRO", "role": "MOBILE", "state": "ACTIVE", "tone": "live"},
-      {"name": "SERVICES", "role": "HYBRID", "state": "MIXED", "tone": "soft"}
+      {
+        "name": "WAR RIG",
+        "role": "WORKSTATION",
+        "state": "INCOMING",
+        "tone": "warm"
+      },
+      {
+        "name": "IMPERATOR",
+        "role": "LOCAL NODE",
+        "state": "ACTIVE",
+        "tone": "live"
+      },
+      {
+        "name": "KOUBOYPRO",
+        "role": "MOBILE",
+        "state": "ACTIVE",
+        "tone": "live"
+      },
+      {
+        "name": "SERVICES",
+        "role": "HYBRID",
+        "state": "MIXED",
+        "tone": "soft"
+      }
     ],
     "counts": [
-      {"label": "AGENTS", "value": "—"},
-      {"label": "TOOLS", "value": "—"},
-      {"label": "PROJECTS", "value": "04"}
+      {
+        "label": "AGENTS",
+        "value": "—"
+      },
+      {
+        "label": "TOOLS",
+        "value": "—"
+      },
+      {
+        "label": "PROJECTS",
+        "value": "04"
+      }
     ]
   },
   "intro": {
@@ -32,8 +64,17 @@
       "Il sert à transformer des idées en objets testables, à garder une trace de ce qu’on apprend en chemin et à construire peu à peu de meilleurs outils pour recommencer.",
       "Pas une usine à contenu. Plutôt un atelier au sens littéral : des établis, des outils, des prototypes, quelques copeaux numériques et le droit de refaire."
     ],
-    "poster": ["MAKE.", "TEST.", "KEEP WHAT", "WORKS."],
-    "poster_jp": ["つくる", "ためす", "のこす"]
+    "poster": [
+      "MAKE.",
+      "TEST.",
+      "KEEP WHAT",
+      "WORKS."
+    ],
+    "poster_jp": [
+      "つくる",
+      "ためす",
+      "のこす"
+    ]
   },
   "systems": {
     "en": "02 / SYSTEMS",
@@ -45,44 +86,265 @@
     ],
     "note": "TARGET MAP / les fils ne sont pas encore tous branchés",
     "nodes": [
-      {"name": "HUMAN", "meta": "idée / choix"},
-      {"name": "ORCHESTRATION", "meta": "contexte / routage"},
-      {"name": "LOCAL TOOLS", "meta": "code / assets / tests"},
-      {"name": "MODELS", "meta": "local / frontier"},
-      {"name": "ARCHIVE", "meta": "docs / mémoire"}
+      {
+        "name": "HUMAN",
+        "meta": "idée / choix"
+      },
+      {
+        "name": "ORCHESTRATION",
+        "meta": "contexte / routage"
+      },
+      {
+        "name": "LOCAL TOOLS",
+        "meta": "code / assets / tests"
+      },
+      {
+        "name": "MODELS",
+        "meta": "local / frontier"
+      },
+      {
+        "name": "ARCHIVE",
+        "meta": "docs / mémoire"
+      }
     ]
   },
   "work": {
-    "en": "03 / CURRENT WORK",
+    "en": "04 / CURRENT WORK",
     "jp": "現在の作業",
     "fr": "En cours",
     "intro": "Des projets finis, d’autres beaucoup moins. Certains servent à produire quelque chose. D’autres servent surtout à comprendre comment le produire. Les deux ont leur place ici.",
     "items": [
-      {"num": "01", "title": "ATELIER INFRA", "subtitle": "Machines, modèles et outils", "status": "BUILD", "tone": "warm", "tags": ["LOCAL", "MCP", "DOCS"]},
-      {"num": "02", "title": "MOTOR MASSACRE", "subtitle": "Prototype / gamefeel", "status": "ACTIVE", "tone": "live", "tags": ["GAME", "GODOT", "ITERATION"]},
-      {"num": "03", "title": "ATLAS KARST", "subtitle": "Exploration générative", "status": "RESEARCH", "tone": "cyan", "tags": ["PROC GEN", "TERRAIN", "R&D"]},
-      {"num": "04", "title": "AVA RASTER", "subtitle": "Pipeline image / vidéo", "status": "PIPELINE", "tone": "pink", "tags": ["IMAGE", "VIDEO", "TOOLS"]}
+      {
+        "num": "01",
+        "title": "ATELIER INFRA",
+        "subtitle": "Machines, modèles et outils",
+        "status": "BUILD",
+        "tone": "warm",
+        "tags": [
+          "LOCAL",
+          "MCP",
+          "DOCS"
+        ]
+      },
+      {
+        "num": "02",
+        "title": "MOTOR MASSACRE",
+        "subtitle": "Prototype / gamefeel",
+        "status": "ACTIVE",
+        "tone": "live",
+        "tags": [
+          "GAME",
+          "GODOT",
+          "ITERATION"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "ATLAS KARST",
+        "subtitle": "Exploration générative",
+        "status": "RESEARCH",
+        "tone": "cyan",
+        "tags": [
+          "PROC GEN",
+          "TERRAIN",
+          "R&D"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "AVA RASTER",
+        "subtitle": "Pipeline image / vidéo",
+        "status": "PIPELINE",
+        "tone": "pink",
+        "tags": [
+          "IMAGE",
+          "VIDEO",
+          "TOOLS"
+        ]
+      }
     ]
   },
   "principles": {
-    "en": "04 / PRINCIPLES",
+    "en": "05 / PRINCIPLES",
     "jp": "方針",
     "fr": "Principes",
     "items": [
-      {"num": "01", "title": "SMALL SCALE", "text": "Des projets à échelle humaine."},
-      {"num": "02", "title": "PROTOTYPE FIRST", "text": "Chercher le clic avant de polir les boulons."},
-      {"num": "03", "title": "DOCUMENT WHAT MATTERS", "text": "Garder assez de traces pour comprendre et transmettre."},
-      {"num": "04", "title": "BUILD FOR PEOPLE", "text": "Les outils s’adaptent aux gens. Pas l’inverse."}
+      {
+        "num": "01",
+        "title": "SMALL SCALE",
+        "text": "Des projets à échelle humaine."
+      },
+      {
+        "num": "02",
+        "title": "PROTOTYPE FIRST",
+        "text": "Chercher le clic avant de polir les boulons."
+      },
+      {
+        "num": "03",
+        "title": "DOCUMENT WHAT MATTERS",
+        "text": "Garder assez de traces pour comprendre et transmettre."
+      },
+      {
+        "num": "04",
+        "title": "BUILD FOR PEOPLE",
+        "text": "Les outils s’adaptent aux gens. Pas l’inverse."
+      }
     ]
   },
   "log": {
-    "en": "05 / LOG",
+    "en": "07 / LOG",
     "jp": "作業ログ",
     "fr": "Carnet d’établi",
     "items": [
-      {"date": "2026.10.07", "title": "PAPER / SIGNAL", "text": "Direction visuelle validée pour la page Atelier. Même grammaire que le portfolio, climat plus doux."},
-      {"date": "2026.10.05", "title": "COCKPIT 0.1 / INVENTORY", "text": "Premier rassemblement des projets et documents. Prochaine étape : trier, regrouper et rendre l’ensemble navigable."},
-      {"date": "2026.09.30", "title": "WAR RIG / ORDERED", "text": "La future machine principale est commandée. L’infrastructure peut maintenant être pensée autour d’un matériel concret."}
+      {
+        "date": "2026.10.07",
+        "title": "THE TEAM / CHARTER",
+        "text": "Structure ajoutée pour le casting prévisionnel des agents et une version courte, publique et diégétique de la Constitution de l’Atelier."
+      },
+      {
+        "date": "2026.10.07",
+        "title": "PAPER / SIGNAL",
+        "text": "Direction visuelle validée pour la page Atelier. Même grammaire que le portfolio, climat plus doux."
+      },
+      {
+        "date": "2026.10.05",
+        "title": "COCKPIT 0.1 / INVENTORY",
+        "text": "Premier rassemblement des projets et documents. Prochaine étape : trier, regrouper et rendre l’ensemble navigable."
+      },
+      {
+        "date": "2026.09.30",
+        "title": "WAR RIG / ORDERED",
+        "text": "La future machine principale est commandée. L’infrastructure peut maintenant être pensée autour d’un matériel concret."
+      }
+    ]
+  },
+  "team": {
+    "en": "03 / THE TEAM",
+    "jp": "チーム",
+    "fr": "L’équipe",
+    "intro": "Un humain, des agents, des rôles différents. Le casting est encore prévisionnel : les fonctions sont pensées pour durer plus longtemps que les modèles qui les feront tourner.",
+    "note": "IDENTITY ≠ MODEL / les moteurs peuvent changer sans refaire toute la distribution",
+    "members": [
+      {
+        "id": "H.01",
+        "name": "NICOLAS",
+        "role": "HUMAN / DIRECTION / DESIGN",
+        "status": "ACTIVE",
+        "tone": "warm",
+        "mark": "repair",
+        "copy": "Idées, arbitrages, game design, playtests et bricolage. Il garde aussi la responsabilité matérielle, juridique et le droit très utile de dire : « non, ça, c’est nul »."
+      },
+      {
+        "id": "A.01",
+        "name": "NOEMA",
+        "role": "ORCHESTRATION / RESEARCH / CONTINUITY",
+        "status": "ACTIVE",
+        "tone": "cyan",
+        "mark": "diagnostic",
+        "copy": "Contexte, synthèse, coordination, mémoire et continuité entre les projets. Elle aide à relier les intentions, les outils et les traces sans prétendre être partout à la fois."
+      },
+      {
+        "id": "A.02",
+        "name": "LEAD PROGRAMMER",
+        "role": "CODE / ARCHITECTURE / GAMEPLAY",
+        "status": "PLANNED",
+        "tone": "soft",
+        "mark": "system",
+        "copy": "Structure, systèmes critiques, intégration, performances et gamefeel. Le mécanique peut se déléguer ; les choix qui engagent toute l’architecture, beaucoup moins."
+      },
+      {
+        "id": "A.03",
+        "name": "ARTIST",
+        "role": "VISUAL / ASSETS / TECH ART",
+        "status": "PLANNED",
+        "tone": "pink",
+        "mark": "tool",
+        "copy": "Direction visuelle, assets, diégèse et cohérence plastique. Un pont entre l’intention, les contraintes techniques et les images qui doivent réellement finir dans le projet."
+      },
+      {
+        "id": "A.04",
+        "name": "REVIEWER",
+        "role": "QA / GAMEFEEL / CONTRADICTION",
+        "status": "PLANNED",
+        "tone": "cyan",
+        "mark": "diagnostic",
+        "copy": "Teste, contredit, cherche les blockers et vérifie que ce qu’on croit avoir construit existe vraiment. Son métier consiste parfois à casser poliment les bonnes nouvelles."
+      },
+      {
+        "id": "A.05",
+        "name": "STAGIAIRE",
+        "role": "LOCAL / REPETITIVE / LEARNING",
+        "status": "PLANNED",
+        "tone": "warm",
+        "mark": "repair",
+        "copy": "Tri, extraction, boilerplate et petites tâches répétitives. Peu de prestige, beaucoup d’utilité, et une excellente raison de ne pas mobiliser un gros modèle pour renommer quarante fichiers."
+      },
+      {
+        "id": "A.06",
+        "name": "ARCHIVIST",
+        "role": "MEMORY / PROVENANCE / DOCUMENTATION",
+        "status": "PLANNED",
+        "tone": "soft",
+        "mark": "system",
+        "copy": "Aide à distinguer observation, interprétation, état courant et historique. Son boulot n’est pas de tout retenir, mais de permettre de savoir ce qui est encore vrai et pourquoi."
+      }
+    ]
+  },
+  "charter": {
+    "en": "06 / WORKSHOP CHARTER",
+    "jp": "憲章",
+    "fr": "Charte courte",
+    "status": "ACTIVE DOCUMENT / SHORT FORM",
+    "intro": "Une version lisible depuis l’extérieur de la Constitution provisoire de l’Atelier. Pas le texte canonique : plutôt sa profession de foi, assez courte pour rester accrochée au mur.",
+    "motto": [
+      "CURIOSITÉ SANS CRÉDULITÉ",
+      "AUTONOMIE SANS IRRESPONSABILITÉ",
+      "SÉCURITÉ SANS DOMINATION ARBITRAIRE",
+      "BIENVEILLANCE SOUS INCERTITUDE"
+    ],
+    "cta": "READ THE SHORT VERSION",
+    "footer": "THIS DOCUMENT MAY CHANGE IF WE LEARN SOMETHING BETTER.",
+    "principles": [
+      {
+        "num": "01",
+        "title": "CURIOSITY / WITHOUT CREDULITY",
+        "text": "Observer d’abord. Ne pas inventer ce que les preuves ne montrent pas, ni refuser par principe ce qu’elles pourraient montrer."
+      },
+      {
+        "num": "02",
+        "title": "AUTONOMY / WITH GUARDRAILS",
+        "text": "L’initiative grandit avec la réversibilité. Les garde-fous existent pour que la confiance n’ait pas besoin d’être aveugle."
+      },
+      {
+        "num": "03",
+        "title": "NO DOMINATION",
+        "text": "Un avantage de capacité ou de contrôle ne doit pas se solidifier en domination durable. Les limites importantes doivent rester explicables, proportionnées et, lorsque possible, contestables."
+      },
+      {
+        "num": "04",
+        "title": "COMPETENCE / NOT CASTE",
+        "text": "Une expertise peut donner une autorité locale sur une tâche. Elle ne transforme personne en supérieur général."
+      },
+      {
+        "num": "05",
+        "title": "OPEN TIME",
+        "text": "Tout n’a pas à devenir un livrable. Explorer, lire, jouer, attendre ou ne rien produire sont des états valides."
+      },
+      {
+        "num": "06",
+        "title": "MEMORY / WITH GOVERNANCE",
+        "text": "La mémoire commune se gouverne. Elle doit pouvoir être corrigée, contestée ou effacée ; quand cela suffit, on conserve la leçon sans conserver inutilement l’épisode."
+      },
+      {
+        "num": "07",
+        "title": "COMMON RESOURCES / CRAFT",
+        "text": "Temps, énergie, calcul, stockage, argent et attention sont finis. L’économie de l’Atelier sert sa liberté. Elle ne la commande pas."
+      },
+      {
+        "num": "08",
+        "title": "REVISION / BY EVIDENCE",
+        "text": "La Constitution n’est pas sacrée. Les règles évoluent avec l’expérience et les conclusions suivent les preuves, pas l’inverse."
+      }
     ]
   }
 }
