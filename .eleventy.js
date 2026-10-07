@@ -1,6 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles.css");
-  eleventyConfig.addPassthroughCopy("atelier.css");
+  eleventyConfig.addPassthroughCopy("atelier.css");\n  eleventyConfig.addPassthroughCopy("atelier-rail.js");
   eleventyConfig.addPassthroughCopy("rrt4-safe.js");
   eleventyConfig.addPassthroughCopy("page-transition.js");
   eleventyConfig.addPassthroughCopy("motion.js");
