@@ -1,0 +1,88 @@
+{
+  "revision": "BUILD 0.1",
+  "hero": {
+    "kicker": "PORTFOLIO / ATELIER / 2026",
+    "title": ["L’Atelier", "Workshop System"],
+    "jp": "工房",
+    "lede": "Un petit espace de fabrication pour des jeux, des outils, des expériences et les systèmes qui permettent de les construire.",
+    "sublede": "On y prototype vite, on teste beaucoup, on jette sans remords quand il le faut, puis on construit proprement ce qui mérite de rester.",
+    "rail": "RESEARCH / BUILD / TEST / DOCUMENT / REUSE / SHARE"
+  },
+  "status": {
+    "label": "PREPARING",
+    "note": "ça se branche",
+    "machines": [
+      {"name": "WAR RIG", "role": "WORKSTATION", "state": "INCOMING", "tone": "warm"},
+      {"name": "IMPERATOR", "role": "LOCAL NODE", "state": "ACTIVE", "tone": "live"},
+      {"name": "KOUBOYPRO", "role": "MOBILE", "state": "ACTIVE", "tone": "live"},
+      {"name": "SERVICES", "role": "HYBRID", "state": "MIXED", "tone": "soft"}
+    ],
+    "counts": [
+      {"label": "AGENTS", "value": "—"},
+      {"label": "TOOLS", "value": "—"},
+      {"label": "PROJECTS", "value": "04"}
+    ]
+  },
+  "intro": {
+    "en": "01 / WHAT IS THE ATELIER",
+    "jp": "工房について",
+    "fr": "Ce que c’est",
+    "paragraphs": [
+      "L’Atelier est un environnement de travail en construction, partagé entre humains, machines et agents logiciels.",
+      "Il sert à transformer des idées en objets testables, à garder une trace de ce qu’on apprend en chemin et à construire peu à peu de meilleurs outils pour recommencer.",
+      "Pas une usine à contenu. Plutôt un atelier au sens littéral : des établis, des outils, des prototypes, quelques copeaux numériques et le droit de refaire."
+    ],
+    "poster": ["MAKE.", "TEST.", "KEEP WHAT", "WORKS."],
+    "poster_jp": ["つくる", "ためす", "のこす"]
+  },
+  "systems": {
+    "en": "02 / SYSTEMS",
+    "jp": "システム構成",
+    "fr": "Architecture",
+    "paragraphs": [
+      "Plusieurs machines. Plusieurs modèles. Des rôles différents.",
+      "Le but n’est pas de faire travailler vingt agents là où deux suffisent. Chaque tâche va autant que possible vers l’outil qui lui convient, avec assez de contexte pour travailler correctement et assez de traces pour comprendre ensuite ce qui s’est passé."
+    ],
+    "note": "TARGET MAP / les fils ne sont pas encore tous branchés",
+    "nodes": [
+      {"name": "HUMAN", "meta": "idée / choix"},
+      {"name": "ORCHESTRATION", "meta": "contexte / routage"},
+      {"name": "LOCAL TOOLS", "meta": "code / assets / tests"},
+      {"name": "MODELS", "meta": "local / frontier"},
+      {"name": "ARCHIVE", "meta": "docs / mémoire"}
+    ]
+  },
+  "work": {
+    "en": "03 / CURRENT WORK",
+    "jp": "現在の作業",
+    "fr": "En cours",
+    "intro": "Des projets finis, d’autres beaucoup moins. Certains servent à produire quelque chose. D’autres servent surtout à comprendre comment le produire. Les deux ont leur place ici.",
+    "items": [
+      {"num": "01", "title": "ATELIER INFRA", "subtitle": "Machines, modèles et outils", "status": "BUILD", "tone": "warm", "tags": ["LOCAL", "MCP", "DOCS"]},
+      {"num": "02", "title": "MOTOR MASSACRE", "subtitle": "Prototype / gamefeel", "status": "ACTIVE", "tone": "live", "tags": ["GAME", "GODOT", "ITERATION"]},
+      {"num": "03", "title": "ATLAS KARST", "subtitle": "Exploration générative", "status": "RESEARCH", "tone": "cyan", "tags": ["PROC GEN", "TERRAIN", "R&D"]},
+      {"num": "04", "title": "AVA RASTER", "subtitle": "Pipeline image / vidéo", "status": "PIPELINE", "tone": "pink", "tags": ["IMAGE", "VIDEO", "TOOLS"]}
+    ]
+  },
+  "principles": {
+    "en": "04 / PRINCIPLES",
+    "jp": "方針",
+    "fr": "Principes",
+    "items": [
+      {"num": "01", "title": "SMALL SCALE", "text": "Des projets à échelle humaine."},
+      {"num": "02", "title": "PROTOTYPE FIRST", "text": "Chercher le clic avant de polir les boulons."},
+      {"num": "03", "title": "DOCUMENT WHAT MATTERS", "text": "Garder assez de traces pour comprendre et transmettre."},
+      {"num": "04", "title": "BUILD FOR PEOPLE", "text": "Les outils s’adaptent aux gens. Pas l’inverse."}
+    ]
+  },
+  "log": {
+    "en": "05 / LOG",
+    "jp": "作業ログ",
+    "fr": "Carnet d’établi",
+    "items": [
+      {"date": "2026.10.07", "title": "PAPER / SIGNAL", "text": "Direction visuelle validée pour la page Atelier. Même grammaire que le portfolio, climat plus doux."},
+      {"date": "2026.10.05", "title": "COCKPIT 0.1 / INVENTORY", "text": "Premier rassemblement des projets et documents. Prochaine étape : trier, regrouper et rendre l’ensemble navigable."},
+      {"date": "2026.09.30", "title": "WAR RIG / ORDERED", "text": "La future machine principale est commandée. L’infrastructure peut maintenant être pensée autour d’un matériel concret."}
+    ]
+  }
+}
