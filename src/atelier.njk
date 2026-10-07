@@ -151,7 +151,20 @@ permalink: atelier.html
     </div>
     <p>{{ atelier.work.intro }}</p>
   </header>
-  <div class="atelier-work-grid">
+  <div class="atelier-work-rail-head">
+    <div class="atelier-work-counter" aria-live="polite">
+      <span data-work-current>01</span>
+      <span aria-hidden="true"> / </span>
+      <span data-work-total>{{ atelier.work.items | length | pad2 }}</span>
+      <small>UNITS</small>
+    </div>
+    <div class="atelier-work-progress" aria-hidden="true"><span data-work-progress></span></div>
+    <div class="atelier-work-controls" aria-label="Parcourir les projets">
+      <button type="button" class="atelier-work-button" data-work-prev aria-label="Projet précédent" disabled>←</button>
+      <button type="button" class="atelier-work-button" data-work-next aria-label="Projet suivant" disabled>→</button>
+    </div>
+  </div>
+  <div class="atelier-work-grid" data-work-rail tabindex="0" aria-label="Projets en cours">
     {% for item in atelier.work.items %}
     <article class="atelier-work-card">
       <div class="atelier-work-top">
@@ -249,5 +262,6 @@ permalink: atelier.html
 </footer>
 
 <script src="rrt4-safe.js"></script>
+<script src="atelier-rail.js"></script>
 </body>
 </html>
