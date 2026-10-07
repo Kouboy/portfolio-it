@@ -165,7 +165,7 @@
     ]
   },
   "principles": {
-    "en": "05 / PRINCIPLES",
+    "en": "06 / PRINCIPLES",
     "jp": "方針",
     "fr": "Principes",
     "items": [
@@ -291,7 +291,7 @@
     ]
   },
   "charter": {
-    "en": "06 / WORKSHOP CHARTER",
+    "en": "05 / WORKSHOP CHARTER",
     "jp": "憲章",
     "fr": "Charte courte",
     "status": "ACTIVE DOCUMENT / SHORT FORM",
