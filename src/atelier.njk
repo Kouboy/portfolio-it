@@ -111,6 +111,38 @@ permalink: atelier.html
   </article>
 </section>
 
+
+<section class="atelier-team">
+  <header class="atelier-section-head atelier-team-head">
+    <div>
+      <div class="atelier-heading-id">{{ atelier.team.en }}</div>
+      <div class="tri-label"><span class="jp">{{ atelier.team.jp }}</span><span class="fr">{{ atelier.team.fr }}</span></div>
+    </div>
+    <div>
+      <p>{{ atelier.team.intro }}</p>
+      <div class="atelier-team-note">{{ atelier.team.note }}</div>
+    </div>
+  </header>
+  <div class="atelier-team-grid">
+    {% for member in atelier.team.members %}
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>{{ member.id }}</span>
+        <span class="atelier-badge {{ member.tone }}">{{ member.status }}</span>
+      </div>
+      <div class="atelier-team-identity">
+        {{ themeMark(member.mark) | safe }}
+        <div>
+          <h3>{{ member.name }}</h3>
+          <div class="atelier-team-role">{{ member.role }}</div>
+        </div>
+      </div>
+      <p>{{ member.copy }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="atelier-work">
   <header class="atelier-section-head">
     <div>
@@ -141,6 +173,25 @@ permalink: atelier.html
     </article>
     {% endfor %}
   </div>
+</section>
+
+
+<section class="atelier-charter-teaser">
+  <div class="atelier-charter-index">
+    <div class="atelier-heading-id">{{ atelier.charter.en }}</div>
+    <div class="tri-label"><span class="jp">{{ atelier.charter.jp }}</span><span class="fr">{{ atelier.charter.fr }}</span></div>
+    <span class="atelier-charter-status">{{ atelier.charter.status }}</span>
+  </div>
+  <div class="atelier-charter-copy">
+    <p>{{ atelier.charter.intro }}</p>
+    <div class="atelier-charter-motto">
+      {% for line in atelier.charter.motto %}<span>{{ line }}</span>{% endfor %}
+    </div>
+  </div>
+  <a class="atelier-charter-link" href="atelier-charter.html">
+    <span>{{ atelier.charter.cta }}</span>
+    <strong>→</strong>
+  </a>
 </section>
 
 <section class="atelier-lower">
