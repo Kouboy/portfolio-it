@@ -843,7 +843,7 @@
 }
 .charter-card:nth-child(3) p,
 .charter-card:nth-child(7) p{color:#d0cbc0}
-.charter-card:nth-child(8){background:var(--sun)}
+.charter-card:nth-child(10){background:var(--sun)}
 
 .charter-closing{
   display:grid;
@@ -1074,4 +1074,32 @@
     border-bottom:0 !important;
     border-right:1px solid var(--work-line);
   }
+}
+
+/* WORKSHOP CHARTER / COMMUNITY GOVERNANCE POLISH */
+.charter-hero-main .charter-hero-secondary{
+  max-width:760px;
+  margin:18px 0 0;
+  padding-left:26px;
+  border-left:0;
+  font-size:.96rem;
+  line-height:1.58;
+  color:#4b473f;
+}
+.charter-scope{
+  font-weight:800;
+  border-left:6px solid var(--sun);
+  padding-left:14px;
+  color:#111;
+}
+.charter-closing .charter-closing-note{
+  margin-top:15px;
+  font:800 .58rem var(--mono);
+  letter-spacing:.05em;
+  line-height:1.65;
+  color:var(--sun);
+}
+.charter-card:nth-child(10) p{color:#29241a}
+@media(max-width:650px){
+  .charter-hero-main .charter-hero-secondary{padding-left:0}
 }
