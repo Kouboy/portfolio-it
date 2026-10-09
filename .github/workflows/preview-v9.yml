@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - v9-content-architecture
+      - atelier-paper-signal
   workflow_dispatch:
 
 permissions:
@@ -63,9 +64,10 @@ jobs:
             # only this branch's generated preview.
             cp -R current-pages/. publish/
             rm -rf publish/.git
-            rm -rf publish/previews/v9-content-architecture
-            mkdir -p publish/previews/v9-content-architecture
-            cp -R source/_site/. publish/previews/v9-content-architecture/
+            preview_dir="publish/previews/${GITHUB_REF_NAME}"
+            rm -rf "${preview_dir}"
+            mkdir -p "${preview_dir}"
+            cp -R source/_site/. "${preview_dir}/"
           fi
 
           touch publish/.nojekyll
