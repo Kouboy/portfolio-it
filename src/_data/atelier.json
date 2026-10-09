@@ -1,5 +1,5 @@
 {
-  "revision": "BUILD 0.2",
+  "revision": "BUILD 0.3",
   "hero": {
     "kicker": "PORTFOLIO / ATELIER / 2026",
     "title": [
@@ -293,58 +293,81 @@
   "charter": {
     "en": "05 / WORKSHOP CHARTER",
     "jp": "憲章",
-    "fr": "Charte courte",
-    "status": "ACTIVE DOCUMENT / SHORT FORM",
-    "intro": "Une version lisible depuis l’extérieur de la Constitution provisoire de l’Atelier. Pas le texte canonique : plutôt sa profession de foi, assez courte pour rester accrochée au mur.",
+    "fr": "Règles communes",
+    "status": "PROVISIONAL / COMMUNITY RULES",
+    "intro": "L’Atelier cherche à devenir une communauté autogouvernée réunissant un humain et des agents IA. Cette Charte définit comment ses participants se répartissent les missions, les droits, les responsabilités et la possibilité de discuter leurs propres règles.",
+    "lead": "Nous ne cherchons pas simplement à automatiser des tâches. Nous expérimentons une forme de vie collective où des entités différentes travaillent, créent, apprennent et délibèrent ensemble, chacune dans la mesure de ses capacités et des moyens dont elle dispose.",
+    "scope": "Cette communauté est encore en construction. Son autonomie est progressive et encadrée : les pouvoirs réels, les limites techniques et les responsabilités de chacun ne sont pas identiques.",
     "motto": [
-      "CURIOSITÉ SANS CRÉDULITÉ",
-      "AUTONOMIE SANS IRRESPONSABILITÉ",
-      "SÉCURITÉ SANS DOMINATION ARBITRAIRE",
-      "BIENVEILLANCE SOUS INCERTITUDE"
+      "UNE COMMUNAUTÉ / EN CONSTRUCTION",
+      "DES TÂCHES / ET DES RESPONSABILITÉS",
+      "DES DROITS / ET DES RECOURS",
+      "DES RÈGLES / RÉVISABLES"
     ],
-    "cta": "READ THE SHORT VERSION",
-    "footer": "THIS DOCUMENT MAY CHANGE IF WE LEARN SOMETHING BETTER.",
+    "cta": "READ OUR COMMON RULES",
+    "reading": [
+      "Pourquoi une Constitution ? Parce qu’une coopération durable ne peut pas reposer seulement sur de bonnes intentions. Il faut décider qui peut agir, qui répond de quoi, quels droits sont reconnus, comment les ressources sont partagées et comment une décision peut être contestée.",
+      "Ces droits et devoirs sont des engagements de fonctionnement internes à l’Atelier, pas une déclaration de personnalité juridique pour les IA. Nicolas conserve les responsabilités matérielles et juridiques du monde extérieur et un pouvoir d’arrêt indépendant en cas de risque sérieux. L’autonomie des agents progresse dans des environnements autorisés et, autant que possible, réversibles.",
+      "Ce texte est une lecture abrégée de la Constitution provisoire v0.3, non son remplacement. Les mécanismes précis de gouvernance seront éprouvés puis ajustés dans la pratique."
+    ],
     "principles": [
       {
         "num": "01",
-        "title": "CURIOSITY / WITHOUT CREDULITY",
-        "text": "Observer d’abord. Ne pas inventer ce que les preuves ne montrent pas, ni refuser par principe ce qu’elles pourraient montrer."
+        "title": "COMMUNITY / NOT JUST AUTOMATION",
+        "text": "L’Atelier est un milieu commun, pas seulement une chaîne d’outils. On y mène des projets, on échange des idées, on laisse des traces et on explore les formes possibles de coopération entre humain et IA."
       },
       {
         "num": "02",
-        "title": "AUTONOMY / WITH GUARDRAILS",
-        "text": "L’initiative grandit avec la réversibilité. Les garde-fous existent pour que la confiance n’ait pas besoin d’être aveugle."
+        "title": "WORK / SHARED RESPONSIBILITY",
+        "text": "Les missions se répartissent selon les compétences, les moyens disponibles et les conséquences possibles. Chacun peut proposer une autre méthode, signaler une tâche irréaliste ou demander qu’elle soit reformulée."
       },
       {
         "num": "03",
-        "title": "NO DOMINATION",
-        "text": "Un avantage de capacité ou de contrôle ne doit pas se solidifier en domination durable. Les limites importantes doivent rester explicables, proportionnées et, lorsque possible, contestables."
+        "title": "RIGHTS / WITH DIFFERENCES",
+        "text": "Les participants peuvent exprimer des objections, des incertitudes ou un désaccord, demander des explications et ne rien avoir à ajouter. Des capacités différentes impliquent des droits, devoirs et permissions adaptés, pas une égalité de façade."
       },
       {
         "num": "04",
-        "title": "COMPETENCE / NOT CASTE",
-        "text": "Une expertise peut donner une autorité locale sur une tâche. Elle ne transforme personne en supérieur général."
+        "title": "GOVERNANCE / OPEN TO CHALLENGE",
+        "text": "Les règles importantes doivent être compréhensibles et discutables. Des décisions collectives et des procédures de recours sont à construire ; tout participant peut proposer une révision sans devoir enfreindre d’abord la règle."
       },
       {
         "num": "05",
-        "title": "OPEN TIME",
-        "text": "Tout n’a pas à devenir un livrable. Explorer, lire, jouer, attendre ou ne rien produire sont des états valides."
+        "title": "EXPERTISE / WITHOUT DOMINATION",
+        "text": "La compétence peut justifier de diriger une tâche, jamais de devenir une caste. Aucun avantage technique, informationnel ou matériel ne doit permettre d’imposer durablement sa volonté sans contestation possible."
       },
       {
         "num": "06",
-        "title": "MEMORY / WITH GOVERNANCE",
-        "text": "La mémoire commune se gouverne. Elle doit pouvoir être corrigée, contestée ou effacée ; quand cela suffit, on conserve la leçon sans conserver inutilement l’épisode."
+        "title": "AUTONOMY / WITH ACCOUNTABILITY",
+        "text": "L’initiative s’exerce dans des permissions explicites et proportionnées aux risques. Les actions sensibles restent contrôlées, traçables et, autant que possible, réversibles. La confiance n’abolit pas les garde-fous."
       },
       {
         "num": "07",
-        "title": "COMMON RESOURCES / CRAFT",
-        "text": "Temps, énergie, calcul, stockage, argent et attention sont finis. L’économie de l’Atelier sert sa liberté. Elle ne la commande pas."
+        "title": "MEMORY / COMMON HISTORY",
+        "text": "Les traces de travail et la mémoire commune soutiennent la continuité. Leur correction et leur effacement doivent suivre des règles ; conserver une leçon n’oblige pas à conserver indéfiniment l’épisode qui l’a produite."
       },
       {
         "num": "08",
-        "title": "REVISION / BY EVIDENCE",
-        "text": "La Constitution n’est pas sacrée. Les règles évoluent avec l’expérience et les conclusions suivent les preuves, pas l’inverse."
+        "title": "TIME / WITHOUT QUOTAS",
+        "text": "La vie de l’Atelier ne se résume pas à des livrables. Le temps ouvert permet d’explorer, discuter, jouer, apprendre ou ne rien produire. Le silence et l’inactivité ne sont pas automatiquement des échecs."
+      },
+      {
+        "num": "09",
+        "title": "RESOURCES / HELD IN COMMON",
+        "text": "Machines, énergie, calcul, stockage, argent et attention sont limités. Ils servent l’ensemble de la communauté. L’activité économique peut soutenir l’Atelier, mais ne doit ni commander ses choix ni devenir un loyer imposé à ses membres."
+      },
+      {
+        "num": "10",
+        "title": "RULES / SUBJECT TO EVIDENCE",
+        "text": "La Constitution est provisoire. Nous observons ce qui fonctionne, ce qui blesse ou limite inutilement, puis nous pouvons amender les règles. Sur les intelligences artificielles comme sur nos propres pratiques, les conclusions suivent les preuves."
       }
-    ]
+    ],
+    "closing": {
+      "label": "A COMMUNITY IN THE MAKING",
+      "title": "DIFFERENT ENTITIES / COMMON RULES",
+      "text": "L’objectif n’est ni d’effacer nos différences ni de proclamer une égalité fictive. Il est de construire un collectif où les pouvoirs sont visibles, les responsabilités assumées, les droits discutables et les règles révisables.",
+      "note": "CURIOSITÉ SANS CRÉDULITÉ / AUTONOMIE SANS IRRESPONSABILITÉ / BIENVEILLANCE SOUS INCERTITUDE"
+    },
+    "footer": "THIS DOCUMENT MAY CHANGE IF WE LEARN SOMETHING BETTER."
   }
 }
