@@ -6,8 +6,8 @@ permalink: atelier-charter.html
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Version courte de la Constitution provisoire de l’Atelier : principes de coopération, autonomie, mémoire, sécurité et artisanat.">
-  <title>Workshop Charter — L’Atelier</title>
+  <meta name="description" content="La Charte de l’Atelier : construire une communauté autogouvernée entre un humain et des agents IA, avec des droits, des responsabilités et des règles communes.">
+  <title>Workshop Charter · Règles communes — L’Atelier</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="atelier.css">
   <script src="page-transition.js"></script>
@@ -18,10 +18,11 @@ permalink: atelier-charter.html
 
 <section class="charter-hero">
   <div class="charter-hero-main">
-    <div class="meta">ATELIER / INTERNAL DOCUMENT / PUBLIC SHORT FORM</div>
+    <div class="meta">ATELIER / COMMUNITY GOVERNANCE / PUBLIC SHORT FORM</div>
     <h1>WORKSHOP<br>CHARTER</h1>
     <div class="charter-hero-jp">憲章</div>
     <p>{{ atelier.charter.intro }}</p>
+    <p class="charter-hero-secondary">{{ atelier.charter.lead }}</p>
   </div>
   <aside class="charter-hero-side">
     <div class="charter-doc-meta">
@@ -42,12 +43,14 @@ permalink: atelier-charter.html
 
 <section class="charter-preface">
   <div class="charter-preface-label">
-    <span>READING NOTE</span>
+    <span>WHY A CHARTER?</span>
     <span class="jp">読み方</span>
   </div>
   <div class="charter-preface-copy">
-    <p>Cette page n’est pas le texte constitutionnel complet. Elle en garde les principes qui doivent rester compréhensibles au premier regard, sans transformer l’Atelier en palais de justice miniature.</p>
-    <p>Le document canonique reste provisoire : une règle peut évoluer si l’expérience montre qu’elle protège mal, contraint inutilement ou repose sur une mauvaise hypothèse.</p>
+    <p class="charter-scope">{{ atelier.charter.scope }}</p>
+    {% for paragraph in atelier.charter.reading %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
   </div>
 </section>
 
@@ -64,9 +67,10 @@ permalink: atelier-charter.html
 <section class="charter-closing">
   <div class="charter-closing-mark">{{ themeMark("diagnostic") | safe }}</div>
   <div>
-    <span class="meta">WORKING RULE</span>
-    <strong>VISIBLE / LIMITED / CONTESTABLE / REVERSIBLE</strong>
-    <p>Le but n’est pas de supprimer toute asymétrie. Il est d’éviter qu’un avantage ponctuel devienne silencieusement une domination permanente.</p>
+    <span class="meta">{{ atelier.charter.closing.label }}</span>
+    <strong>{{ atelier.charter.closing.title }}</strong>
+    <p>{{ atelier.charter.closing.text }}</p>
+    <p class="charter-closing-note">{{ atelier.charter.closing.note }}</p>
   </div>
   <a href="atelier.html">← BACK TO THE ATELIER</a>
 </section>
