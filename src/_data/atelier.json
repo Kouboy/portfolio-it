@@ -51,7 +51,7 @@
       },
       {
         "label": "PROJECTS",
-        "value": "05"
+        "value": "06"
       }
     ]
   },
@@ -174,6 +174,19 @@
           "RUST"
         ],
         "href": "cockpit-signal.html"
+      },
+      {
+        "num": "06",
+        "title": "LAZARE",
+        "subtitle": "Diagnostic, réemploi & archives",
+        "status": "FIELD LOG",
+        "tone": "warm",
+        "tags": [
+          "REPAIR",
+          "REUSE",
+          "ARCHIVE"
+        ],
+        "href": "lazare.html"
       }
     ]
   },
@@ -209,6 +222,11 @@
     "jp": "作業ログ",
     "fr": "Carnet d’établi",
     "items": [
+      {
+        "date": "2026.10.10",
+        "title": "LAZARE / CASE 001",
+        "text": "Premier dossier publié : un disque LaCie rendu inaccessible par sa chaîne USB, remis en service avec une interface SATA-USB alimentée, après diagnostic croisé et vérification NTFS."
+      },
       {
         "date": "2026.10.07",
         "title": "THE TEAM / CHARTER",
