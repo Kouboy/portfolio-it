@@ -120,3 +120,10 @@
 @media(max-width:1000px){.cs-hero{grid-template-columns:1fr}.cs-hero-visual{min-height:350px}.cs-layout{grid-template-columns:1fr}.cs-rail{position:sticky;top:54px;max-height:none;flex-direction:row;white-space:nowrap;overflow-x:auto;border-bottom:1px solid #101010;border-right:0;background:#f6b500}.cs-rail a{padding:12px 15px;border-right:1px solid #101010;border-bottom:0}.cs-rail-sign{display:none}.cs-chapter{scroll-margin-top:120px}}
 @media(max-width:620px){.cs-hero{min-height:unset}.cs-hero-copy{padding:36px 19px}.cs-hero h1{font-size:clamp(3.9rem,15vw,6.5rem)}.cs-eyebrow{margin-top:50px}.cs-lede{margin-top:35px}.cs-hero-visual{min-height:290px}.cs-utility>span:last-child{display:none}.cs-controlbar{flex-direction:column;align-items:flex-start}.cs-current{align-items:flex-start}.cs-chapter{padding:42px 20px 62px}.cs-chapter h2{font-size:clamp(2.7rem,12vw,4.8rem)}.cs-feature h2{font-size:clamp(3.3rem,13vw,5rem)}.cs-duo{grid-template-columns:1fr}.cs-moments{grid-template-columns:1fr}.cs-endline{grid-template-columns:repeat(2,1fr)}.cs-media-art{min-height:285px}.cs-facts>div{padding:13px}.cs-facts span{font-size:.59rem}.cs-footer{flex-direction:column;align-items:flex-start}.cs-hero-han{left:12%}}
 @media(prefers-reduced-motion:reduce){.cockpit-story *, .cockpit-story *::before, .cockpit-story *::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Atelier ownership and breadcrumb */
+.cockpit-story .header{background:#f6f0df}
+.cockpit-story .workshop-header .brandmark{background:#f6b500}
+.cs-breadcrumb{background:#f6f0df;color:#101010;padding:12px clamp(18px,3vw,44px);display:flex;flex-wrap:wrap;gap:12px;border-bottom:1px solid #101010;font:850 .67rem ui-monospace,monospace;letter-spacing:.05em}
+.cs-breadcrumb a{text-decoration:underline;text-underline-offset:3px}
+.cs-breadcrumb a:hover,.cs-breadcrumb a:focus-visible{background:#101010;color:#f6b500}
