@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="L’Atelier de Nicolas Georget : projets en cours, infrastructure, prototypes, outils et journal de fabrication.">
+  <title>L’Atelier — Nicolas Georget</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css"><link rel="stylesheet" href="rrt4-lexicon.css">
+  <script src="page-transition.js"></script>
+</head>
+<body class="theme-workshop">
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header workshop-header">
+  <a class="brand" href="atelier.html"><span class="brandmark">A</span><span>L'ATELIER</span><small>PAPER / SIGNAL · WORKSHOP</small></a>
+  <nav class="nav" aria-label="Navigation de l'Atelier">
+    <a href="index.html#index">Portfolio ↗</a>
+    <a href="atelier.html">Atelier</a>
+    <a href="atelier.html#atelier-work">Projets</a>
+    <a href="atelier-charter.html">Charte</a>
+  </nav>
+</header>
+
+<main id="content">
+
+<section class="hero atelier-hero">
+  <div class="hero-main">
+    <div class="hero-kicker meta">PORTFOLIO / ATELIER / 2026</div>
+    <h1>
+      <span>L’Atelier</span>
+      <span class="signal">Workshop System</span>
+    </h1>
+    <div class="atelier-jp" aria-hidden="true">工房</div>
+    <div class="hero-lede atelier-lede">
+      <b>WORKSHOP NOTE</b>
+      <div>
+        <p>Un petit espace de fabrication pour des jeux, des outils, des expériences et les systèmes qui permettent de les construire.</p>
+        <p>On y prototype vite, on teste beaucoup, on jette sans remords quand il le faut, puis on construit proprement ce qui mérite de rester.</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="hero-side atelier-status" aria-label="État du système">
+    <div class="atelier-status-top">
+      <span class="meta">SYSTEM STATUS</span>
+      <span class="meta">BUILD 0.3</span>
+    </div>
+    <div class="atelier-status-state">
+      <span class="atelier-dot warm"></span>
+      <strong>PREPARING</strong>
+      <small>ça se branche</small>
+    </div>
+    <div class="atelier-machine-list">
+      
+      <div class="atelier-machine">
+        <b>WAR RIG</b>
+        <span>WORKSTATION</span>
+        <span class="atelier-machine-state warm">INCOMING</span>
+      </div>
+      
+      <div class="atelier-machine">
+        <b>IMPERATOR</b>
+        <span>LOCAL NODE</span>
+        <span class="atelier-machine-state live">ACTIVE</span>
+      </div>
+      
+      <div class="atelier-machine">
+        <b>KOUBOYPRO</b>
+        <span>MOBILE</span>
+        <span class="atelier-machine-state live">ACTIVE</span>
+      </div>
+      
+      <div class="atelier-machine">
+        <b>SERVICES</b>
+        <span>HYBRID</span>
+        <span class="atelier-machine-state soft">MIXED</span>
+      </div>
+      
+    </div>
+    <div class="atelier-counts">
+      
+      <div><small>AGENTS</small><b>—</b></div>
+      
+      <div><small>TOOLS</small><b>—</b></div>
+      
+      <div><small>PROJECTS</small><b>06</b></div>
+      
+    </div>
+  </aside>
+</section>
+
+<div class="atelier-strip">
+  <div>RESEARCH / BUILD / TEST / DOCUMENT / REUSE / SHARE</div>
+  <div>PAPER / SIGNAL</div>
+</div>
+
+<section class="atelier-dual atelier-intro">
+  <article class="atelier-panel atelier-panel-copy">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">01 / WHAT IS THE ATELIER</div>
+      <div class="tri-label"><span class="jp">工房について</span><span class="fr">Ce que c’est</span></div>
+    </header>
+    <div class="atelier-copy-poster">
+      <div class="atelier-copy">
+        <p>L’Atelier est un environnement de travail en construction, partagé entre humains, machines et agents logiciels.</p><p>Il sert à transformer des idées en objets testables, à garder une trace de ce qu’on apprend en chemin et à construire peu à peu de meilleurs outils pour recommencer.</p><p>Pas une usine à contenu. Plutôt un atelier au sens littéral : des établis, des outils, des prototypes, quelques copeaux numériques et le droit de refaire.</p>
+      </div>
+      <aside class="atelier-poster">
+        <div>
+          <strong>MAKE.</strong><strong>TEST.</strong><strong>KEEP WHAT</strong><strong>WORKS.</strong>
+        </div>
+        <div class="atelier-poster-jp">
+          <span>つくる</span><span>ためす</span><span>のこす</span>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <article class="atelier-panel atelier-panel-systems">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">02 / SYSTEMS</div>
+      <div class="tri-label"><span class="jp">システム構成</span><span class="fr">Architecture</span></div>
+    </header>
+    <div class="atelier-copy">
+      <p>Plusieurs machines. Plusieurs modèles. Des rôles différents.</p><p>Le but n’est pas de faire travailler vingt agents là où deux suffisent. Chaque tâche va autant que possible vers l’outil qui lui convient, avec assez de contexte pour travailler correctement et assez de traces pour comprendre ensuite ce qui s’est passé.</p>
+    </div>
+    <div class="atelier-map-note">TARGET MAP / les fils ne sont pas encore tous branchés</div>
+    <div class="atelier-system-map" aria-label="Architecture cible simplifiée">
+      <div class="atelier-node human"><b>HUMAN</b><small>idée / choix</small></div>
+      <div class="atelier-link vertical">↕</div>
+      <div class="atelier-node orchestration"><b>ORCHESTRATION</b><small>contexte / routage</small></div>
+      <div class="atelier-link vertical">↕</div>
+      <div class="atelier-node-row">
+        
+        
+        
+        
+        
+        
+        <div class="atelier-node"><b>LOCAL TOOLS</b><small>code / assets / tests</small></div>
+        
+        
+        
+        <div class="atelier-node"><b>MODELS</b><small>local / frontier</small></div>
+        
+        
+        
+        <div class="atelier-node"><b>ARCHIVE</b><small>docs / mémoire</small></div>
+        
+        
+      </div>
+    </div>
+  </article>
+</section>
+
+
+<section class="atelier-team">
+  <header class="atelier-section-head atelier-team-head">
+    <div>
+      <div class="atelier-heading-id">03 / THE TEAM</div>
+      <div class="tri-label"><span class="jp">チーム</span><span class="fr">L’équipe</span></div>
+    </div>
+    <div>
+      <p>Un humain, des agents, des rôles différents. Le casting est encore prévisionnel : les fonctions sont pensées pour durer plus longtemps que les modèles qui les feront tourner.</p>
+      <div class="atelier-team-note">IDENTITY ≠ MODEL / les moteurs peuvent changer sans refaire toute la distribution</div>
+    </div>
+  </header>
+  <div class="atelier-team-grid">
+    
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>H.01</span>
+        <span class="atelier-badge warm">ACTIVE</span>
+      </div>
+      <div class="atelier-team-identity">
+        <span class="theme-mark repair">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="41" cy="26" r="3.5" fill="#080808"/><path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/><path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/></svg>
+
+</span>
+        <div>
+          <h3>NICOLAS</h3>
+          <div class="atelier-team-role">HUMAN / DIRECTION / DESIGN</div>
+        </div>
+      </div>
+      <p>Idées, arbitrages, game design, playtests et bricolage. Il garde aussi la responsabilité matérielle, juridique et le droit très utile de dire : « non, ça, c’est nul ».</p>
+    </article>
+    
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>A.01</span>
+        <span class="atelier-badge cyan">ACTIVE</span>
+      </div>
+      <div class="atelier-team-identity">
+        <span class="theme-mark diagnostic">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="12" fill="currentColor"/><circle cx="40" cy="40" r="5" fill="#32d9ee"/></svg>
+
+</span>
+        <div>
+          <h3>NOEMA</h3>
+          <div class="atelier-team-role">ORCHESTRATION / RESEARCH / CONTINUITY</div>
+        </div>
+      </div>
+      <p>Contexte, synthèse, coordination, mémoire et continuité entre les projets. Elle aide à relier les intentions, les outils et les traces sans prétendre être partout à la fois.</p>
+    </article>
+    
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>A.02</span>
+        <span class="atelier-badge soft">PLANNED</span>
+      </div>
+      <div class="atelier-team-identity">
+        <span class="theme-mark system">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="16" width="48" height="46" rx="3" fill="currentColor" stroke="#080808" stroke-width="3"/><rect x="21" y="22" width="38" height="28" fill="#080808"/><circle cx="32" cy="35" r="3.5" fill="#e6ff00"/><circle cx="48" cy="35" r="3.5" fill="#e6ff00"/><path d="M29 43 Q40 49 51 43" fill="none" stroke="#fffaf0" stroke-width="2.5"/></svg>
+
+</span>
+        <div>
+          <h3>LEAD PROGRAMMER</h3>
+          <div class="atelier-team-role">CODE / ARCHITECTURE / GAMEPLAY</div>
+        </div>
+      </div>
+      <p>Structure, systèmes critiques, intégration, performances et gamefeel. Le mécanique peut se déléguer ; les choix qui engagent toute l’architecture, beaucoup moins.</p>
+    </article>
+    
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>A.03</span>
+        <span class="atelier-badge pink">PLANNED</span>
+      </div>
+      <div class="atelier-team-identity">
+        <span class="theme-mark tool">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+
+</span>
+        <div>
+          <h3>ARTIST</h3>
+          <div class="atelier-team-role">VISUAL / ASSETS / TECH ART</div>
+        </div>
+      </div>
+      <p>Direction visuelle, assets, diégèse et cohérence plastique. Un pont entre l’intention, les contraintes techniques et les images qui doivent réellement finir dans le projet.</p>
+    </article>
+    
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>A.04</span>
+        <span class="atelier-badge cyan">PLANNED</span>
+      </div>
+      <div class="atelier-team-identity">
+        <span class="theme-mark diagnostic">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="12" fill="currentColor"/><circle cx="40" cy="40" r="5" fill="#32d9ee"/></svg>
+
+</span>
+        <div>
+          <h3>REVIEWER</h3>
+          <div class="atelier-team-role">QA / GAMEFEEL / CONTRADICTION</div>
+        </div>
+      </div>
+      <p>Teste, contredit, cherche les blockers et vérifie que ce qu’on croit avoir construit existe vraiment. Son métier consiste parfois à casser poliment les bonnes nouvelles.</p>
+    </article>
+    
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>A.05</span>
+        <span class="atelier-badge warm">PLANNED</span>
+      </div>
+      <div class="atelier-team-identity">
+        <span class="theme-mark repair">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="41" cy="26" r="3.5" fill="#080808"/><path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/><path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/></svg>
+
+</span>
+        <div>
+          <h3>STAGIAIRE</h3>
+          <div class="atelier-team-role">LOCAL / REPETITIVE / LEARNING</div>
+        </div>
+      </div>
+      <p>Tri, extraction, boilerplate et petites tâches répétitives. Peu de prestige, beaucoup d’utilité, et une excellente raison de ne pas mobiliser un gros modèle pour renommer quarante fichiers.</p>
+    </article>
+    
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>A.06</span>
+        <span class="atelier-badge soft">PLANNED</span>
+      </div>
+      <div class="atelier-team-identity">
+        <span class="theme-mark system">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="16" width="48" height="46" rx="3" fill="currentColor" stroke="#080808" stroke-width="3"/><rect x="21" y="22" width="38" height="28" fill="#080808"/><circle cx="32" cy="35" r="3.5" fill="#e6ff00"/><circle cx="48" cy="35" r="3.5" fill="#e6ff00"/><path d="M29 43 Q40 49 51 43" fill="none" stroke="#fffaf0" stroke-width="2.5"/></svg>
+
+</span>
+        <div>
+          <h3>ARCHIVIST</h3>
+          <div class="atelier-team-role">MEMORY / PROVENANCE / DOCUMENTATION</div>
+        </div>
+      </div>
+      <p>Aide à distinguer observation, interprétation, état courant et historique. Son boulot n’est pas de tout retenir, mais de permettre de savoir ce qui est encore vrai et pourquoi.</p>
+    </article>
+    
+  </div>
+</section>
+
+<section class="atelier-work" id="atelier-work">
+  <header class="atelier-section-head">
+    <div>
+      <div class="atelier-heading-id">04 / CURRENT WORK</div>
+      <div class="tri-label"><span class="jp">現在の作業</span><span class="fr">En cours</span></div>
+    </div>
+    <p>Des projets finis, d’autres beaucoup moins. Certains servent à produire quelque chose. D’autres servent surtout à comprendre comment le produire. Les deux ont leur place ici.</p>
+  </header>
+  <div class="atelier-work-rail-head">
+    <div class="atelier-work-counter" aria-live="polite">
+      <span data-work-current>01</span>
+      <span aria-hidden="true"> / </span>
+      <span data-work-total>06</span>
+      <small>UNITS</small>
+    </div>
+    <div class="atelier-work-progress" aria-hidden="true"><span data-work-progress></span></div>
+    <div class="atelier-work-controls" aria-label="Parcourir les projets">
+      <button type="button" class="atelier-work-button" data-work-prev aria-label="Projet précédent" disabled>←</button>
+      <button type="button" class="atelier-work-button" data-work-next aria-label="Projet suivant" disabled>→</button>
+    </div>
+  </div>
+  <div class="atelier-work-grid" data-work-rail tabindex="0" aria-label="Projets en cours">
+    
+    <article class="atelier-work-card">
+      <div class="atelier-work-top">
+        <span>01</span>
+        <span class="atelier-badge warm">BUILD</span>
+      </div>
+      <div class="atelier-work-visual visual-1">
+        <span>
+          <span class="theme-mark system">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="16" width="48" height="46" rx="3" fill="currentColor" stroke="#080808" stroke-width="3"/><rect x="21" y="22" width="38" height="28" fill="#080808"/><circle cx="32" cy="35" r="3.5" fill="#e6ff00"/><circle cx="48" cy="35" r="3.5" fill="#e6ff00"/><path d="M29 43 Q40 49 51 43" fill="none" stroke="#fffaf0" stroke-width="2.5"/></svg>
+
+</span>
+          
+        </span>
+      </div>
+      <h3>ATELIER INFRA</h3>
+      <p>Machines, modèles et outils</p>
+      <div class="atelier-tags"><span>LOCAL</span><span>MCP</span><span>DOCS</span></div>
+      <div class="atelier-card-foot">DOSSIER EN COURS <span>→</span></div>
+    </article>
+    
+    <article class="atelier-work-card">
+      <div class="atelier-work-top">
+        <span>02</span>
+        <span class="atelier-badge live">ACTIVE</span>
+      </div>
+      <div class="atelier-work-visual visual-2">
+        <span>
+          <span class="theme-mark repair">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="41" cy="26" r="3.5" fill="#080808"/><path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/><path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/></svg>
+
+</span>
+          
+        </span>
+      </div>
+      <h3>MOTOR MASSACRE</h3>
+      <p>Prototype / gamefeel</p>
+      <div class="atelier-tags"><span>GAME</span><span>GODOT</span><span>ITERATION</span></div>
+      <div class="atelier-card-foot">DOSSIER EN COURS <span>→</span></div>
+    </article>
+    
+    <article class="atelier-work-card">
+      <div class="atelier-work-top">
+        <span>03</span>
+        <span class="atelier-badge cyan">RESEARCH</span>
+      </div>
+      <div class="atelier-work-visual visual-3">
+        <span>
+          <span class="theme-mark diagnostic">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="12" fill="currentColor"/><circle cx="40" cy="40" r="5" fill="#32d9ee"/></svg>
+
+</span>
+          
+        </span>
+      </div>
+      <h3>ATLAS KARST</h3>
+      <p>Exploration générative</p>
+      <div class="atelier-tags"><span>PROC GEN</span><span>TERRAIN</span><span>R&amp;D</span></div>
+      <div class="atelier-card-foot">DOSSIER EN COURS <span>→</span></div>
+    </article>
+    
+    <article class="atelier-work-card">
+      <div class="atelier-work-top">
+        <span>04</span>
+        <span class="atelier-badge pink">PIPELINE</span>
+      </div>
+      <div class="atelier-work-visual visual-4">
+        <span>
+          <span class="theme-mark tool">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+
+</span>
+        </span>
+      </div>
+      <h3>AVA RASTER</h3>
+      <p>Pipeline image / vidéo</p>
+      <div class="atelier-tags"><span>IMAGE</span><span>VIDEO</span><span>TOOLS</span></div>
+      <div class="atelier-card-foot">DOSSIER EN COURS <span>→</span></div>
+    </article>
+    
+    <article class="atelier-work-card">
+      <div class="atelier-work-top">
+        <span>05</span>
+        <span class="atelier-badge cyan">ALPHA</span>
+      </div>
+      <div class="atelier-work-visual visual-5">
+        <span>
+          <span class="theme-mark tool">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+
+</span>
+        </span>
+      </div>
+      <h3>COCKPIT SIGNAL</h3>
+      <p>Choisir, reprendre, relier les projets</p>
+      <div class="atelier-tags"><span>LOCAL</span><span>DESIGN</span><span>RUST</span></div>
+      <a class="atelier-card-foot atelier-card-link" href="cockpit-signal.html">LIRE LA FICHE <span>→</span></a>
+    </article>
+    
+    <article class="atelier-work-card">
+      <div class="atelier-work-top">
+        <span>06</span>
+        <span class="atelier-badge warm">FIELD LOG</span>
+      </div>
+      <div class="atelier-work-visual visual-6">
+        <span>
+          <span class="theme-mark tool">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+
+</span>
+        </span>
+      </div>
+      <h3>LAZARE</h3>
+      <p>Diagnostic, réemploi &amp; archives</p>
+      <div class="atelier-tags"><span>REPAIR</span><span>REUSE</span><span>ARCHIVE</span></div>
+      <a class="atelier-card-foot atelier-card-link" href="lazare.html">LIRE LA FICHE <span>→</span></a>
+    </article>
+    
+  </div>
+</section>
+
+
+<section class="atelier-charter-teaser">
+  <div class="atelier-charter-index">
+    <div class="atelier-heading-id">05 / WORKSHOP CHARTER</div>
+    <div class="tri-label"><span class="jp">憲章</span><span class="fr">Règles communes</span></div>
+    <span class="atelier-charter-status">PROVISIONAL / COMMUNITY RULES</span>
+  </div>
+  <div class="atelier-charter-copy">
+    <p>L’Atelier cherche à devenir une communauté autogouvernée réunissant un humain et des agents IA. Cette Charte définit comment ses participants se répartissent les missions, les droits, les responsabilités et la possibilité de discuter leurs propres règles.</p>
+    <div class="atelier-charter-motto">
+      <span>UNE COMMUNAUTÉ / EN CONSTRUCTION</span><span>DES TÂCHES / ET DES RESPONSABILITÉS</span><span>DES DROITS / ET DES RECOURS</span><span>DES RÈGLES / RÉVISABLES</span>
+    </div>
+  </div>
+  <a class="atelier-charter-link" href="atelier-charter.html">
+    <span>READ OUR COMMON RULES</span>
+    <strong>→</strong>
+  </a>
+</section>
+
+<section class="atelier-lower">
+  <article class="atelier-principles">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">06 / PRINCIPLES</div>
+      <div class="tri-label"><span class="jp">方針</span><span class="fr">Principes</span></div>
+    </header>
+    <div class="atelier-principle-grid">
+      
+      <div class="atelier-principle">
+        <span>01</span>
+        <h3>SMALL SCALE</h3>
+        <p>Des projets à échelle humaine.</p>
+      </div>
+      
+      <div class="atelier-principle">
+        <span>02</span>
+        <h3>PROTOTYPE FIRST</h3>
+        <p>Chercher le clic avant de polir les boulons.</p>
+      </div>
+      
+      <div class="atelier-principle">
+        <span>03</span>
+        <h3>DOCUMENT WHAT MATTERS</h3>
+        <p>Garder assez de traces pour comprendre et transmettre.</p>
+      </div>
+      
+      <div class="atelier-principle">
+        <span>04</span>
+        <h3>BUILD FOR PEOPLE</h3>
+        <p>Les outils s’adaptent aux gens. Pas l’inverse.</p>
+      </div>
+      
+    </div>
+  </article>
+
+  <article class="atelier-log">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">07 / LOG</div>
+      <div class="tri-label"><span class="jp">作業ログ</span><span class="fr">Carnet d’établi</span></div>
+    </header>
+    <div class="atelier-log-list">
+      
+      <div class="atelier-log-entry">
+        <time>2026.10.10</time>
+        <div>
+          <strong>LAZARE / CASE 001</strong>
+          <p>Premier dossier publié : un disque LaCie rendu inaccessible par sa chaîne USB, remis en service avec une interface SATA-USB alimentée, après diagnostic croisé et vérification NTFS.</p>
+        </div>
+        <span aria-hidden="true">→</span>
+      </div>
+      
+      <div class="atelier-log-entry">
+        <time>2026.10.07</time>
+        <div>
+          <strong>THE TEAM / CHARTER</strong>
+          <p>Structure ajoutée pour le casting prévisionnel des agents et une version courte, publique et diégétique de la Constitution de l’Atelier.</p>
+        </div>
+        <span aria-hidden="true">→</span>
+      </div>
+      
+      <div class="atelier-log-entry">
+        <time>2026.10.07</time>
+        <div>
+          <strong>PAPER / SIGNAL</strong>
+          <p>Direction visuelle validée pour la page Atelier. Même grammaire que le portfolio, climat plus doux.</p>
+        </div>
+        <span aria-hidden="true">→</span>
+      </div>
+      
+      <div class="atelier-log-entry">
+        <time>2026.10.10</time>
+        <div>
+          <strong>COCKPIT / FIRST PHASE</strong>
+          <p>Première phase clôturée : trois vues NOW, Établi et Constellation, essais humains et distributions privées Windows / Ubuntu. Fiche de conception disponible depuis l’Atelier.</p>
+        </div>
+        <span aria-hidden="true">→</span>
+      </div>
+      
+      <div class="atelier-log-entry">
+        <time>2026.09.30</time>
+        <div>
+          <strong>WAR RIG / ORDERED</strong>
+          <p>La future machine principale est commandée. L’infrastructure peut maintenant être pensée autour d’un matériel concret.</p>
+        </div>
+        <span aria-hidden="true">→</span>
+      </div>
+      
+    </div>
+  </article>
+</section>
+
+</main>
+
+<footer class="footer atelier-footer">
+  <div class="footer-main">
+    <strong>PAPER /<br>SIGNAL</strong>
+    <div class="project-footer-joke">
+      <span class="theme-mark repair">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/><circle cx="41" cy="26" r="3.5" fill="#080808"/><path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/><path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/></svg>
+
+</span>
+      <span><b>WORKSHOP NOTE 01</b><br>Si ça marche, noter pourquoi avant de démonter autre chose.</span>
+    </div>
+    <div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div>
+  </div>
+  <div class="footer-side">
+    <div>ATELIER / WORKSHOP SYSTEM<br>工房 / 試験 / 記録</div>
+    <div>BUILD 0.3 / 2026</div>
+  </div>
+</footer>
+
+<script src="rrt4-safe.js"></script>
+<script src="atelier-rail.js"></script><script src="rrt4-lexicon.js"></script>
+</body>
+</html>

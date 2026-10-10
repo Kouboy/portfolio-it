@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Design system du Portfolio Signal : Technical Optimism.">
+<title>Portfolio Signal — Design System</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header">
+  <a class="brand" href="index.html"><span class="brandmark">NG</span><span>PORTFOLIO SIGNAL</span><small>DESIGN SYSTEM / REV.01</small></a>
+  <nav class="nav">
+    <a href="index.html">Portfolio</a>
+    <a href="#palette">Palette</a>
+    <a href="#components">Components</a>
+    <a href="#mascots">Mascots</a><a href="#language">Language</a><a href="#motion">Motion</a>
+  </nav>
+</header>
+
+<main id="content">
+<section class="style-intro">
+  <div>
+    <div class="meta">DESIGN SYSTEM / TECHNICAL OPTIMISM / REV.01</div>
+    <h1>Sun +<br>Signal</h1>
+    <p>Rigueur graphique, chaleur solaire, documentation technique. L'influence techno reste dans la précision, les micro-signaux et la typographie. L'influence RRT4 porte le climat général : espace, couleur, mouvement et positivité.</p>
+  </div>
+  <div class="black">
+    <div class="meta">CORE PRINCIPLE</div>
+    <p class="micro-note">Le fond safran est l'environnement normal. Le noir concentre l'information. Les autres couleurs annotent seulement.</p>
+    <div style="margin-top:60px;font-size:4rem;font-weight:1000;line-height:.8;opacity:.16" class="jp">修復<br>記録<br>試験</div>
+  </div>
+</section>
+
+<section class="style-section" id="palette">
+  <aside class="rail"><div class="meta">01 / PALETTE</div></aside>
+  <div class="content">
+    <h2>Color roles</h2>
+    <div class="swatches">
+      <div class="swatch sun"><small>FIELD / 60–70%</small><strong>#F6B500<br>SUN</strong></div>
+      <div class="swatch black"><small>FOCUS / TECH</small><strong>#050505<br>BLACK</strong></div>
+      <div class="swatch paper"><small>READING / PROOF</small><strong>#F6F0DF<br>PAPER</strong></div>
+      <div class="swatch pale"><small>UTILITY / TAB</small><strong>#FFD86C<br>PALE</strong></div>
+      <div class="swatch gray"><small>NEUTRAL UI</small><strong>#B8AD8C<br>WARM GRAY</strong></div>
+      <div class="swatch cyan"><small>DIAGNOSTIC</small><strong>#32D9EE<br>CYAN</strong></div>
+      <div class="swatch pink"><small>TOOLS / HUMAN NOTE</small><strong>#FF4A98<br>PINK</strong></div>
+      <div class="swatch orange"><small>ACTION / REPAIR</small><strong>#FF5B00<br>ORANGE</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="components">
+  <aside class="rail"><div class="meta">02 / COMPONENTS</div></aside>
+  <div class="content">
+    <h2>Components and hierarchy</h2>
+    <div class="component-demo">
+      <div class="utility-band">
+        <div class="gray">UTILITY BAND</div>
+        <div>MODE / CONTEXT / STATUS</div>
+        <div class="black">→ ACTION</div>
+      </div>
+      <div class="theme-key">
+        <span class="key"><span class="theme-mark repair"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg></span>REPAIR / REUSE</span>
+        <span class="key"><span class="theme-mark system"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg></span>SYSTEM / NETWORK</span>
+        <span class="key"><span class="theme-mark diagnostic"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg></span>DIAGNOSTIC / EVIDENCE</span>
+        <span class="key"><span class="theme-mark tool"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg></span>TOOLS / MEDIATION</span>
+      </div>
+      <div>
+        <span class="side-note cyan">context / brief</span>
+        <span class="side-note pink">outcome / complete</span>
+        <span class="side-note gray">neutral note</span>
+        <span class="side-note black">system state</span>
+      </div>
+      <p class="micro-note">Une page peut avoir plusieurs micro-signaux, mais jamais plusieurs gestes majeurs concurrents.</p>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="mascots">
+  <aside class="rail"><div class="meta">03 / MASCOTS</div></aside>
+  <div class="content">
+    <h2>Thematic marks</h2>
+    <div class="mascot-grid">
+      <article class="mascot-spec">
+        <span class="theme-mark repair"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg></span>
+        <h3>Local Duck</h3>
+        <p>Réemploi, réparation, terrain, bricolage et petites notes pratiques. Peut faire une blague de bas de page.</p>
+      </article>
+      <article class="mascot-spec">
+        <span class="theme-mark system"><svg viewBox="0 0 80 80" aria-hidden="true">
+<rect x="16" y="16" width="48" height="46" rx="3" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<rect x="21" y="22" width="38" height="28" fill="#080808"/>
+<circle cx="32" cy="35" r="3.5" fill="#e6ff00"/>
+<circle cx="48" cy="35" r="3.5" fill="#e6ff00"/>
+<path d="M29 43 Q40 49 51 43" fill="none" stroke="#fffaf0" stroke-width="2.5"/>
+</svg></span>
+        <h3>Archive Node</h3>
+        <p>Systèmes, services, réseau, stockage et infrastructure.</p>
+      </article>
+      <article class="mascot-spec">
+        <span class="theme-mark diagnostic"><svg viewBox="0 0 80 80" aria-hidden="true">
+<path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/>
+<circle cx="40" cy="40" r="12" fill="currentColor"/>
+<circle cx="40" cy="40" r="5" fill="#32d9ee"/>
+</svg></span>
+        <h3>Reviewer Eye</h3>
+        <p>Diagnostic, preuve, recette, observation et vérification.</p>
+      </article>
+      <article class="mascot-spec">
+        <span class="theme-mark tool"><svg viewBox="0 0 80 80" aria-hidden="true">
+<polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/>
+<circle cx="40" cy="40" r="7" fill="currentColor"/>
+</svg></span>
+        <h3>Spark</h3>
+        <p>Outils, interfaces, médiation et expérimentation légère.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="style-section">
+  <aside class="rail"><div class="meta">04 / RULES</div></aside>
+  <div class="content">
+    <h2>Composition rules</h2>
+    <div class="rules-list">
+      <article><div class="meta">R01</div><h3>One big gesture</h3><p>Un seul énorme titre, aplat noir ou rupture majeure par écran.</p></article>
+      <article><div class="meta">R02</div><h3>Two accents max</h3><p>Hors index global, un écran utilise au maximum deux micro-couleurs secondaires pour préserver une hiérarchie nette.</p></article>
+      <article><div class="meta">R03</div><h3>Mascots are signs</h3><p>Une mascotte par fonction ou section pertinente. Jamais comme papier peint.</p></article>
+      <article><div class="meta">R04</div><h3>Kanji are labels</h3><p>Ils nomment ou ponctuent. Ils ne remplacent jamais une information utile.</p></article>
+      <article><div class="meta">R05</div><h3>Reading stays boring</h3><p>Les paragraphes restent sobres, contrastés et prévisibles. Le spectacle vit autour d'eux.</p></article>
+      <article><div class="meta">R06</div><h3>Functional information</h3><p>Les données, diagrammes et composants graphiques correspondent à des fonctions ou informations identifiables.</p></article>
+    </div>
+    <div class="dont" style="margin-top:24px">
+      <strong>COMPOSITION DISCIPLINE</strong>
+      <ul>
+        <li>Les surfaces restent franches : aplats, lignes nettes et contrastes directs.</li>
+        <li>La grille organise la composition sans devenir un motif permanent.</li>
+        <li>Les kanji servent de repères sémantiques courts et cohérents.</li>
+        <li>Les mascottes restent des repères thématiques et des signatures secondaires.</li>
+        <li>Chaque couleur secondaire possède un rôle fonctionnel défini.</li>
+        <li>Le vocabulaire technique décrit des fonctions et états réels du projet.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="language">
+  <aside class="rail">
+    <div class="tri-stack">
+      <span class="en">05 / LANGUAGE</span>
+      <span class="jp">言語設計</span>
+      <span class="fr">Grammaire trilingue</span>
+    </div>
+  </aside>
+  <div class="content">
+    <h2>FR tells. EN structures. JP signs.</h2>
+    <p class="micro-note">Les trois langues n’occupent pas la même fonction. Le mélange est volontaire, mais jamais arbitraire.</p>
+    <div class="rules-list" style="margin-top:24px">
+      <article><div class="meta">FR / CONTENT</div><h3>Le français raconte</h3><p>Paragraphes, explications, raisonnement, contexte et retour d’expérience.</p></article>
+      <article><div class="meta">EN / INTERFACE</div><h3>L’anglais structure</h3><p>Navigation, états, catégories, protocoles, unités et micro-UI.</p></article>
+      <article><div class="meta">JP / SEMANTIC SIGN</div><h3>Le japonais ponctue</h3><p>Kanji courts utilisés comme repères sémantiques et visuels cohérents.</p></article>
+      <article><div class="meta">RULE</div><h3>No triple translation everywhere</h3><p>Les trois couches ne sont affichées ensemble que lorsqu’elles améliorent réellement la hiérarchie.</p></article>
+    </div>
+    <h3 style="margin-top:32px;text-transform:uppercase;letter-spacing:-.04em">Lexicon</h3>
+    <div class="lexicon-grid"><article class="lexicon-item">
+      <div>
+        <div class="jp">修復</div>
+        <div class="en">REPAIR / RESTORE</div>
+        <div class="fr">Réparation / remise en état</div>
+      </div>
+      <code>Réemploi, panne matérielle, restauration</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">記録</div>
+        <div class="en">FIELD LOG / RECORD</div>
+        <div class="fr">Journal / trace</div>
+      </div>
+      <code>Démarche, notes, chronologie</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">試験</div>
+        <div class="en">TEST</div>
+        <div class="fr">Test / essai</div>
+      </div>
+      <code>Validation technique</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">接続</div>
+        <div class="en">CONNECTION</div>
+        <div class="fr">Connexion</div>
+      </div>
+      <code>Réseau, liaisons, topologie</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">制御</div>
+        <div class="en">CONTROL</div>
+        <div class="fr">Contrôle</div>
+      </div>
+      <code>Administration, accès, permissions</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">構築</div>
+        <div class="en">BUILD / DEPLOY</div>
+        <div class="fr">Construction / déploiement</div>
+      </div>
+      <code>Mise en place d’un système</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">診断</div>
+        <div class="en">DIAGNOSIS</div>
+        <div class="fr">Diagnostic</div>
+      </div>
+      <code>Recherche de panne</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">証拠</div>
+        <div class="en">EVIDENCE</div>
+        <div class="fr">Preuve</div>
+      </div>
+      <code>Captures, mesures, résultats</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">結果</div>
+        <div class="en">OUTCOME</div>
+        <div class="fr">Résultat</div>
+      </div>
+      <code>État final / validation</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">観測</div>
+        <div class="en">OBSERVATION</div>
+        <div class="fr">Observation</div>
+      </div>
+      <code>Supervision, vérification</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">保守</div>
+        <div class="en">MAINTENANCE</div>
+        <div class="fr">Maintenance</div>
+      </div>
+      <code>Entretien, suivi</code>
+    </article>
+<article class="lexicon-item">
+      <div>
+        <div class="jp">再利用</div>
+        <div class="en">REUSE</div>
+        <div class="fr">Réemploi</div>
+      </div>
+      <code>Réaffectation d’un matériel</code>
+    </article></div>
+  </div>
+</section>
+
+
+<section class="style-section" id="motion">
+  <aside class="rail">
+    <div class="tri-stack">
+      <span class="en">06 / MOTION</span>
+      <span class="jp">動き</span>
+      <span class="fr">Mouvement</span>
+    </div>
+  </aside>
+  <div class="content">
+    <h2>Quiet at rest. Alive on interaction.</h2>
+    <p class="micro-note">Le mouvement indique une interaction, un changement d’état ou une présence. Il reste bref, rare et fonctionnel.</p>
+
+    <div class="rules-list" style="margin-top:24px">
+      <article><div class="meta">HOVER / 140–190 MS</div><h3>Snap</h3><p>Les lignes, flèches et onglets réagissent immédiatement avec quelques pixels de déplacement.</p></article>
+      <article><div class="meta">PANEL / 280 MS</div><h3>Reveal</h3><p>Les panneaux s’ouvrent par expansion courte, rotation de flèche et changement d’état du label.</p></article>
+      <article><div class="meta">AMBIENT / ~10 S</div><h3>Pulse</h3><p>Une seule mascotte ou un seul rail reçoit ponctuellement une micro-animation discrète.</p></article>
+      <article><div class="meta">SCROLL / ONCE</div><h3>Arrival</h3><p>Les sections apparaissent avec un déplacement vertical minimal, une seule fois.</p></article>
+    </div>
+
+    <h3 style="margin-top:32px;text-transform:uppercase;letter-spacing:-.04em">Expandable panel</h3>
+    <details class="signal-panel" style="margin-top:14px">
+      <summary>Motion protocol / 動き</summary>
+      <div class="panel-inner">
+        <div class="panel-content">
+          <div class="panel-copy">
+            Le panneau reste compact lorsqu’il est fermé. À l’ouverture, la flèche pivote et le contenu se révèle rapidement, sans rebond ni animation décorative longue.
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+
+<section class="style-section" id="safeflow">
+  <aside class="rail">
+    <div class="tri-stack">
+      <span class="en">07 / SAFE FLOW</span>
+      <span class="jp">文字</span>
+      <span class="fr">Animation tolérante aux erreurs</span>
+    </div>
+  </aside>
+  <div class="content">
+    <h2>Visible first. Animated second.</h2>
+    <p class="micro-note">Le contenu existe toujours dans son état final. L’animation est une surcouche temporaire rejouée à l’entrée du viewport, jamais une condition nécessaire à la lisibilité.</p>
+    <div class="rules-list" style="margin-top:24px">
+      <article><div class="meta">FAIL SAFE</div><h3>Always readable</h3><p>Si JavaScript ou IntersectionObserver échoue, tous les textes et composants restent visibles.</p></article>
+      <article><div class="meta">TEXT</div><h3>Character flow</h3><p>Les textes ordinaires rejouent un reveal caractère par caractère avec un bref flash cyan/crème.</p></article>
+      <article><div class="meta">DISPLAY TYPE</div><h3>Slide</h3><p>Les grands titres anglais restent traités comme des formes graphiques et glissent par masque.</p></article>
+      <article><div class="meta">VIEWPORT</div><h3>Replay without hiding</h3><p>Sortir de l’écran réarme la séquence sans masquer le contenu. Le retour relance simplement l’animation.</p></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <strong>Technical<br>Optimism</strong>
+    <div class="footer-joke">
+      <span class="theme-mark repair"><svg viewBox="0 0 80 80" aria-hidden="true">
+<ellipse cx="42" cy="51" rx="24" ry="17" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="36" cy="29" r="15" fill="currentColor" stroke="#080808" stroke-width="3"/>
+<circle cx="41" cy="26" r="3.5" fill="#080808"/>
+<path d="M22 32 L7 38 L24 43 Q31 37 22 32Z" fill="#ff5b00" stroke="#080808" stroke-width="2"/>
+<path d="M52 48 Q66 35 72 51 Q65 66 52 48Z" fill="#ff4a98" stroke="#080808" stroke-width="2"/>
+</svg></span>
+      <span><b>LOCAL DUCK / DESIGN REVIEW</b><br>Chaque composant graphique gagne sa place en aidant à lire, situer ou comprendre.</span>
+    </div>
+  </div>
+  <div class="footer-side">
+    <div>PORTFOLIO SIGNAL / SYSTEM REV.04</div>
+    <div>SUN / SIGNAL / EVIDENCE / HUMOR</div>
+  </div>
+</footer>
+<script src="motion.js"></script>
+</body>
+</html>
