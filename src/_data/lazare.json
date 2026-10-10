@@ -1,6 +1,6 @@
 {
-  "edition": "FIELD REGISTER / 0.1",
-  "status": "ACTIVE / WORK IN PROGRESS",
+  "edition": "FIELD REGISTER / 0.2",
+  "status": "LABORATORY / OPEN",
   "mission": "Diagnostiquer, sauver et remettre en service des machines, des supports et des archives qui ont encore quelque chose à raconter.",
   "introduction": [
     "LAZARE est le chantier de diagnostic, de restauration et de préservation de l’Atelier. Il rassemble des interventions réelles, des essais prudents et les traces utiles pour reprendre un dossier sans effacer son histoire.",
@@ -132,8 +132,42 @@
         "Une réparation NTFS ne remplace pas un diagnostic de périphérique USB absent.",
         "Le remontage et la lecture des fichiers prouvent un rétablissement fonctionnel, pas une fiabilité éternelle."
       ],
-      "evidenceNote": "Photographies du disque et capture SMART conservées hors du site ; publication à venir après sélection et masquage des identifiants. Le schéma ci-dessus illustre la chaîne matérielle, ce n’est pas une photographie de preuve."
+      "evidenceNote": "Photographies du disque et capture SMART conservées hors du site ; publication à venir après sélection et masquage des identifiants. Le schéma ci-dessus illustre la chaîne matérielle, ce n’est pas une photographie de preuve.",
+      "visual": "hdd",
+      "outcomeTitle": "Une panne de moins. Un disque de plus."
     }
   ],
-  "acronym": "Laboratoire d’Archivage et de Zélée Assistance à la Résurrection Électronique"
+  "acronym": "Laboratoire d’Archivage et de Zélée Assistance à la Résurrection Électronique",
+  "prospects": [
+    {
+      "id": "P.01",
+      "title": "Toshiba Satellite 4070CDS",
+      "type": "PORTABLE / DOS / WINDOWS 98",
+      "status": "REPÉRÉ",
+      "description": "Un portable ancien à documenter et examiner avec méthode. Aucun résultat de restauration n'est encore présenté.",
+      "glyph": "笔记本",
+      "pinyin": "bǐjìběn",
+      "meaning": "Ordinateur portable, carnet"
+    },
+    {
+      "id": "P.02",
+      "title": "Power Macintosh 7100/80",
+      "type": "ARCHIVES / MACINTOSH",
+      "status": "À EXAMINER",
+      "description": "Préserver d'abord les données et le contexte avant toute manipulation. Aucun diagnostic publié à ce stade.",
+      "glyph": "档案",
+      "pinyin": "dàng'àn",
+      "meaning": "Archives, dossier"
+    },
+    {
+      "id": "P.03",
+      "title": "Disques anciens",
+      "type": "STOCKAGE / PRÉSERVATION",
+      "status": "INVENTAIRE",
+      "description": "Identifier les supports, leurs interfaces et leurs risques avant de tenter une lecture ou une récupération.",
+      "glyph": "存储",
+      "pinyin": "cúnchǔ",
+      "meaning": "Stockage, mémorisation"
+    }
+  ]
 }

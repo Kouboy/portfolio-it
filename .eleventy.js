@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("cockpit-story.css");
   eleventyConfig.addPassthroughCopy("atelier.css");
   eleventyConfig.addPassthroughCopy("lazare.css");
+  eleventyConfig.addPassthroughCopy("lazare-motion.js");
   eleventyConfig.addPassthroughCopy("atelier-rail.js");
   eleventyConfig.addPassthroughCopy("cockpit-story.js");
   eleventyConfig.addPassthroughCopy("rrt4-lexicon.css");
