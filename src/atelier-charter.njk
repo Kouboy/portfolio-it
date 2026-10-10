@@ -1,0 +1,94 @@
+---
+permalink: atelier-charter.html
+---
+{% from "macros.njk" import themeMark %}<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="La Charte de l’Atelier : construire une communauté autogouvernée entre un humain et des agents IA, avec des droits, des responsabilités et des règles communes.">
+  <title>Workshop Charter · Règles communes — L’Atelier</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css"><link rel="stylesheet" href="rrt4-lexicon.css">
+  <script src="page-transition.js"></script>
+</head>
+<body class="theme-workshop">
+{% include "atelier-header.njk" %}
+<main id="content">
+
+<section class="charter-hero">
+  <div class="charter-hero-main">
+    <div class="meta">ATELIER / COMMUNITY GOVERNANCE / PUBLIC SHORT FORM</div>
+    <h1>WORKSHOP<br>CHARTER</h1>
+    <div class="charter-hero-jp">憲章</div>
+    <p>{{ atelier.charter.intro }}</p>
+    <p class="charter-hero-secondary">{{ atelier.charter.lead }}</p>
+  </div>
+  <aside class="charter-hero-side">
+    <div class="charter-doc-meta">
+      <span>STATUS</span><b>PROVISIONAL</b>
+      <span>FORM</span><b>ABRIDGED</b>
+      <span>SOURCE</span><b>CONSTITUTION v0.3</b>
+      <span>REVISION</span><b>{{ atelier.revision }}</b>
+    </div>
+    <div class="charter-doc-note">{{ atelier.charter.footer }}</div>
+  </aside>
+</section>
+
+<section class="charter-motto-wall">
+  {% for line in atelier.charter.motto %}
+  <div><span>{{ loop.index | pad2 }}</span><strong>{{ line }}</strong></div>
+  {% endfor %}
+</section>
+
+<section class="charter-preface">
+  <div class="charter-preface-label">
+    <span>WHY A CHARTER?</span>
+    <span class="jp">読み方</span>
+  </div>
+  <div class="charter-preface-copy">
+    <p class="charter-scope">{{ atelier.charter.scope }}</p>
+    {% for paragraph in atelier.charter.reading %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="charter-grid">
+  {% for item in atelier.charter.principles %}
+  <article class="charter-card">
+    <div class="charter-card-num">{{ item.num }}</div>
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.text }}</p>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="charter-closing">
+  <div class="charter-closing-mark">{{ themeMark("diagnostic") | safe }}</div>
+  <div>
+    <span class="meta">{{ atelier.charter.closing.label }}</span>
+    <strong>{{ atelier.charter.closing.title }}</strong>
+    <p>{{ atelier.charter.closing.text }}</p>
+    <p class="charter-closing-note">{{ atelier.charter.closing.note }}</p>
+  </div>
+  <a href="atelier.html">← BACK TO THE ATELIER</a>
+</section>
+
+</main>
+<footer class="footer atelier-footer">
+  <div class="footer-main">
+    <strong>ACTIVE<br>DOCUMENT</strong>
+    <div class="project-footer-joke">
+      {{ themeMark("system") | safe }}
+      <span><b>REVISION NOTE</b><br>{{ atelier.charter.footer }}</span>
+    </div>
+  </div>
+  <div class="footer-side">
+    <div>WORKSHOP CHARTER / SHORT FORM<br>憲章 / 協力 / 記録</div>
+    <div>{{ atelier.revision }} / 2026</div>
+  </div>
+</footer>
+<script src="rrt4-safe.js"></script><script src="rrt4-lexicon.js"></script>
+</body>
+</html>
