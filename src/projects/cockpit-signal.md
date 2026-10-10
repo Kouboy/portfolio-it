@@ -1,7 +1,7 @@
 ---
 layout: cockpit.njk
 tags:
-  - project
+  - atelier-project
 permalink: cockpit-signal.html
 num: "CS"
 order: 98
