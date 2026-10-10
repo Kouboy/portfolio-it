@@ -1,0 +1,267 @@
+---
+permalink: atelier.html
+---
+{% from "macros.njk" import themeMark, mascotChip %}<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="L’Atelier de Nicolas Georget : projets en cours, infrastructure, prototypes, outils et journal de fabrication.">
+  <title>L’Atelier — Nicolas Georget</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css"><link rel="stylesheet" href="rrt4-lexicon.css">
+  <script src="page-transition.js"></script>
+</head>
+<body class="theme-workshop">
+{% include "atelier-header.njk" %}
+<main id="content">
+
+<section class="hero atelier-hero">
+  <div class="hero-main">
+    <div class="hero-kicker meta">{{ atelier.hero.kicker }}</div>
+    <h1>
+      <span>{{ atelier.hero.title[0] }}</span>
+      <span class="signal">{{ atelier.hero.title[1] }}</span>
+    </h1>
+    <div class="atelier-jp" aria-hidden="true">{{ atelier.hero.jp }}</div>
+    <div class="hero-lede atelier-lede">
+      <b>WORKSHOP NOTE</b>
+      <div>
+        <p>{{ atelier.hero.lede }}</p>
+        <p>{{ atelier.hero.sublede }}</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="hero-side atelier-status" aria-label="État du système">
+    <div class="atelier-status-top">
+      <span class="meta">SYSTEM STATUS</span>
+      <span class="meta">{{ atelier.revision }}</span>
+    </div>
+    <div class="atelier-status-state">
+      <span class="atelier-dot warm"></span>
+      <strong>{{ atelier.status.label }}</strong>
+      <small>{{ atelier.status.note }}</small>
+    </div>
+    <div class="atelier-machine-list">
+      {% for machine in atelier.status.machines %}
+      <div class="atelier-machine">
+        <b>{{ machine.name }}</b>
+        <span>{{ machine.role }}</span>
+        <span class="atelier-machine-state {{ machine.tone }}">{{ machine.state }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="atelier-counts">
+      {% for item in atelier.status.counts %}
+      <div><small>{{ item.label }}</small><b>{{ item.value }}</b></div>
+      {% endfor %}
+    </div>
+  </aside>
+</section>
+
+<div class="atelier-strip">
+  <div>{{ atelier.hero.rail }}</div>
+  <div>PAPER / SIGNAL</div>
+</div>
+
+<section class="atelier-dual atelier-intro">
+  <article class="atelier-panel atelier-panel-copy">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">{{ atelier.intro.en }}</div>
+      <div class="tri-label"><span class="jp">{{ atelier.intro.jp }}</span><span class="fr">{{ atelier.intro.fr }}</span></div>
+    </header>
+    <div class="atelier-copy-poster">
+      <div class="atelier-copy">
+        {% for p in atelier.intro.paragraphs %}<p>{{ p }}</p>{% endfor %}
+      </div>
+      <aside class="atelier-poster">
+        <div>
+          {% for line in atelier.intro.poster %}<strong>{{ line }}</strong>{% endfor %}
+        </div>
+        <div class="atelier-poster-jp">
+          {% for line in atelier.intro.poster_jp %}<span>{{ line }}</span>{% endfor %}
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <article class="atelier-panel atelier-panel-systems">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">{{ atelier.systems.en }}</div>
+      <div class="tri-label"><span class="jp">{{ atelier.systems.jp }}</span><span class="fr">{{ atelier.systems.fr }}</span></div>
+    </header>
+    <div class="atelier-copy">
+      {% for p in atelier.systems.paragraphs %}<p>{{ p }}</p>{% endfor %}
+    </div>
+    <div class="atelier-map-note">{{ atelier.systems.note }}</div>
+    <div class="atelier-system-map" aria-label="Architecture cible simplifiée">
+      <div class="atelier-node human"><b>{{ atelier.systems.nodes[0].name }}</b><small>{{ atelier.systems.nodes[0].meta }}</small></div>
+      <div class="atelier-link vertical">↕</div>
+      <div class="atelier-node orchestration"><b>{{ atelier.systems.nodes[1].name }}</b><small>{{ atelier.systems.nodes[1].meta }}</small></div>
+      <div class="atelier-link vertical">↕</div>
+      <div class="atelier-node-row">
+        {% for node in atelier.systems.nodes %}
+        {% if loop.index > 2 %}
+        <div class="atelier-node"><b>{{ node.name }}</b><small>{{ node.meta }}</small></div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+</section>
+
+
+<section class="atelier-team">
+  <header class="atelier-section-head atelier-team-head">
+    <div>
+      <div class="atelier-heading-id">{{ atelier.team.en }}</div>
+      <div class="tri-label"><span class="jp">{{ atelier.team.jp }}</span><span class="fr">{{ atelier.team.fr }}</span></div>
+    </div>
+    <div>
+      <p>{{ atelier.team.intro }}</p>
+      <div class="atelier-team-note">{{ atelier.team.note }}</div>
+    </div>
+  </header>
+  <div class="atelier-team-grid">
+    {% for member in atelier.team.members %}
+    <article class="atelier-team-card">
+      <div class="atelier-team-card-top">
+        <span>{{ member.id }}</span>
+        <span class="atelier-badge {{ member.tone }}">{{ member.status }}</span>
+      </div>
+      <div class="atelier-team-identity">
+        {{ themeMark(member.mark) | safe }}
+        <div>
+          <h3>{{ member.name }}</h3>
+          <div class="atelier-team-role">{{ member.role }}</div>
+        </div>
+      </div>
+      <p>{{ member.copy }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="atelier-work" id="atelier-work">
+  <header class="atelier-section-head">
+    <div>
+      <div class="atelier-heading-id">{{ atelier.work.en }}</div>
+      <div class="tri-label"><span class="jp">{{ atelier.work.jp }}</span><span class="fr">{{ atelier.work.fr }}</span></div>
+    </div>
+    <p>{{ atelier.work.intro }}</p>
+  </header>
+  <div class="atelier-work-rail-head">
+    <div class="atelier-work-counter" aria-live="polite">
+      <span data-work-current>01</span>
+      <span aria-hidden="true"> / </span>
+      <span data-work-total>{{ atelier.work.items | length | pad2 }}</span>
+      <small>UNITS</small>
+    </div>
+    <div class="atelier-work-progress" aria-hidden="true"><span data-work-progress></span></div>
+    <div class="atelier-work-controls" aria-label="Parcourir les projets">
+      <button type="button" class="atelier-work-button" data-work-prev aria-label="Projet précédent" disabled>←</button>
+      <button type="button" class="atelier-work-button" data-work-next aria-label="Projet suivant" disabled>→</button>
+    </div>
+  </div>
+  <div class="atelier-work-grid" data-work-rail tabindex="0" aria-label="Projets en cours">
+    {% for item in atelier.work.items %}
+    <article class="atelier-work-card">
+      <div class="atelier-work-top">
+        <span>{{ item.num }}</span>
+        <span class="atelier-badge {{ item.tone }}">{{ item.status }}</span>
+      </div>
+      <div class="atelier-work-visual visual-{{ loop.index }}">
+        <span>
+          {% if loop.index == 1 %}{{ themeMark("system") | safe }}
+          {% elif loop.index == 2 %}{{ themeMark("repair") | safe }}
+          {% elif loop.index == 3 %}{{ themeMark("diagnostic") | safe }}
+          {% else %}{{ themeMark("tool") | safe }}{% endif %}
+        </span>
+      </div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.subtitle }}</p>
+      <div class="atelier-tags">{% for tag in item.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+      {% if item.href %}<a class="atelier-card-foot atelier-card-link" href="{{ item.href }}">LIRE LA FICHE <span>→</span></a>{% else %}<div class="atelier-card-foot">DOSSIER EN COURS <span>→</span></div>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+
+<section class="atelier-charter-teaser">
+  <div class="atelier-charter-index">
+    <div class="atelier-heading-id">{{ atelier.charter.en }}</div>
+    <div class="tri-label"><span class="jp">{{ atelier.charter.jp }}</span><span class="fr">{{ atelier.charter.fr }}</span></div>
+    <span class="atelier-charter-status">{{ atelier.charter.status }}</span>
+  </div>
+  <div class="atelier-charter-copy">
+    <p>{{ atelier.charter.intro }}</p>
+    <div class="atelier-charter-motto">
+      {% for line in atelier.charter.motto %}<span>{{ line }}</span>{% endfor %}
+    </div>
+  </div>
+  <a class="atelier-charter-link" href="atelier-charter.html">
+    <span>{{ atelier.charter.cta }}</span>
+    <strong>→</strong>
+  </a>
+</section>
+
+<section class="atelier-lower">
+  <article class="atelier-principles">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">{{ atelier.principles.en }}</div>
+      <div class="tri-label"><span class="jp">{{ atelier.principles.jp }}</span><span class="fr">{{ atelier.principles.fr }}</span></div>
+    </header>
+    <div class="atelier-principle-grid">
+      {% for item in atelier.principles.items %}
+      <div class="atelier-principle">
+        <span>{{ item.num }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </article>
+
+  <article class="atelier-log">
+    <header class="atelier-heading">
+      <div class="atelier-heading-id">{{ atelier.log.en }}</div>
+      <div class="tri-label"><span class="jp">{{ atelier.log.jp }}</span><span class="fr">{{ atelier.log.fr }}</span></div>
+    </header>
+    <div class="atelier-log-list">
+      {% for item in atelier.log.items %}
+      <div class="atelier-log-entry">
+        <time>{{ item.date }}</time>
+        <div>
+          <strong>{{ item.title }}</strong>
+          <p>{{ item.text }}</p>
+        </div>
+        <span aria-hidden="true">→</span>
+      </div>
+      {% endfor %}
+    </div>
+  </article>
+</section>
+
+</main>
+
+<footer class="footer atelier-footer">
+  <div class="footer-main">
+    <strong>PAPER /<br>SIGNAL</strong>
+    <div class="project-footer-joke">
+      {{ themeMark("repair") | safe }}
+      <span><b>WORKSHOP NOTE 01</b><br>Si ça marche, noter pourquoi avant de démonter autre chose.</span>
+    </div>
+    <div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div>
+  </div>
+  <div class="footer-side">
+    <div>ATELIER / WORKSHOP SYSTEM<br>工房 / 試験 / 記録</div>
+    <div>{{ atelier.revision }} / 2026</div>
+  </div>
+</footer>
+
+<script src="rrt4-safe.js"></script>
+<script src="atelier-rail.js"></script><script src="rrt4-lexicon.js"></script>
+</body>
+</html>
