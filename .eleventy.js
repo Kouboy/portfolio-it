@@ -1,5 +1,9 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles.css");
+  eleventyConfig.addPassthroughCopy("cockpit-story.css");
+  eleventyConfig.addPassthroughCopy("cockpit-story.js");
+  eleventyConfig.addPassthroughCopy("rrt4-lexicon.css");
+  eleventyConfig.addPassthroughCopy("rrt4-lexicon.js");
   eleventyConfig.addPassthroughCopy("rrt4-safe.js");
   eleventyConfig.addPassthroughCopy("page-transition.js");
   eleventyConfig.addPassthroughCopy("motion.js");

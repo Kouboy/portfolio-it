@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cockpit Signal : les coulisses d'une application locale conçue pour retrouver le fil des projets, avec NOW, l'Établi et Constellation.">
+<title>Cockpit Signal | Carnet de fabrication · Atelier</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="rrt4-lexicon.css"><link rel="stylesheet" href="cockpit-story.css">
+<script src="page-transition.js"></script>
+</head>
+<body class="cockpit-story">
+{% include "header.njk" %}
+<a class="cs-skip" href="#cs-content">Aller au récit Cockpit Signal</a>
+<div class="cs-utility"><span>ATELIER / 制作記録 / FIELD RECORD</span><span>COCKPIT SIGNAL · 2026.10.10</span><span>PREMIÈRE PHASE CLÔTURÉE</span></div>
+<main id="cs-content">
+<header class="cs-hero">
+  <div class="cs-hero-copy">
+    <div class="cs-meta">PROJECT FILE / CS-01 / APPLICATION DE BUREAU</div>
+    <p class="cs-eyebrow">Un outil pour retrouver son travail</p>
+    <h1>COCKPIT<br><em>SIGNAL<span class="cs-dot">.</span></em></h1>
+    <p class="cs-lede">Construire un outil pour <strong>retrouver le fil.</strong></p>
+    <p class="cs-intro">Des archives dispersées, trois façons de reprendre un projet et quelques laboratoires pour apprendre à rendre l'ensemble agréable à explorer.</p>
+    <div class="cs-hero-tags"><span>PROTOTYPE LOCAL</span><span>WINDOWS + UBUNTU 24.04</span><span>SANS IA INTÉGRÉE</span></div>
+  </div>
+  <div class="cs-hero-visual">
+    <div class="cs-media-label">VISUEL 00 / COUVERTURE À REMPLACER</div>
+    <div class="cs-cover-pattern" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="cs-hero-han"><span class="cs-lex" data-zh="工作台" data-zh-reading="gōngzuòtái" data-ja="作業台" data-ja-reading="sagyōdai" data-meaning="Établi, plan de travail">工作台</span></div>
+    <p>Une image réelle du logiciel viendra ici après anonymisation.</p>
+  </div>
+</header>
+<div class="cs-ticker"><span>CHOOSE / RESUME / CONNECT</span><span>拾い直す / KEEP THE THREAD</span><span>NO TELEMETRY / LOCAL FIRST</span></div>
+<div class="cs-controlbar">
+  <div class="cs-current"><b>LECTURE / 07 CHAPITRES</b><span>Une histoire accessible, des preuves à consulter à la demande.</span></div>
+  <div class="cs-language" role="group" aria-label="Écriture des annotations asiatiques">
+    <span>ANNOTATIONS</span>
+    <button type="button" data-cs-script="zh" aria-pressed="true" class="is-active">中文 / ZH</button>
+    <button type="button" data-cs-script="ja" aria-pressed="false">日本語 / JP</button>
+  </div>
+</div>
+<div class="cs-layout">
+  <nav class="cs-rail" aria-label="Chapitres de Cockpit Signal">
+    <a href="#cs-origin"><span>01</span> Le besoin</a>
+    <a href="#cs-truth"><span>02</span> Les données</a>
+    <a href="#cs-now"><span>03</span> NOW</a>
+    <a href="#cs-bench"><span>04</span> L'Établi</a>
+    <a href="#cs-map"><span>05</span> Constellation</a>
+    <a href="#cs-proof"><span>06</span> Les preuves</a>
+    <a href="#cs-lessons"><span>07</span> Ce qui reste</a>
+    <div class="cs-rail-sign">OBSERVE<br>TEST<br>REBUILD<br>RECORD</div>
+  </nav>
+  <div class="cs-chapters">
+    <section id="cs-origin" class="cs-chapter">
+      <div class="cs-kicker">01 / LE POINT DE DÉPART <span class="cs-lex" data-zh="起点" data-zh-reading="qǐdiǎn" data-ja="起点" data-ja-reading="kiten" data-meaning="Point de départ">起点</span></div>
+      <h2 class="cs-rise">Où en étions-nous <i>déjà ?</i></h2>
+      <div class="cs-prose cs-rise"><p>Il y a les projets que l'on termine. Et puis il y a tous les autres : interrompus pour réparer une machine, laissés en attente ou simplement mis en sommeil.</p><p>Quand on les reprend, la difficulté n'est pas toujours de trouver quoi faire. C'est de retrouver le dernier état, les essais déjà réalisés et la prochaine piste. <strong>Cockpit est né de ce coût invisible de la reprise.</strong></p><p>Pas une usine à productivité : un petit établi numérique où les idées peuvent attendre sans se transformer en obligations.</p></div>
+      <figure class="cs-media cs-rise" data-media="01"><div class="cs-media-art cs-paper-art"><span>ARCHIVES → REGISTRE → REPRISE</span><div class="cs-placeholder-cards"><b>NOTE / ?</b><b>PROJET / 70</b><b>REPRISE / →</b></div><strong>MÉDIA 01</strong></div><figcaption>À remplacer : composition sur les archives et le contexte de reprise. Illustration conceptuelle, pas photographie de la matière d'origine.</figcaption></figure>
+    </section>
+    <section id="cs-truth" class="cs-chapter">
+      <div class="cs-kicker">02 / SAVOIR NE PAS SAVOIR <span class="cs-lex" data-zh="记录" data-zh-reading="jìlù" data-ja="記録" data-ja-reading="kiroku" data-meaning="Consignation, journal">记录</span></div>
+      <h2 class="cs-rise">Ranger sans <i>inventer.</i></h2>
+      <div class="cs-prose cs-rise"><p>La matière première était un ensemble d'archives et de notes dispersées. Leur consolidation a permis d'établir un registre de <strong>70 entités</strong> : projets, machines, programmes et autres repères. Cela ne signifie pas 70 tâches à terminer.</p><p>Une archive peut décrire une intention ancienne sans prouver son état actuel. Cockpit distingue ce que l'on sait, ce qui reste à vérifier et ce qui est inconnu. Une ancienne importation ne doit pas effacer une décision humaine plus récente.</p></div>
+      <div class="cs-duo cs-rise"><div><small>CONNU</small><strong>Un projet existe.</strong><p>On conserve sa source.</p></div><div><small>INCONNU</small><strong>Sa prochaine action.</strong><p>On ne la fabrique pas.</p></div></div>
+    </section>
+    <section id="cs-now" class="cs-chapter cs-feature cs-feature-sun">
+      <div class="cs-kicker">03 / PREMIÈRE VUE <span class="cs-lex" data-zh="现在" data-zh-reading="xiànzài" data-ja="現在" data-ja-reading="genzai" data-meaning="Maintenant, présent">现在</span></div>
+      <h2 class="cs-rise">NOW<span class="cs-punc">↗</span></h2>
+      <p class="cs-deck cs-rise">Choisir sans se laisser commander.</p>
+      <div class="cs-prose cs-rise"><p>Quarante minutes libres, une énergie variable, plusieurs projets possibles. NOW ne cherche pas le chantier le plus important dans l'absolu, mais des <strong>actions praticables dans les conditions du moment.</strong></p><p>Des règles fixes examinent notamment la durée, l'énergie nécessaire et l'effet utile attendu. La personne garde la décision. La surprise ? Sur une base fraîche, NOW peut être vide. Sans prochaine action suffisamment renseignée, il refuse de prétendre savoir.</p></div>
+      <figure class="cs-media cs-rise" data-media="02"><div class="cs-media-art cs-ui-art"><span>CAPTURE / NOW / À ANONYMISER</span><div class="cs-ui-row"><b>TEMPS · 40 MIN</b><b>ÉNERGIE · À RENSEIGNER</b></div><div class="cs-ui-empty">?</div><strong>UNE LISTE VIDE PEUT ÊTRE HONNÊTE.</strong></div><figcaption>Média 02 à remplacer par une capture anonymisée de NOW. Le visuel actuel n'est pas une capture du produit.</figcaption></figure>
+      <div class="cs-note cs-rise"><b>CE QUE L'ON A APPRIS</b><p>Un classement vérifiable peut être plus utile qu'une recommandation plausible mais inventée.</p></div>
+    </section>
+    <section id="cs-bench" class="cs-chapter cs-feature cs-feature-paper">
+      <div class="cs-kicker">04 / DEUXIÈME VUE <span class="cs-lex" data-zh="工作台" data-zh-reading="gōngzuòtái" data-ja="作業台" data-ja-reading="sagyōdai" data-meaning="Établi, plan de travail">工作台</span></div>
+      <h2 class="cs-rise">L'ÉTABLI<span class="cs-punc">✳</span></h2>
+      <p class="cs-deck cs-rise">Laisser une note à son futur soi.</p>
+      <div class="cs-prose cs-rise"><p>Choisir un projet ne suffit pas. Il faut retrouver ses ressources, ce qui a déjà été essayé et par où recommencer. L'Établi sépare l'identité d'un projet, son état actuel, ses repères de reprise et l'historique de ses changements.</p><p>Le carnet et la sauvegarde explicite permettent de conserver les modifications. L'import d'anciennes notes ne doit pas écraser silencieusement les décisions humaines. Nous avons aussi travaillé la lisibilité : <strong>une fiche exhaustive n'est pas forcément une fiche utile.</strong></p></div>
+      <figure class="cs-media cs-rise" data-media="03"><div class="cs-media-art cs-ui-art cs-ui-bench"><span>CAPTURE / ÉTABLI / À ANONYMISER</span><div class="cs-bench-grid"><b>IDENTITÉ</b><b>ÉTAT ACTUEL</b><b>RESSOURCES</b><b>CARNET</b></div><strong>REPRENDRE SANS REPARTIR DE ZÉRO.</strong></div><figcaption>Média 03 à remplacer : édition, sauvegarde et carnet sur un corpus fictif, avec légende du scénario montré.</figcaption></figure>
+      <div class="cs-note cs-rise"><b>CE QUE L'ON A APPRIS</b><p>La mémoire d'un projet n'est pas qu'une pile de documents : elle comprend des sources, des décisions et un point de reprise.</p></div>
+    </section>
+    <section id="cs-map" class="cs-chapter cs-feature cs-feature-black">
+      <div class="cs-kicker">05 / TROISIÈME VUE <span class="cs-lex" data-zh="星图" data-zh-reading="xīngtú" data-ja="星図" data-ja-reading="seizu" data-meaning="Carte des étoiles">星图</span></div>
+      <h2 class="cs-rise">CONSTELLATION<span class="cs-punc">✧</span></h2>
+      <p class="cs-deck cs-rise">Prendre du recul sur un ensemble de relations.</p>
+      <div class="cs-prose cs-rise"><p>La carte représente les liens documentés entre les éléments de l'Atelier. Deux points proches à l'écran ne deviennent pas pour autant liés dans les données.</p><p>La première version fonctionnait, mais restait froide à manipuler. Plutôt que de refaire immédiatement le produit, nous avons testé les gestes dans un laboratoire indépendant, avec quinze nœuds fictifs.</p></div>
+      <figure class="cs-media cs-rise" data-media="04"><div class="cs-media-art cs-graph-art"><span>MOTION LAB / DONNÉES SYNTHÉTIQUES</span><svg viewBox="0 0 520 250" role="img" aria-label="Schéma conceptuel de nœuds reliés, et non capture du Motion Lab"><g stroke="#6e6e6e" stroke-width="2"><path d="M78 78L205 107 312 60 430 141 310 210 205 107 118 199 78 78M205 107 310 210"/></g><g fill="#f6f0df"><circle cx="78" cy="78" r="7"/><circle cx="205" cy="107" r="9"/><circle cx="118" cy="199" r="7"/><circle cx="312" cy="60" r="7"/><circle cx="310" cy="210" r="7"/></g><circle cx="430" cy="141" r="14" fill="#f6b500"/></svg><strong>UNE CARTE CORRECTE N'EST PAS FORCÉMENT AGRÉABLE.</strong></div><figcaption>Média 04 : schéma d'attente. À remplacer par le GIF réel du laboratoire ELASTIC, après vérification des images.</figcaption></figure>
+      <div class="cs-moments cs-rise"><div><b>01 / ELASTIC</b><p>Le point saisi suit immédiatement ; les voisins répondent avec un léger retard. Le ressenti a été validé à la manipulation.</p></div><div><b>02 / DEEP FOCUS</b><p>Un double-clic rapproche la caméra et ouvre un Digest. Un décalage entre sélection et fiche a révélé un problème de cohérence, puis a été corrigé.</p></div><div><b>03 / RETOUR AU PRODUIT</b><p>Les gestes retenus ont été reconstruits sur les vraies données. La disposition personnelle peut être sauvegardée puis réinitialisée.</p></div></div>
+      <div class="cs-note cs-rise"><b>CE QUE L'ON A APPRIS</b><p>On peut jeter un laboratoire de code et conserver la découverte qu'il a rendue possible.</p></div>
+    </section>
+    <section id="cs-proof" class="cs-chapter">
+      <div class="cs-kicker">06 / RÉSULTAT OBSERVÉ <span class="cs-lex" data-zh="验证" data-zh-reading="yànzhèng" data-ja="検証" data-ja-reading="kenshō" data-meaning="Vérification, validation">验证</span></div>
+      <h2 class="cs-rise">Du prototype au <i>logiciel.</i></h2>
+      <div class="cs-prose cs-rise"><p>La première phase s'est achevée le 10 octobre 2026 avec une application de bureau locale, sans compte obligatoire, télémétrie ni IA intégrée. Les parcours retenus ont été essayés et acceptés sur Windows et Ubuntu 24.04.</p><p>Les tests automatisés ont vérifié des comportements ciblés. Les essais humains ont apporté un autre éclairage : cohérence, agrément, lecture et reprise des données. Un retour favorable sur un ancien portable sous Xfce reste un témoignage, pas une mesure de performance généralisable.</p></div>
+      <div class="cs-facts cs-rise"><div><b>70</b><span>entités canoniques</span></div><div><b>02</b><span>distributions privées</span></div><div><b>0</b><span>IA à l'exécution</span></div></div>
+      <figure class="cs-media cs-rise" data-media="05"><div class="cs-media-art cs-paper-art"><span>CAPTURES / WINDOWS + UBUNTU / À FOURNIR</span><div class="cs-two-screens"><div>WINDOWS<br>SCREENSHOT</div><div>UBUNTU<br>SCREENSHOT</div></div><strong>DEUX ENVIRONNEMENTS TESTÉS.</strong></div><figcaption>Média 05 : emplacements pour captures réelles anonymisées. Aucun essai sur toutes les versions d'OS n'est affirmé.</figcaption></figure>
+      <div class="cs-limit cs-rise"><strong>Ce qui reste ouvert</strong><p>La restauration complète après incident, certains parcours d'installation et de désinstallation, les lecteurs d'écran et l'usage en organisation demandent encore des essais. Le produit reste un prototype personnel.</p></div>
+    </section>
+    <section id="cs-lessons" class="cs-chapter cs-last">
+      <div class="cs-kicker">07 / CE QUI RESTE <span class="cs-lex" data-zh="发现" data-zh-reading="fāxiàn" data-ja="発見" data-ja-reading="hakken" data-meaning="Découverte">发现</span></div>
+      <h2 class="cs-rise">Le travail est un <i>dialogue.</i></h2>
+      <div class="cs-prose cs-rise"><p>La conception a associé des décisions humaines, des propositions et reformulations de Noema, puis des réalisations, essais et rapports produits avec Codex. Les implémentations techniquement correctes n'ont pas toujours répondu aux attentes sensibles. Ce sont les essais et les désaccords qui ont permis de préciser la direction.</p><p>Le projet est aujourd'hui gelé dans son périmètre de première phase. Une éventuelle intégration future d'IA reste un chantier séparé, ni annoncé comme livré ni indispensable à l'usage courant.</p></div>
+      <div class="cs-endline cs-rise"><span>CONSTRUIRE</span><span>ESSAYER</span><span>COMPRENDRE</span><span>RECOMMENCER</span></div>
+      <div class="cs-note cs-rise"><b>À TON TOUR ?</b><p>Choisis un projet laissé de côté. Note ce que tu sais de son état, ce que tu dois encore vérifier et ce qui faciliterait la prochaine reprise. Tu viens de dessiner un morceau du problème auquel Cockpit essaie de répondre.</p></div>
+      <p class="cs-privacy">Cette présentation utilise des visuels provisoires, sans données privées. Les captures, GIF et références publiques seront ajoutés uniquement après anonymisation et relecture.</p>
+    </section>
+  </div>
+</div>
+</main>
+<footer class="cs-footer"><div><strong>COCKPIT SIGNAL</strong><p>ATELIER / CARNET DE FABRICATION / 2026</p></div><a href="index.html#index">← Retour aux projets</a></footer>
+<script src="rrt4-safe.js"></script><script src="rrt4-lexicon.js"></script><script src="cockpit-story.js"></script>
+</body></html>
