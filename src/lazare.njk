@@ -89,14 +89,14 @@ permalink: lazare.html
     <a href="#case-{{ entry.id }}" class="lz-project-card lz-project-documented">
       <div class="lz-project-top"><span>DOSSIER {{ entry.id }}</span><span class="lz-project-state is-verified">DOCUMENTÉ <span aria-hidden="true">●</span></span></div>
       <div class="lz-project-symbol lz-project-hdd" aria-hidden="true"><span>▣</span><small>STORAGE / 01</small></div>
-      <div class="lz-project-body"><small>{{ entry.type }}</small><h3>{{ entry.title }}</h3><p>{{ entry.hook }}</p></div>
+      <div class="lz-project-body"><small>{{ entry.type }}</small><h3>{{ entry.title }}</h3><span class="lz-project-subtitle">{{ entry.subtitle }}</span><p>{{ entry.hook }}</p></div>
       <div class="lz-project-foot"><span>CONSULTER L'INTERVENTION</span><span aria-hidden="true">↗</span></div>
     </a>
     {% endfor %}
     {% for item in lazare.prospects %}
     <article class="lz-project-card lz-project-planned">
       <div class="lz-project-top"><span>PISTE {{ item.id }}</span><span class="lz-project-state">{{ item.status }}</span></div>
-      <div class="lz-project-symbol" aria-hidden="true"><span class="lz-han">{{ item.glyph }}</span><small>RESEARCH / OPEN</small></div>
+      <div class="lz-project-symbol"><span class="lz-han lz-glyph" lang="zh-Hans" data-rrt4-gloss="{{ item.glyph }}" data-rrt4-language="zh" data-rrt4-reading="{{ item.pinyin }}" data-rrt4-meaning="{{ item.meaning }}">{{ item.glyph }}</span><small>RESEARCH / OPEN</small></div>
       <div class="lz-project-body"><small>{{ item.type }}</small><h3>{{ item.title }}</h3><p>{{ item.description }}</p></div>
       <div class="lz-project-foot"><span>DOSSIER NON OUVERT</span><span aria-hidden="true">○</span></div>
     </article>
