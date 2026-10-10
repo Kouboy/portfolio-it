@@ -1,0 +1,170 @@
+---
+permalink: lazare.html
+---
+{% from "macros.njk" import themeMark %}
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="LAZARE, chantier de diagnostic et réemploi de l'Atelier. Premier dossier : le sauvetage d'un disque externe LaCie 1 To.">
+<title>LAZARE · Diagnostic & restauration | L'Atelier</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="atelier.css">
+<link rel="stylesheet" href="lazare.css">
+<link rel="stylesheet" href="rrt4-lexicon.css">
+<script src="page-transition.js"></script>
+</head>
+<body class="theme-workshop lazare-page">
+{% include "atelier-header.njk" %}
+<nav class="lz-breadcrumb" aria-label="Fil d’Ariane">
+  <a href="index.html#index">PORTFOLIO IT</a><span aria-hidden="true">/</span>
+  <a href="atelier.html">L’ATELIER</a><span aria-hidden="true">/</span>
+  <span aria-current="page">LAZARE</span>
+</nav>
+<main id="content">
+<header class="lz-hero">
+  <div class="lz-hero-main">
+    <div class="lz-kicker">WORKSHOP / REPAIR / ARCHIVE <span>LAZARE · {{ lazare.edition }}</span></div>
+    <div class="lz-hero-name">
+      <div>
+        <span class="lz-label">DIAGNOSTIC / RESTAURATION / PRÉSERVATION</span>
+        <h1>LAZARE<span class="lz-period">.</span></h1>
+        <p class="lz-hero-line">Avant de remplacer,<br><strong>comprendre ce qui a lâché.</strong></p>
+      </div>
+      <div class="lz-character" aria-hidden="true">
+        {{ themeMark("repair") | safe }}
+        <div class="lz-character-stamp"><span>KEEP</span><span>TESTING</span></div>
+      </div>
+    </div>
+    <p class="lz-hero-lede">{{ lazare.mission }}</p>
+    <div class="lz-hero-tags"><span>FIELD LOG</span><span>REUSE FIRST</span><span>NON-DESTRUCTIVE BY DEFAULT</span></div>
+  </div>
+  <aside class="lz-hero-side" aria-label="État du projet">
+    <div class="lz-aside-top"><span>SYSTEM STATE</span><b>{{ lazare.edition }}</b></div>
+    <div class="lz-aside-body">
+      <div class="lz-aside-status"><i aria-hidden="true"></i>{{ lazare.status }}</div>
+      <div class="lz-aside-number">{{ lazare.cases | length | pad2 }}</div>
+      <p>CAS DOCUMENTÉ{% if lazare.cases | length > 1 %}S{% endif %}<br>ET D’AUTRES MACHINES À EXAMINER.</p>
+    </div>
+    <div class="lz-aside-bottom">
+      <span class="lz-language" lang="zh-Hans" data-rrt4-language="zh" data-rrt4-reading="xiūfù" data-rrt4-meaning="Réparer, restaurer">修复</span>
+      <div>DIAGNOSE / PRESERVE / REBUILD / RECORD</div>
+    </div>
+  </aside>
+</header>
+<div class="lz-marquee" aria-label="Méthode"><span>OBSERVE → ISOLATE → PRESERVE → VERIFY</span><span>FIELD REGISTER / ATELIER</span></div>
+<section class="lz-intro" id="mission">
+  <div class="lz-section-label"><b>00 / THE WORKSHOP</b><span lang="zh-Hans" data-rrt4-language="zh" data-rrt4-reading="gōngzuòshì" data-rrt4-meaning="Atelier">工作室</span><span>Le chantier</span></div>
+  <div class="lz-intro-copy">
+    <h2>Une seconde vie,<br><em>pas un miracle.</em></h2>
+    {% for paragraph in lazare.introduction %}<p>{{ paragraph }}</p>{% endfor %}
+    <a class="lz-text-link" href="#case-001">CONSULTER LE PREMIER DOSSIER <span aria-hidden="true">↘</span></a>
+  </div>
+</section>
+<section class="lz-method" id="protocol">
+  <div class="lz-section-heading"><div><span class="lz-small">01 / PROTOCOL</span><h2>La méthode.</h2></div><span class="lz-section-symbol" lang="ja">手順</span></div>
+  <div class="lz-method-grid">
+    {% for item in lazare.method %}
+    <article class="lz-method-card">
+      <span class="lz-stepnum">{{ item.num }} / {{ item.title }}</span>
+      <h3>{{ item.subtitle }}</h3>
+      <p>{{ item.body }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="lz-register" id="register">
+  <div class="lz-section-heading"><div><span class="lz-small">02 / CASE REGISTER</span><h2>Les interventions.</h2></div><span class="lz-section-symbol" lang="ja">記録</span></div>
+  <div class="lz-index">
+    {% for entry in lazare.cases %}
+    <a href="#case-{{ entry.id }}" class="lz-index-row">
+      <span>CASE {{ entry.id }}</span><strong>{{ entry.title }}</strong><small>{{ entry.type }}</small><span>{{ entry.badge }} ↗</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% for entry in lazare.cases %}
+<article class="lz-case" id="case-{{ entry.id }}">
+  <header class="lz-case-head">
+    <div class="lz-case-main">
+      <div class="lz-case-meta">CASE {{ entry.id }} / {{ entry.date }} / {{ entry.type }}</div>
+      <span class="lz-case-kicker">{{ entry.subtitle }}</span>
+      <h2>{{ entry.title }}<span>.</span></h2>
+      <p class="lz-case-hook">{{ entry.hook }}</p>
+      <div class="lz-case-badges"><b>{{ entry.badge }}</b><span>{{ entry.badgeSub }}</span></div>
+    </div>
+    <aside class="lz-case-aside">
+      <span class="lz-aside-tag">REPAIR REPORT / {{ entry.id }}</span>
+      <div class="lz-disc-art" role="img" aria-label="Schéma abstrait d'un disque dur mécanique, illustration et non photo de preuve">
+        <div class="lz-disc-ring"><div></div></div><div class="lz-disc-head"></div>
+        <small>HDD / SATA</small>
+      </div>
+      <p>{{ entry.summary }}</p>
+    </aside>
+  </header>
+
+  <div class="lz-section-heading lz-case-subhead"><div><span class="lz-small">FIELD LOG / {{ entry.id }}</span><h3>Réduire la panne.</h3></div><span class="lz-section-symbol">↘</span></div>
+  <div class="lz-case-layout">
+    <div class="lz-timeline">
+      {% for step in entry.steps %}
+      <div class="lz-timeline-entry">
+        <div class="lz-timeline-index"><span>{{ step.id }}</span><small>{{ step.date }}</small></div>
+        <div class="lz-timeline-copy"><h4>{{ step.label }}</h4><p>{{ step.text }}</p></div>
+      </div>
+      {% endfor %}
+    </div>
+    <aside class="lz-case-data">
+      <div class="lz-case-data-heading"><b>RESULTS / OBSERVED</b><span lang="ja">検証</span></div>
+      {% for signal in entry.signals %}
+      <div class="lz-datum"><small>{{ signal.label }}</small><strong>{{ signal.value }}</strong></div>
+      {% endfor %}
+      <div class="lz-data-foot">MESURES DATÉES / OCT. 2026<br>PAS DE MONITORING PUBLIC EN DIRECT</div>
+    </aside>
+  </div>
+
+  <section class="lz-evidence" aria-labelledby="evidence-{{ entry.id }}">
+    <div class="lz-section-heading"><div><span class="lz-small">EVIDENCE / INTERPRETATION</span><h3 id="evidence-{{ entry.id }}">Ce que les essais disent.</h3></div><span class="lz-section-symbol" lang="ja">証拠</span></div>
+    <div class="lz-chain" role="img" aria-label="Chaîne d'accès : auparavant disque SATA, ancien pont USB et ordinateur, échec ; ensuite disque SATA, adaptateur Sabrent alimenté, ordinateur et KouboyPi, accès restauré.">
+      <div class="lz-chain-label"><b>BEFORE</b><small>Communication perdue</small></div>
+      <div class="lz-chain-path"><span>DISQUE SATA</span><i aria-hidden="true">→</i><span>ANCIEN PONT USB</span><i aria-hidden="true">×</i><span>PC / PI</span></div>
+      <div class="lz-chain-label lz-good"><b>AFTER</b><small>Accès rétabli</small></div>
+      <div class="lz-chain-path lz-recovered"><span>DISQUE SATA</span><i aria-hidden="true">→</i><span>SABRENT ALIMENTÉ</span><i aria-hidden="true">→</i><span>PC / PI</span></div>
+    </div>
+    <div class="lz-evidence-grid">
+      {% for item in entry.observations %}
+      <div class="lz-evidence-card">
+        <span>{{ item.tag }}</span><h4>{{ item.title }}</h4><p>{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="lz-evidence-caption">{{ entry.evidenceNote }}</p>
+  </section>
+
+  <section class="lz-outcome" aria-labelledby="outcome-{{ entry.id }}">
+    <div class="lz-outcome-marker">03 / OUTCOME <span lang="zh-Hans" data-rrt4-language="zh" data-rrt4-reading="jiéguǒ" data-rrt4-meaning="Résultat">结果</span></div>
+    <div><h3 id="outcome-{{ entry.id }}">Une panne de moins.<br>Un disque de plus.</h3><p>{{ entry.outcome }}</p><a href="kouboypi.html">VOIR LE PROJET KOUBOYPI <span aria-hidden="true">→</span></a></div>
+  </section>
+  <section class="lz-lessons">
+    <div class="lz-section-heading"><div><span class="lz-small">04 / WHAT STAYED</span><h3>Ce qu'on garde.</h3></div><span class="lz-section-symbol" lang="ja">学び</span></div>
+    <div class="lz-lessons-grid">{% for lesson in entry.lessons %}<div><b>L{{ loop.index | pad2 }}</b><p>{{ lesson }}</p></div>{% endfor %}</div>
+  </section>
+</article>
+{% endfor %}
+<section class="lz-closing">
+  <div class="lz-closing-title"><small>LAZARE / NEXT RECORD</small><strong>À SUIVRE.</strong></div>
+  <div><p>Le registre est ouvert. Les prochains dossiers seront ajoutés lorsqu'une intervention aura produit des observations et des résultats vérifiables, pas simplement une promesse de réparation.</p><a href="atelier.html#atelier-work">← RETOUR AUX PROJETS DE L’ATELIER</a></div>
+</section>
+</main>
+<footer class="footer atelier-footer lz-footer">
+  <div class="footer-main">
+    <strong>LAZARE<br>FIELD REGISTER</strong>
+    <div class="project-footer-joke">{{ themeMark("repair") | safe }}<span><b>WORKSHOP NOTE / 001</b><br>Avant de déclarer mort, vérifier l'alimentation.</span></div>
+    <div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span>ZH + JP / SIGNS</span></div>
+  </div>
+  <div class="footer-side"><div>ATELIER / REPAIR & ARCHIVE<br>修复 / 記録 / 2026</div><div>FIELD REGISTER / {{ lazare.edition }}</div></div>
+</footer>
+<script src="rrt4-safe.js"></script>
+<script src="rrt4-lexicon.js"></script>
+</body>
+</html>
