@@ -2,6 +2,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("cockpit-story.css");
   eleventyConfig.addPassthroughCopy("atelier.css");
+  eleventyConfig.addPassthroughCopy("lazare.css");
   eleventyConfig.addPassthroughCopy("atelier-rail.js");
   eleventyConfig.addPassthroughCopy("cockpit-story.js");
   eleventyConfig.addPassthroughCopy("rrt4-lexicon.css");
