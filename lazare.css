@@ -367,3 +367,6 @@
  .lz-motion-enabled .lz-reveal:not(.lz-in){opacity:1;transform:none}
  .lz-character:hover .theme-mark,.lz-project-card:hover .lz-project-symbol>span{transform:none}
 }
+
+.lz-project-subtitle{display:block;font:800 .64rem/1.5 var(--mono);color:#5e584e;margin:-3px 0 13px}
+.lz-project-symbol .lz-glyph:focus-visible{outline:3px solid #ff5b00;outline-offset:4px}
