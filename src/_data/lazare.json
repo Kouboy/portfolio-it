@@ -1,0 +1,138 @@
+{
+  "edition": "FIELD REGISTER / 0.1",
+  "status": "ACTIVE / WORK IN PROGRESS",
+  "mission": "Diagnostiquer, sauver et remettre en service des machines, des supports et des archives qui ont encore quelque chose à raconter.",
+  "introduction": [
+    "LAZARE est le chantier de diagnostic, de restauration et de préservation de l’Atelier. Il rassemble des interventions réelles, des essais prudents et les traces utiles pour reprendre un dossier sans effacer son histoire.",
+    "Pas un service professionnel de récupération de données, ni une promesse de résurrection universelle. Un établi de réemploi : on observe, on documente, on isole la panne, on préserve les données avant d’intervenir."
+  ],
+  "method": [
+    {
+      "num": "01",
+      "title": "OBSERVE",
+      "subtitle": "Identifier sans supposer",
+      "body": "Relever les symptômes, la configuration et les événements précédant la panne."
+    },
+    {
+      "num": "02",
+      "title": "ISOLATE",
+      "subtitle": "Changer une variable",
+      "body": "Séparer disque, interface, câble, alimentation et système de fichiers par des essais ciblés."
+    },
+    {
+      "num": "03",
+      "title": "PRESERVE",
+      "subtitle": "Préférer le réversible",
+      "body": "Vérifier l’existence des copies, éviter les écritures risquées et ne pas formater pour « voir »."
+    },
+    {
+      "num": "04",
+      "title": "VERIFY",
+      "subtitle": "Confirmer, puis raconter",
+      "body": "Contrôler accès, état SMART, montage, stabilité, et distinguer les preuves des hypothèses."
+    }
+  ],
+  "cases": [
+    {
+      "id": "001",
+      "slug": "lacie-usb",
+      "title": "Le disque innocent",
+      "subtitle": "LaCie 1 To / Samsung SpinPoint M8",
+      "date": "10 OCT 2026",
+      "type": "STORAGE / USB / RECOVERY",
+      "badge": "REMIS EN SERVICE",
+      "badgeSub": "STABILITÉ À SURVEILLER",
+      "hook": "Invisible sur deux ordinateurs. Ses fichiers étaient pourtant toujours là.",
+      "summary": "Le disque externe 2,5 pouces, utilisé sur KouboyPi pour les archives familiales, cesse d’apparaître sur le bus USB. Son moteur réagit, mais ni Linux ni Windows ne retrouvent l’ancien pont USB.",
+      "signals": [
+        {
+          "label": "DISQUE",
+          "value": "ST1000LM024 / 1 To"
+        },
+        {
+          "label": "SURVEILLANCE",
+          "value": "SMART : Bon"
+        },
+        {
+          "label": "SECTEURS 05 / C5 / C6",
+          "value": "0 / 0 / 0"
+        },
+        {
+          "label": "TEMP. LORS DU TEST",
+          "value": "25 °C"
+        },
+        {
+          "label": "MONTAGE FINAL",
+          "value": "NTFS3 / AUTOMOUNT"
+        },
+        {
+          "label": "DONNÉES",
+          "value": "FICHIERS RETROUVÉS"
+        }
+      ],
+      "steps": [
+        {
+          "id": "01",
+          "label": "INCIDENT",
+          "date": "08 OCT",
+          "text": "Le LaCie disparaît de KouboyPi. lsusb et lsblk ne voient plus son interface ; systemd ne peut plus satisfaire les demandes de montage."
+        },
+        {
+          "id": "02",
+          "label": "TEST CROISÉ",
+          "date": "08 OCT",
+          "text": "Sur IMPERATOR, le disque tourne mais n’apparaît pas dans la liste des disques USB Windows. Essai avec câble Micro-USB 2.0 : la communication n’est toujours pas établie."
+        },
+        {
+          "id": "03",
+          "label": "ISOLATION",
+          "date": "10 OCT",
+          "text": "L’interface USB de l’ancien boîtier est contournée. Un adaptateur SATA-USB Sabrent à alimentation externe connecte le disque SATA directement à IMPERATOR."
+        },
+        {
+          "id": "04",
+          "label": "VÉRIFICATION",
+          "date": "10 OCT",
+          "text": "Les volumes se montent, les fichiers sont présents et CrystalDiskInfo indique « Bon ». Les compteurs 05, C5, C6 et C7 restent à zéro."
+        },
+        {
+          "id": "05",
+          "label": "SYSTÈME DE FICHIERS",
+          "date": "10 OCT",
+          "text": "Sur le Pi, le volume NTFS principal est d’abord refusé : indicateur « dirty ». Une vérification/réparation Windows est exécutée ; CHKDSK termine sans autre action requise."
+        },
+        {
+          "id": "06",
+          "label": "REPRISE",
+          "date": "10 OCT",
+          "text": "KouboyPi détecte le disque via le Sabrent. Le montage ntfs3 sur /srv/lacie et son automount systemd sont confirmés ; les répertoires redeviennent accessibles."
+        }
+      ],
+      "observations": [
+        {
+          "tag": "CONFIRMÉ",
+          "title": "Le disque et ses données sont lisibles",
+          "text": "Deux partitions reconnues, fichiers présents, diagnostic SMART rassurant et montage final opérationnel sur KouboyPi."
+        },
+        {
+          "tag": "PROBABLE",
+          "title": "Défaut dans l’ancienne chaîne USB",
+          "text": "Câble, connecteur, pont SATA-USB ou alimentation du boîtier sont les suspects cohérents avec les essais."
+        },
+        {
+          "tag": "NON ISOLÉ",
+          "title": "Le composant exact de la panne",
+          "text": "Le Sabrent a changé à la fois l’interface et l’alimentation. Ce test ne permet pas d’attribuer la panne exclusivement au pont USB."
+        }
+      ],
+      "outcome": "Le disque d’origine a été conservé. Les archives restent accessibles via KouboyPi et les partages Samba. Les interfaces CHIPdeck et ImperatorDeck peuvent de nouveau observer le stockage ; la stabilité de la nouvelle liaison reste à confirmer dans le temps.",
+      "lessons": [
+        "L’absence d’un disque dans le système n’implique pas nécessairement la mort de ses plateaux.",
+        "Tester séparément l’interface, l’alimentation et le support évite les conclusions prématurées.",
+        "Une réparation NTFS ne remplace pas un diagnostic de périphérique USB absent.",
+        "Le remontage et la lecture des fichiers prouvent un rétablissement fonctionnel, pas une fiabilité éternelle."
+      ],
+      "evidenceNote": "Photographies du disque et capture SMART conservées hors du site ; publication à venir après sélection et masquage des identifiants. Le schéma ci-dessus illustre la chaîne matérielle, ce n’est pas une photographie de preuve."
+    }
+  ]
+}
