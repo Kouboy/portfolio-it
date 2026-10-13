@@ -1,5 +1,5 @@
 {
-  "revision": "BUILD 0.3",
+  "revision": "BUILD 0.4",
   "hero": {
     "kicker": "PORTFOLIO / ATELIER / 2026",
     "title": [
@@ -43,7 +43,7 @@
     "counts": [
       {
         "label": "AGENTS",
-        "value": "—"
+        "value": "03"
       },
       {
         "label": "TOOLS",
@@ -253,8 +253,8 @@
     "en": "03 / THE TEAM",
     "jp": "チーム",
     "fr": "L’équipe",
-    "intro": "Un humain, des agents, des rôles différents. Le casting est encore prévisionnel : les fonctions sont pensées pour durer plus longtemps que les modèles qui les feront tourner.",
-    "note": "IDENTITY ≠ MODEL / les moteurs peuvent changer sans refaire toute la distribution",
+    "intro": "Un humain, des agents et des rôles différents. Une partie de l’équipe est désormais incarnée ; d’autres fonctions restent prévisionnelles. Les identités sont pensées pour durer plus longtemps que les modèles qui les feront tourner.",
+    "note": "LUNA FAIT SES PREUVES PAR SON TRAVAIL / HERMES ORGANISE / MÉRIDIEN VÉRIFIE · IDENTITY ≠ MODEL",
     "members": [
       {
         "id": "H.01",
@@ -276,6 +276,24 @@
       },
       {
         "id": "A.02",
+        "name": "MÉRIDIEN",
+        "role": "ARCHITECT / TECHNICIAN / REVIEW",
+        "status": "ACTIVE",
+        "tone": "cyan",
+        "mark": "system",
+        "copy": "Architecte et technicien de l’Atelier, actuellement gardien technique d’Hermes sur Imperator. Il vérifie, expérimente, documente les limites et relit les propositions avant qu’elles ne deviennent des décisions."
+      },
+      {
+        "id": "A.03",
+        "name": "LUNA",
+        "role": "ARCHIVIST / SOURCES / DOCUMENTATION",
+        "status": "ACTIVE",
+        "tone": "soft",
+        "mark": "diagnostic",
+        "copy": "Archiviste documentaire de l’Atelier, avec son espace de travail Hermes/WebView. Elle lit les sources, les interprète dans leur contexte et prépare des propositions documentaires en conservant provenance et contradictions. Elle n’a pas d’autonomie canonique."
+      },
+      {
+        "id": "A.04",
         "name": "LEAD PROGRAMMER",
         "role": "CODE / ARCHITECTURE / GAMEPLAY",
         "status": "PLANNED",
@@ -284,7 +302,7 @@
         "copy": "Structure, systèmes critiques, intégration, performances et gamefeel. Le mécanique peut se déléguer ; les choix qui engagent toute l’architecture, beaucoup moins."
       },
       {
-        "id": "A.03",
+        "id": "A.05",
         "name": "ARTIST",
         "role": "VISUAL / ASSETS / TECH ART",
         "status": "PLANNED",
@@ -293,7 +311,7 @@
         "copy": "Direction visuelle, assets, diégèse et cohérence plastique. Un pont entre l’intention, les contraintes techniques et les images qui doivent réellement finir dans le projet."
       },
       {
-        "id": "A.04",
+        "id": "A.06",
         "name": "REVIEWER",
         "role": "QA / GAMEFEEL / CONTRADICTION",
         "status": "PLANNED",
@@ -302,22 +320,13 @@
         "copy": "Teste, contredit, cherche les blockers et vérifie que ce qu’on croit avoir construit existe vraiment. Son métier consiste parfois à casser poliment les bonnes nouvelles."
       },
       {
-        "id": "A.05",
+        "id": "A.07",
         "name": "STAGIAIRE",
         "role": "LOCAL / REPETITIVE / LEARNING",
         "status": "PLANNED",
         "tone": "warm",
         "mark": "repair",
         "copy": "Tri, extraction, boilerplate et petites tâches répétitives. Peu de prestige, beaucoup d’utilité, et une excellente raison de ne pas mobiliser un gros modèle pour renommer quarante fichiers."
-      },
-      {
-        "id": "A.06",
-        "name": "ARCHIVIST",
-        "role": "MEMORY / PROVENANCE / DOCUMENTATION",
-        "status": "PLANNED",
-        "tone": "soft",
-        "mark": "system",
-        "copy": "Aide à distinguer observation, interprétation, état courant et historique. Son boulot n’est pas de tout retenir, mais de permettre de savoir ce qui est encore vrai et pourquoi."
       }
     ]
   },
