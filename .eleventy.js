@@ -10,9 +10,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("rrt4-lexicon.js");
   eleventyConfig.addPassthroughCopy("rrt4-safe.js");
   eleventyConfig.addPassthroughCopy("page-transition.js");
+  eleventyConfig.addPassthroughCopy("analytics.js");
   eleventyConfig.addPassthroughCopy("motion.js");
   eleventyConfig.addPassthroughCopy("system.html");
   eleventyConfig.addPassthroughCopy("assets");
+
+  eleventyConfig.addTransform("analytics", function(content) {
+    if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+      return content.replace("</head>", '  <script src="analytics.js"></script>\n</head>');
+    }
+    return content;
+  });
 
   eleventyConfig.addFilter("pad2", value => String(value).padStart(2, "0"));
 
