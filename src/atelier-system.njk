@@ -1,0 +1,238 @@
+---
+permalink: atelier-system.html
+---
+{% from "macros.njk" import themeMark %}<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PAPER / SIGNAL : système graphique de l’Atelier, variation de Portfolio Signal.">
+  <title>PAPER / SIGNAL — Système graphique de l’Atelier</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css">
+  <link rel="stylesheet" href="rrt4-lexicon.css">
+  <script src="page-transition.js"></script>
+</head>
+<body class="theme-workshop paper-signal-system">
+{% include "atelier-header.njk" %}
+
+<main id="content">
+<section class="style-intro paper-signal-intro">
+  <div>
+    <div class="meta">WORKSHOP DESIGN SYSTEM / PAPER / SIGNAL / REV.01</div>
+    <h1>Paper /<br><span class="paper-signal-word">Signal</span></h1>
+    <p>Portfolio Signal et PAPER / SIGNAL appartiennent à la même famille. Même grille, même typographie, même grammaire FR / EN / JP et même goût pour les signes fonctionnels. La différence vient du climat : le portfolio travaille au soleil ; l’Atelier travaille sur la table, parmi les notes, les outils et les machines ouvertes.</p>
+  </div>
+  <div class="black paper-signal-core">
+    <div class="meta">CORE PRINCIPLE</div>
+    <p class="micro-note">Le papier est l’environnement normal. Le noir révèle la mécanique. Le safran indique l’activité. Cyan, rose et orange restent des signaux ponctuels.</p>
+    <div class="paper-signal-kanji jp" aria-hidden="true">工房<br>記録<br>試験</div>
+  </div>
+</section>
+
+<section class="style-section" id="palette">
+  <aside class="rail"><div class="meta">01 / PALETTE</div></aside>
+  <div class="content">
+    <h2>Color roles</h2>
+    <p class="micro-note">Même nuancier que Portfolio Signal, mais la hiérarchie est retournée : PAPER prend la place de SUN comme surface principale.</p>
+    <div class="swatches paper-signal-swatches" style="margin-top:22px">
+      <div class="swatch paper"><small>FIELD / 55–70%</small><strong>#F6F0DF<br>PAPER</strong></div>
+      <div class="swatch black"><small>MACHINE / FOCUS</small><strong>#050505<br>BLACK</strong></div>
+      <div class="swatch sun"><small>LIVE / SIGNAL</small><strong>#F6B500<br>SUN</strong></div>
+      <div class="swatch gray"><small>SCAFFOLD / UTILITY</small><strong>#B8AD8C<br>WARM GRAY</strong></div>
+      <div class="swatch pale"><small>NOTE / SECONDARY</small><strong>#FFD86C<br>PALE</strong></div>
+      <div class="swatch cyan"><small>VERIFY / SYSTEM</small><strong>#32D9EE<br>CYAN</strong></div>
+      <div class="swatch pink"><small>CREATIVE / HUMAN</small><strong>#FF4A98<br>PINK</strong></div>
+      <div class="swatch orange"><small>ACTION / REPAIR</small><strong>#FF5B00<br>ORANGE</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="components">
+  <aside class="rail"><div class="meta">02 / COMPONENTS</div></aside>
+  <div class="content">
+    <h2>Workshop components</h2>
+    <div class="component-demo">
+      <div class="utility-band">
+        <div class="gray">WORKSHOP BAND</div>
+        <div>STATUS / ROLE / TRACE</div>
+        <div class="black">→ NEXT ACTION</div>
+      </div>
+
+      <div class="paper-component-grid">
+        <article>
+          <small>STATUS PANEL</small>
+          <strong>PREPARING</strong>
+          <p>Un panneau noir concentre l’état des machines, services et agents. Il ressemble à un instrument, pas à un décor.</p>
+        </article>
+        <article>
+          <small>DOSSIER CARD</small>
+          <strong>PROJECT / ACTIVE</strong>
+          <p>Les projets vivent sur papier avec tags, état, rôle et point d’entrée. Une carte doit dire quoi regarder avant de séduire.</p>
+        </article>
+        <article>
+          <small>ROLE CARD</small>
+          <strong>IDENTITY ≠ MODEL</strong>
+          <p>Les personnes et agents sont décrits par leur fonction durable. Le moteur peut changer sans réécrire l’organigramme.</p>
+        </article>
+        <article>
+          <small>FIELD NOTE</small>
+          <strong>TRACE BEFORE CLAIM</strong>
+          <p>Logs, limites, décisions et petites anomalies restent visibles. L’Atelier préfère une trace exploitable à une belle certitude.</p>
+        </article>
+      </div>
+      <p class="micro-note">Les composants partagent les proportions et la discipline du portfolio, mais leur vocabulaire vient du chantier : état, rôle, trace, reprise, test.</p>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="signs">
+  <aside class="rail"><div class="meta">03 / SHARED SIGNS</div></aside>
+  <div class="content">
+    <h2>Same family. Same signs.</h2>
+    <p class="micro-note">Les marques thématiques ne sont pas redessinées pour l’Atelier. Elles changent de contexte, pas d’alphabet graphique.</p>
+    <div class="mascot-grid" style="margin-top:22px">
+      <article class="mascot-spec">
+        {{ themeMark("repair") | safe }}
+        <h3>Local Duck</h3>
+        <p>Terrain, réparation, bricolage, réemploi et notes pratiques. Dans l’Atelier, il signale aussi le droit d’essayer sans solennité excessive.</p>
+      </article>
+      <article class="mascot-spec">
+        {{ themeMark("system") | safe }}
+        <h3>Archive Node</h3>
+        <p>Infrastructure, services, stockage, mémoire et raccords. La partie de l’Atelier qui doit continuer à fonctionner quand l’enthousiasme est parti dormir.</p>
+      </article>
+      <article class="mascot-spec">
+        {{ themeMark("diagnostic") | safe }}
+        <h3>Reviewer Eye</h3>
+        <p>Observation, contradiction, vérification et provenance. Le signe des choses que l’on veut pouvoir démontrer plus tard.</p>
+      </article>
+      <article class="mascot-spec">
+        {{ themeMark("tool") | safe }}
+        <h3>Spark</h3>
+        <p>Outils, prototypes, interfaces et expérimentation créative. Une étincelle, pas une obligation d’incendier tout le bâtiment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="rules">
+  <aside class="rail"><div class="meta">04 / RULES</div></aside>
+  <div class="content">
+    <h2>Composition rules</h2>
+    <div class="rules-list paper-signal-rules">
+      <article><div class="meta">R01</div><h3>Paper is the field</h3><p>Le papier domine. Il donne de l’air aux projets et rend les zones noires réellement significatives.</p></article>
+      <article><div class="meta">R02</div><h3>Black shows the machine</h3><p>Le noir sert aux états, à l’infrastructure, aux passages techniques et aux blocs de forte concentration.</p></article>
+      <article><div class="meta">R03</div><h3>Signal marks life</h3><p>Le safran indique activité, passage, sélection ou chaleur. Il n’est plus le paysage entier.</p></article>
+      <article><div class="meta">R04</div><h3>Evidence stays visible</h3><p>Une limite, une provenance ou un statut incertain ne disparaît pas pour rendre la page plus flatteuse.</p></article>
+      <article><div class="meta">R05</div><h3>Shared grammar first</h3><p>Grille, typographie, signes et langues doivent rappeler Portfolio Signal avant d’introduire la variation Atelier.</p></article>
+      <article><div class="meta">R06</div><h3>Alive, not busy</h3><p>Un écran peut sembler vivant sans clignoter. Le mouvement répond à une arrivée, une action ou un changement d’état.</p></article>
+    </div>
+    <div class="dont" style="margin-top:24px">
+      <strong>FAMILY RULE</strong>
+      <ul>
+        <li>Portfolio Signal = SUN comme environnement, PAPER comme preuve.</li>
+        <li>PAPER / SIGNAL = PAPER comme environnement, SUN comme signe d’activité.</li>
+        <li>Dans les deux cas, BLACK concentre l’information technique.</li>
+        <li>Les accents cyan, rose et orange conservent un rôle fonctionnel identifiable.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="language">
+  <aside class="rail">
+    <div class="tri-stack">
+      <span class="en">05 / LANGUAGE</span>
+      <span class="jp">言語</span>
+      <span class="fr">Même grammaire, vocabulaire d’atelier</span>
+    </div>
+  </aside>
+  <div class="content">
+    <h2>FR tells. EN structures. JP signs.</h2>
+    <p class="micro-note">La règle trilingue reste identique au portfolio. Seul le lexique se rapproche du chantier, des rôles, des essais et des traces.</p>
+    <div class="rules-list paper-signal-language" style="margin-top:24px">
+      <article><div class="meta">FR / CONTENT</div><h3>Le français raconte</h3><p>Intentions, décisions, retours d’usage, limites et documentation lisible.</p></article>
+      <article><div class="meta">EN / INTERFACE</div><h3>L’anglais structure</h3><p>WORKSHOP, STATUS, ACTIVE, BUILD, REVIEW, LOG : l’ossature courte de l’interface.</p></article>
+      <article><div class="meta">JP / 記号</div><h3>Le japonais ponctue</h3><p>Des signes courts reviennent comme des repères visuels, jamais comme une troisième traduction complète.</p></article>
+      <article><div class="meta">RULE</div><h3>No ornamental translation</h3><p>Une langue apparaît lorsqu’elle apporte une fonction de lecture. Pas pour remplir les coins.</p></article>
+    </div>
+
+    <h3 class="paper-system-subtitle">Workshop lexicon</h3>
+    <div class="lexicon-grid paper-signal-lexicon">
+      <article class="lexicon-item"><div><div class="jp">工房</div><div class="en">WORKSHOP</div><div class="fr">Atelier</div></div><code>Espace commun / fabrication</code></article>
+      <article class="lexicon-item"><div><div class="jp">記録</div><div class="en">RECORD / LOG</div><div class="fr">Trace / journal</div></div><code>Provenance / décisions</code></article>
+      <article class="lexicon-item"><div><div class="jp">試験</div><div class="en">TEST</div><div class="fr">Essai</div></div><code>Prototype / validation</code></article>
+      <article class="lexicon-item"><div><div class="jp">接続</div><div class="en">CONNECTION</div><div class="fr">Raccord</div></div><code>Machines / outils / agents</code></article>
+      <article class="lexicon-item"><div><div class="jp">構築</div><div class="en">BUILD</div><div class="fr">Construction</div></div><code>Assemblage / déploiement</code></article>
+      <article class="lexicon-item"><div><div class="jp">観測</div><div class="en">OBSERVATION</div><div class="fr">Observation</div></div><code>État / mesure / revue</code></article>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="motion">
+  <aside class="rail">
+    <div class="tri-stack">
+      <span class="en">06 / MOTION</span>
+      <span class="jp">動き</span>
+      <span class="fr">Assemblage et passage</span>
+    </div>
+  </aside>
+  <div class="content">
+    <h2>The interface assembles.</h2>
+    <p class="micro-note">Le mouvement reste parent de Portfolio Signal, mais l’Atelier insiste davantage sur l’idée d’assemblage : panneaux, étiquettes, fiches et rails semblent se mettre en place pour former un établi.</p>
+    <div class="rules-list paper-signal-rules" style="margin-top:24px">
+      <article><div class="meta">PAGE / WIPE</div><h3>Black passage</h3><p>Le panneau noir couvre totalement l’ancienne page. La suivante se prépare dessous et ne commence à s’animer qu’une fois le passage terminé.</p></article>
+      <article><div class="meta">TEXT / ONCE</div><h3>Character flow</h3><p>Le texte ordinaire se révèle comme une information reçue. Une seule fois par visite, sans devenir une machine à sous typographique.</p></article>
+      <article><div class="meta">UI / SNAP</div><h3>Short response</h3><p>Boutons, flèches et onglets répondent vite et sur peu de distance. Le retour doit être perceptible avant d’être spectaculaire.</p></article>
+      <article><div class="meta">REST / NONE</div><h3>Quiet bench</h3><p>Au repos, rien n’a besoin de bouger pour prouver que l’Atelier est vivant.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="style-section" id="family">
+  <aside class="rail">
+    <div class="tri-stack">
+      <span class="en">07 / FAMILY</span>
+      <span class="jp">系統</span>
+      <span class="fr">Une identité, deux climats</span>
+    </div>
+  </aside>
+  <div class="content">
+    <h2>Variation, not rupture.</h2>
+    <div class="paper-family-grid">
+      <article class="portfolio-side">
+        <small>PORTFOLIO SIGNAL</small>
+        <strong>SUN / SIGNAL</strong>
+        <p>Public, lumineux, affirmatif. Le safran installe le climat général ; le papier accueille la lecture longue et les preuves.</p>
+      </article>
+      <article class="atelier-side">
+        <small>L’ATELIER</small>
+        <strong>PAPER / SIGNAL</strong>
+        <p>Documentaire, expérimental, plus proche du chantier. Le papier devient le monde ; le safran devient l’impulsion.</p>
+      </article>
+    </div>
+    <p class="paper-family-conclusion">Le but n’est pas que les deux espaces se ressemblent à chaque écran. Le but est qu’on sente qu’ils parlent la même langue avec deux voix différentes.</p>
+  </div>
+</section>
+</main>
+
+<footer class="footer atelier-footer paper-system-footer">
+  <div class="footer-main">
+    <strong>PAPER /<br>SIGNAL</strong>
+    <div class="project-footer-joke">
+      {{ themeMark("repair") | safe }}
+      <span><b>WORKSHOP DESIGN REVIEW</b><br>Même famille. Autre table de travail. Les boulons restent compatibles.</span>
+    </div>
+    <div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div>
+  </div>
+  <div class="footer-side">
+    <div>ATELIER / DESIGN SYSTEM<br>工房 / 記録 / 試験</div>
+    <div>REV.01 / 2026</div>
+  </div>
+</footer>
+
+<script src="motion.js"></script>
+<script src="rrt4-lexicon.js"></script>
+</body>
+</html>

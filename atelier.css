@@ -1108,3 +1108,239 @@
 .atelier-card-link{color:inherit;text-decoration:none;transition:color .16s ease,background .16s ease;padding:9px 2px 3px}
 .atelier-card-link:hover,.atelier-card-link:focus-visible{color:#000;background:#f6b500;outline:2px solid #101010;outline-offset:3px}
 .atelier-work{scroll-margin-top:70px}
+
+
+/* =========================================================
+   PAPER / SIGNAL DESIGN SYSTEM PAGE
+   Same grammar as Portfolio Signal, workshop balance.
+   ========================================================= */
+
+.paper-signal-system .nav a[href="atelier.html"]{
+  background:transparent;
+  color:inherit;
+}
+.paper-signal-system .nav a[href="atelier-system.html"]{
+  background:#000;
+  color:#fff;
+}
+.paper-signal-system .style-intro,
+.paper-signal-system .style-section{
+  border-color:var(--work-line);
+}
+.paper-signal-system .style-intro{
+  background:var(--paper);
+}
+.paper-signal-system .style-intro>div:first-child{
+  position:relative;
+}
+.paper-signal-system .style-intro>div:first-child::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:10px;
+  height:100%;
+  background:var(--sun);
+}
+.paper-signal-word{
+  display:inline-block;
+  position:relative;
+  z-index:0;
+}
+.paper-signal-word::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:-.03em;
+  right:-.08em;
+  bottom:.02em;
+  height:.19em;
+  background:var(--sun);
+}
+.paper-signal-core{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+}
+.paper-signal-kanji{
+  margin-top:auto;
+  padding-top:64px;
+  font-size:clamp(3rem,5vw,5rem);
+  font-weight:1000;
+  line-height:.8;
+  opacity:.15;
+}
+.paper-signal-system .style-section>.rail{
+  background:#ede5d1;
+  border-color:var(--work-line);
+}
+.paper-signal-system .style-section>.content{
+  background:var(--paper);
+}
+.paper-signal-system .rules-list article{
+  background:var(--paper);
+  box-shadow:inset 0 7px 0 var(--sun);
+}
+.paper-signal-system .rules-list article:nth-child(2n){
+  background:#fffaf0;
+}
+.paper-signal-system .paper-signal-language article:nth-child(3){
+  background:#111;
+  color:#fff;
+  box-shadow:inset 0 7px 0 var(--cyan);
+}
+.paper-signal-system .paper-signal-language article:nth-child(3) p{
+  color:#d5d0c6;
+}
+.paper-component-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  max-width:1100px;
+  background:#111;
+}
+.paper-component-grid article{
+  min-height:210px;
+  padding:18px;
+  background:#fffaf0;
+  display:flex;
+  flex-direction:column;
+}
+.paper-component-grid article:nth-child(1),
+.paper-component-grid article:nth-child(4){
+  background:#111;
+  color:#fff;
+}
+.paper-component-grid article:nth-child(2){
+  box-shadow:inset 0 8px 0 var(--sun);
+}
+.paper-component-grid article:nth-child(3){
+  box-shadow:inset 0 8px 0 var(--cyan);
+}
+.paper-component-grid small{
+  font:900 .56rem var(--mono);
+  letter-spacing:.08em;
+  opacity:.62;
+}
+.paper-component-grid strong{
+  margin:auto 0 10px;
+  font-size:clamp(1.25rem,2.2vw,2rem);
+  line-height:.95;
+  letter-spacing:-.05em;
+}
+.paper-component-grid p{
+  margin:0;
+  max-width:48ch;
+  font-size:.84rem;
+  line-height:1.45;
+  opacity:.76;
+}
+.paper-system-subtitle{
+  margin-top:32px;
+  text-transform:uppercase;
+  letter-spacing:-.04em;
+}
+.paper-signal-system .paper-signal-lexicon .lexicon-item{
+  background:#fffaf0;
+}
+.paper-signal-system .paper-signal-lexicon .lexicon-item:nth-child(2),
+.paper-signal-system .paper-signal-lexicon .lexicon-item:nth-child(5){
+  background:var(--sun-pale);
+}
+.paper-signal-system .paper-signal-lexicon .lexicon-item:nth-child(3n){
+  background:var(--warm-gray);
+}
+.paper-family-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  max-width:1100px;
+  background:#111;
+}
+.paper-family-grid article{
+  min-height:300px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.paper-family-grid small{
+  margin-bottom:auto;
+  font:900 .58rem var(--mono);
+  letter-spacing:.09em;
+}
+.paper-family-grid strong{
+  display:block;
+  margin-bottom:14px;
+  font-size:clamp(2rem,4vw,4.2rem);
+  line-height:.84;
+  letter-spacing:-.075em;
+}
+.paper-family-grid p{
+  max-width:48ch;
+  margin:0;
+  line-height:1.5;
+}
+.paper-family-grid .portfolio-side{
+  background:var(--sun);
+}
+.paper-family-grid .atelier-side{
+  background:var(--paper);
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.25);
+}
+.paper-family-conclusion{
+  max-width:900px;
+  margin:24px 0 0;
+  padding:16px 18px;
+  border-left:10px solid var(--sun);
+  background:#fffaf0;
+  font-weight:800;
+  line-height:1.5;
+}
+.paper-system-footer::before{
+  background:var(--sun);
+}
+.atelier-design-teaser{
+  background:var(--paper);
+  color:var(--ink);
+}
+.atelier-design-teaser::before{
+  background:#111;
+}
+.atelier-design-teaser .atelier-charter-index,
+.atelier-design-teaser .atelier-charter-copy{
+  border-color:rgba(0,0,0,.28);
+}
+.atelier-design-teaser .atelier-charter-status{
+  border-color:rgba(0,0,0,.45);
+  color:#000;
+  background:var(--sun);
+}
+.atelier-design-teaser .atelier-charter-copy p{
+  color:#403c35;
+}
+.atelier-design-teaser .atelier-charter-motto{
+  background:rgba(0,0,0,.3);
+}
+.atelier-design-teaser .atelier-charter-motto span{
+  background:#fffaf0;
+  color:#111;
+}
+.atelier-design-teaser .atelier-charter-link{
+  color:#111;
+}
+.atelier-design-teaser .atelier-charter-link:hover,
+.atelier-design-teaser .atelier-charter-link:focus-visible{
+  background:#111;
+  color:#fff;
+}
+
+@media(max-width:750px){
+  .paper-component-grid,
+  .paper-family-grid{
+    grid-template-columns:1fr;
+  }
+  .paper-family-grid article{
+    min-height:240px;
+  }
+}
