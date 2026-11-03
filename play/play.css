@@ -347,3 +347,8 @@ html.ps-calm .ps-band{animation:none!important;opacity:1!important;transform:non
 @media(prefers-reduced-motion:reduce){
  .ps-article [data-reveal],.ps-next,.ps-band{animation:none!important;opacity:1!important;clip-path:none!important}
 }
+
+/* Archive-switch label: full on desktop, compact where header space is tight. */
+@media(max-width:1100px) {
+  .ps-nav .ps-nav-long { display:none; }
+}
