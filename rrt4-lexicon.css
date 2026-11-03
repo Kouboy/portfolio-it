@@ -1,0 +1,10 @@
+/* RRT4 multilingual microcards */
+.jp[data-rrt4-ready],.jp-big[data-rrt4-ready],[data-rrt4-gloss]{cursor:help;transition:transform .15s ease,color .15s ease;display:inline-block}
+.jp[data-rrt4-ready]:hover,.jp-big[data-rrt4-ready]:hover,[data-rrt4-gloss]:hover{transform:translateY(-2px)}
+.jp[data-rrt4-ready]:focus-visible,.jp-big[data-rrt4-ready]:focus-visible,[data-rrt4-gloss]:focus-visible{outline:2px solid #ff5b00;outline-offset:4px}
+.rrt4-lex-popup{position:fixed;z-index:9999;background:#101010;color:#f6f0df;border:2px solid #f6b500;box-shadow:5px 5px 0 #f6b500;padding:12px 16px;max-width:min(270px,calc(100vw - 24px));pointer-events:none;font-family:Arial,Helvetica,sans-serif}
+.rrt4-lex-popup[hidden]{display:none}
+.rrt4-lex-popup .rrt4-word{font-size:1.6rem;font-weight:900;line-height:1.1}
+.rrt4-lex-popup .rrt4-reading{display:block;color:#f6b500;font:800 .75rem ui-monospace,monospace;margin-top:7px}
+.rrt4-lex-popup .rrt4-meaning{font-size:.83rem;line-height:1.3;margin-top:6px}
+@media(prefers-reduced-motion:reduce){.jp[data-rrt4-ready],.jp-big[data-rrt4-ready],[data-rrt4-gloss]{transition:none}}
