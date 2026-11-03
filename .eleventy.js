@@ -13,6 +13,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("analytics.js");
   eleventyConfig.addPassthroughCopy("motion.js");
   eleventyConfig.addPassthroughCopy("system.html");
+  // PLAY/SIGNAL lives outside Eleventy's src/ input directory.
+  // Publish its standalone HTML, CSS, and JS as /play/*.
+  eleventyConfig.addPassthroughCopy("play");
   eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addTransform("analytics", function(content) {
