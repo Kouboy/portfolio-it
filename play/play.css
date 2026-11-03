@@ -161,3 +161,189 @@ html.ps-calm [data-build]::before{animation:none!important}
   *,*::before,*::after{animation:none!important;transition:none!important}
   [data-reveal],[data-build] .ps-fill{opacity:1!important;transform:none!important}
 }
+
+
+/* ==============================================================
+   CREATIVE ARCHIVE / PLAY-SIGNAL MOTION LANGUAGE V02
+   Scoped enhancements. Never imported by SUN/SIGNAL.
+   ============================================================== */
+.ps-brand{white-space:nowrap}
+.ps-brand .ps-logo{background:var(--ps-coral)}
+.ps-brand small{color:var(--ps-lime);letter-spacing:.02em}
+.ps-title.ps-title-archive{
+  font-size:clamp(3.9rem,9.4vw,9.8rem);
+  line-height:.83;
+  letter-spacing:-.083em;
+  overflow-wrap:normal
+}
+.ps-title.ps-title-archive>span{display:inline-block;max-width:100%}
+.ps-language-band{
+  position:relative;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:stretch;
+  min-height:70px;
+  gap:20px;
+  background:linear-gradient(90deg,#342962, #1c1b31 58%, #171526);
+  border-bottom:1px solid var(--ps-line);
+  overflow:hidden
+}
+.ps-language-band::before{
+  content:"";position:absolute;inset:0 auto 0 0;width:0;
+  background:linear-gradient(90deg,transparent,rgba(214,245,93,.14),transparent);
+  pointer-events:none;z-index:2
+}
+.ps-languages{display:flex;align-items:center;gap:12px;flex-wrap:wrap;z-index:1}
+.ps-lang-en,.ps-lang-jp,.ps-lang-fr,.ps-band-number{
+  font:800 10px var(--ps-mono);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  white-space:nowrap
+}
+.ps-lang-en{color:var(--ps-lime)}
+.ps-lang-jp{font-size:1.15rem;letter-spacing:.02em;color:var(--ps-paper)}
+.ps-lang-fr{color:#d5cde9}
+.ps-lang-jp::before,.ps-lang-fr::before{content:"/";color:var(--ps-coral);margin-right:12px;font:900 13px var(--ps-mono)}
+.ps-band-number{display:flex;align-items:center;color:var(--ps-lime);justify-content:flex-end;z-index:1}
+.ps-marquee{min-width:0;overflow:hidden;align-self:center;position:relative;border-left:1px solid var(--ps-line);border-right:1px solid var(--ps-line);padding:10px 0}
+.ps-marquee-inner{white-space:nowrap;display:inline-block;font:900 10px var(--ps-mono);letter-spacing:.13em;color:#aaa2cf;padding-left:16px;will-change:transform}
+.ps-language-band.ps-visible::before{animation:ps-band-flash .75s ease-out both}
+.ps-language-band.ps-visible .ps-marquee-inner{animation:ps-belt 22s linear 1.1s infinite alternate}
+@keyframes ps-band-flash{
+  0%{left:0;width:0;opacity:0}
+  25%{width:35%;opacity:1}
+  100%{left:100%;width:0;opacity:0}
+}
+@keyframes ps-belt{from{transform:translateX(0)}to{transform:translateX(-31%)}}
+.ps-rail-label{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-height:134px;padding:5px 0 12px;border-top:2px solid var(--ps-violet)}
+.ps-rail-label::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:1px;background:var(--ps-line)}
+.ps-rail-label .ps-kicker{font-size:10px}
+.ps-rail-label .ps-jp{font-size:clamp(1.25rem,2vw,1.9rem);font-weight:900;letter-spacing:-.02em;color:var(--ps-lime);line-height:1}
+.ps-rail-label .ps-fr{font:700 11px var(--ps-mono);color:#d0cadc}
+.ps-rail-picto{margin-top:auto;display:grid;place-items:center;width:50px;height:50px;border:1px solid var(--ps-line);color:var(--ps-paper);background:#342b53;box-shadow:5px 5px 0 #171526}
+.ps-rail-picto svg{width:30px;height:30px}
+.ps-lead-trio{display:flex;align-items:center;gap:18px;margin:12px 0;flex-wrap:wrap}
+.ps-lead-trio .ps-jp{font:900 1.1rem var(--ps-sans);color:var(--ps-lime)}
+.ps-lead-trio .ps-fr{font:800 11px var(--ps-mono);color:var(--ps-muted);text-transform:uppercase}
+.ps-playglyph{overflow:hidden}
+.ps-playglyph:has(svg)::after{display:none}
+.ps-playglyph svg{position:relative;z-index:2;width:115px;height:115px;fill:none;stroke:var(--ps-lime);color:var(--ps-lime);filter:drop-shadow(4px 4px 0 #171526)}
+.ps-visual{display:grid;place-items:center;min-height:165px}
+.ps-visual-symbol{display:block;width:86px;height:86px;position:relative;z-index:1;color:var(--ps-lime)}
+.ps-visual-symbol svg{display:block;width:100%;height:100%;filter:drop-shadow(5px 5px 0 rgba(112,89,237,.45))}
+.ps-project:nth-child(2) .ps-visual-symbol{color:#ff785f}
+.ps-project:nth-child(3) .ps-visual-symbol{color:#b9a6ff}
+.ps-project:nth-child(4) .ps-visual-symbol{color:#f5f0e5}
+.ps-project .ps-visual::before{border-color:rgba(112,89,237,.3)}
+.ps-project .ps-visual::after{color:var(--ps-muted)}
+/* Footer retains compact FR / EN / JP signatures */
+.ps-footer::before{content:"FR / CONTENU     EN / INTERFACE     JP / 記号";position:absolute;font:700 9px var(--ps-mono);letter-spacing:.07em;color:var(--ps-coral);top:8px;left:clamp(18px,3vw,48px)}
+.ps-footer{position:relative;padding-top:37px}
+/* Reveal each semantic layer independently: frame, pictogram, labels, title, copy. */
+@keyframes ps-type-in{
+  0%{opacity:1;clip-path:inset(0 100% 0 0)}
+  100%{opacity:1;clip-path:inset(0 0 0 0)}
+}
+@keyframes ps-copy-in{
+  0%{opacity:0;transform:translateY(9px);filter:blur(1.5px)}
+  100%{opacity:1;transform:none;filter:blur(0)}
+}
+@keyframes ps-icon-snap{
+  0%{opacity:0;transform:translateY(14px) scale(.68) rotate(-12deg)}
+  70%{opacity:1;transform:translateY(-3px) scale(1.06) rotate(2deg)}
+  100%{opacity:1;transform:none}
+}
+@keyframes ps-nav-arrive{
+  from{opacity:0;transform:translateY(-9px)}
+  to{opacity:1;transform:translateY(0)}
+}
+html.ps-motion .ps-header .ps-logo{animation:ps-icon-snap .54s var(--ps-ease) .07s both}
+html.ps-motion .ps-header .ps-brand>span:not(.ps-logo){animation:ps-copy-in .5s var(--ps-ease) .19s both}
+html.ps-motion .ps-header .ps-brand small{animation:ps-type-in .5s steps(12,end) .38s both}
+html.ps-motion .ps-nav a{animation:ps-nav-arrive .42s var(--ps-ease) both}
+html.ps-motion .ps-nav a:nth-child(1){animation-delay:.12s}
+html.ps-motion .ps-nav a:nth-child(2){animation-delay:.20s}
+html.ps-motion .ps-nav a:nth-child(3){animation-delay:.28s}
+html.ps-motion .ps-nav a:nth-child(4){animation-delay:.36s}
+/* JS only adds these classes to visible-stage descendants, keeping source text untouched. */
+html.ps-motion [data-reveal].ps-armed .ps-type-target,
+html.ps-motion [data-build].ps-armed .ps-type-target{opacity:0}
+html.ps-motion [data-reveal].ps-visible .ps-type-target,
+html.ps-motion [data-build].ps-visible .ps-type-target{
+  animation:ps-type-in var(--ps-type-duration,.62s) steps(var(--ps-type-steps,16),end) var(--ps-type-delay,.12s) both;
+}
+html.ps-motion [data-reveal].ps-armed .ps-copy-target,
+html.ps-motion [data-build].ps-armed .ps-copy-target{opacity:0}
+html.ps-motion [data-reveal].ps-visible .ps-copy-target,
+html.ps-motion [data-build].ps-visible .ps-copy-target{
+  animation:ps-copy-in .5s var(--ps-ease) var(--ps-copy-delay,.62s) both
+}
+html.ps-motion [data-reveal].ps-armed .ps-picto,
+html.ps-motion [data-build].ps-armed .ps-picto{opacity:0}
+html.ps-motion [data-reveal].ps-visible .ps-picto,
+html.ps-motion [data-build].ps-visible .ps-picto{animation:ps-icon-snap .58s var(--ps-ease) .44s both}
+html.ps-motion [data-build].ps-visible::before{animation:ps-trace .52s steps(12,end) both}
+html.ps-motion [data-build].ps-visible .ps-fill{animation:ps-populate .4s var(--ps-ease) .28s both}
+html.ps-motion .ps-demo.is-replaying [data-build].ps-visible::before{animation:ps-trace .52s steps(12,end) both}
+html.ps-motion .ps-demo.is-replaying [data-build].ps-visible .ps-fill{animation:ps-populate .4s var(--ps-ease) .28s both}
+html.ps-calm .ps-header *,
+html.ps-calm .ps-language-band *,
+html.ps-calm .ps-language-band::before,
+html.ps-calm .ps-type-target,
+html.ps-calm .ps-copy-target,
+html.ps-calm .ps-picto{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}
+html.ps-calm .ps-marquee-inner{transform:translateX(0)!important}
+html.ps-calm [data-reveal].ps-armed:not(.ps-visible){opacity:1!important;transform:none!important}
+@media(max-width:1000px){
+ .ps-language-band{grid-template-columns:1fr auto}
+ .ps-marquee{display:none}
+ .ps-brand{gap:7px}
+}
+@media(max-width:700px){
+ .ps-header .ps-brand small{display:none}
+ .ps-title.ps-title-archive{font-size:clamp(3.05rem,12vw,6rem)}
+ .ps-language-band{gap:8px;min-height:64px;grid-template-columns:1fr}
+ .ps-band-number{display:none}
+ .ps-languages{gap:6px 10px;padding:7px 0}
+ .ps-lang-en,.ps-lang-fr{font-size:9px}
+ .ps-lang-jp{font-size:1rem}
+ .ps-rail-label{min-height:0;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:6px 14px;padding:10px 0}
+ .ps-rail-label .ps-kicker{grid-column:1/3}
+ .ps-rail-label .ps-jp{grid-column:1}
+ .ps-rail-label .ps-fr{grid-column:2}
+ .ps-rail-picto{grid-column:3;grid-row:1/3;width:42px;height:42px;margin:0}
+ .ps-rail-picto svg{width:25px;height:25px}
+}
+@media(prefers-reduced-motion:reduce){
+ .ps-header *, .ps-language-band *, .ps-language-band::before,
+ .ps-type-target,.ps-copy-target,.ps-picto{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}
+}
+
+
+/* Editorial reveal and utility band orchestration */
+.ps-band{position:relative;overflow:hidden;isolation:isolate}
+.ps-band::before{
+ content:"";position:absolute;z-index:-1;inset:0;transform:scaleX(0);
+ transform-origin:left center;background:linear-gradient(90deg,#7059ed42,#7059ed00)
+}
+html.ps-motion .ps-band.ps-visible::before{
+ animation:ps-band-fill .65s cubic-bezier(.15,.8,.3,1) both
+}
+@keyframes ps-band-fill {from{transform:scaleX(0)}to{transform:scaleX(1)}}
+html.ps-motion .ps-article [data-reveal].ps-self-type.ps-visible{
+ animation:ps-type-in .76s steps(24,end) .16s both
+}
+html.ps-motion .ps-article [data-reveal].ps-self-copy.ps-visible,
+html.ps-motion .ps-next.ps-visible{
+ animation:ps-copy-in .55s var(--ps-ease) .12s both
+}
+.ps-article article > h2{border-top:1px solid var(--ps-line);padding-top:18px}
+.ps-article article > h2::before{content:"▶ ";color:var(--ps-coral);font-size:.68em;vertical-align:middle}
+.ps-article article > ul{padding-left:23px}
+.ps-article article > ul li::marker{color:var(--ps-lime)}
+/* Small landmarks stay quiet when motion is disabled. */
+html.ps-calm .ps-article [data-reveal],html.ps-calm .ps-next,
+html.ps-calm .ps-band{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
+@media(prefers-reduced-motion:reduce){
+ .ps-article [data-reveal],.ps-next,.ps-band{animation:none!important;opacity:1!important;clip-path:none!important}
+}
