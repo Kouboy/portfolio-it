@@ -21,6 +21,14 @@
     return;
   }
 
+  // Editorial content also follows the page's visual rhythm, section by section.
+  // These are existing semantic elements, not duplicates and not hidden without JS.
+  for (const element of document.querySelectorAll(
+    '.ps-article article > h2, .ps-article article > p, .ps-article article > ul, ' +
+    '.ps-article article > .ps-quote, .ps-article aside > h3, .ps-article aside > .ps-facts, ' +
+    '.ps-article aside > ul, .ps-next, .ps-band'
+  )) element.setAttribute('data-reveal', '');
+
   const stages = [...document.querySelectorAll('[data-reveal], [data-build]')];
 
   function category(element) {
@@ -36,6 +44,11 @@
   }
 
   function prepare(stage) {
+    if (stage.matches('.ps-article h2, .ps-article h3')) {
+      stage.classList.add('ps-self-type');
+    } else if (stage.matches('.ps-article p, .ps-article ul, .ps-article .ps-quote, .ps-facts, .ps-next')) {
+      stage.classList.add('ps-self-copy');
+    }
     // Only the nearest animation stage owns a target: prevents double animations.
     const source = [
       '.ps-title > span', '.ps-page-lead h1',
@@ -45,7 +58,8 @@
       '.ps-hero-main > .ps-kicker','.ps-hero-side strong','.ps-hero-side .ps-label',
       '.ps-project h3','.ps-project .ps-kicker','.ps-project .ps-label',
       '.ps-card strong','.ps-card b','.ps-card .ps-chip',
-      '.ps-proof-slot strong','.ps-page-lead > .ps-kicker'
+      '.ps-proof-slot strong','.ps-page-lead > .ps-kicker',
+      '.ps-band > b','.ps-band > span'
     ];
     const seen = new Set();
     for (const element of stage.querySelectorAll(source.join(','))) {
@@ -75,11 +89,12 @@
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        entry.target.classList.add('ps-visible');
-        observer.unobserve(entry.target);
-      }
+      entries.filter(entry => entry.isIntersecting)
+        .sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        .forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          window.setTimeout(() => entry.target.classList.add('ps-visible'), Math.min(index * 85, 250));
+        });
     }, { threshold: .06, rootMargin: '0px 0px -15px 0px' });
     for (const stage of stages) observer.observe(stage);
   } else {
