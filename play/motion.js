@@ -2,7 +2,14 @@
 (() => {
   const root = document.documentElement;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (reduced.matches) return;
+  if (reduced.matches) {
+    // Do not offer replay controls that cannot run under the system preference.
+    document.querySelectorAll('[data-motion-replay], [data-motion-toggle]').forEach((button) => {
+      button.disabled = true;
+      button.title = 'Animations désactivées par la préférence de mouvement réduit du système';
+    });
+    return;
+  }
   root.classList.add('ps-motion');
 
   const targets = [...document.querySelectorAll('[data-reveal], [data-build]')];
