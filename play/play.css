@@ -318,3 +318,32 @@ html.ps-calm [data-reveal].ps-armed:not(.ps-visible){opacity:1!important;transfo
  .ps-header *, .ps-language-band *, .ps-language-band::before,
  .ps-type-target,.ps-copy-target,.ps-picto{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}
 }
+
+
+/* Editorial reveal and utility band orchestration */
+.ps-band{position:relative;overflow:hidden;isolation:isolate}
+.ps-band::before{
+ content:"";position:absolute;z-index:-1;inset:0;transform:scaleX(0);
+ transform-origin:left center;background:linear-gradient(90deg,#7059ed42,#7059ed00)
+}
+html.ps-motion .ps-band.ps-visible::before{
+ animation:ps-band-fill .65s cubic-bezier(.15,.8,.3,1) both
+}
+@keyframes ps-band-fill {from{transform:scaleX(0)}to{transform:scaleX(1)}}
+html.ps-motion .ps-article [data-reveal].ps-self-type.ps-visible{
+ animation:ps-type-in .76s steps(24,end) .16s both
+}
+html.ps-motion .ps-article [data-reveal].ps-self-copy.ps-visible,
+html.ps-motion .ps-next.ps-visible{
+ animation:ps-copy-in .55s var(--ps-ease) .12s both
+}
+.ps-article article > h2{border-top:1px solid var(--ps-line);padding-top:18px}
+.ps-article article > h2::before{content:"▶ ";color:var(--ps-coral);font-size:.68em;vertical-align:middle}
+.ps-article article > ul{padding-left:23px}
+.ps-article article > ul li::marker{color:var(--ps-lime)}
+/* Small landmarks stay quiet when motion is disabled. */
+html.ps-calm .ps-article [data-reveal],html.ps-calm .ps-next,
+html.ps-calm .ps-band{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
+@media(prefers-reduced-motion:reduce){
+ .ps-article [data-reveal],.ps-next,.ps-band{animation:none!important;opacity:1!important;clip-path:none!important}
+}
