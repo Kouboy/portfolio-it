@@ -57,6 +57,7 @@
       '.ps-lang-en','.ps-lang-jp','.ps-lang-fr','.ps-band-number',
       '.ps-hero-main > .ps-kicker','.ps-hero-side strong','.ps-hero-side .ps-label',
       '.ps-project h3','.ps-project .ps-kicker','.ps-project .ps-label',
+      '.ps-card h3','.ps-card .ps-kicker','.ps-card .ps-jp',
       '.ps-card strong','.ps-card b','.ps-card .ps-chip',
       '.ps-proof-slot strong','.ps-page-lead > .ps-kicker',
       '.ps-band > b','.ps-band > span'
