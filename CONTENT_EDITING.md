@@ -2,6 +2,9 @@
 
 La v9 sépare désormais **contenu**, **templates** et **design**.
 
+> **Règle transversale :** toute modification du portfolio doit respecter [R-PORT-01 · Rigueur vivante](EDITORIAL_RULE.md). Les faits restent prouvables, les choix racontent une démarche, les notions difficiles deviennent compréhensibles et l'humour reste léger, facultatif et clairement séparé des mesures. Cette règle concerne aussi les légendes, l'UX, le design et les contributions des agents.
+
+
 ## Modifier un projet
 
 Les textes sont dans `src/projects/`.
