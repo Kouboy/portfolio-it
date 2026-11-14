@@ -232,3 +232,11 @@ La chorégraphie validée sur l’accueil devient la grammaire commune des fiche
 - `prefers-reduced-motion` garde une version immédiatement lisible et statique.
 
 Cette grammaire s’applique à toutes les fiches publiques du portfolio.
+
+---
+
+## 14. Règle éditoriale transversale
+
+Le portfolio doit rester **précis, vivant et instructif**. Les anecdotes de terrain et les micro-explications rendent les projets accessibles sans diluer les mesures ni les preuves. Les notes marginales et les mascottes sont au service de la compréhension, jamais de la décoration ou d'une obligation de faire rire.
+
+Appliquer systématiquement **[R-PORT-01 · Rigueur vivante](EDITORIAL_RULE.md)** à toute évolution du contenu, du design, des interfaces et de la narration. Cette règle complète la grammaire visuelle sans la remplacer.
