@@ -70,6 +70,13 @@ next_steps:
 - "Qualifier une reprise isolée, des permissions effectives et la cohérence de la mémoire restaurée."
 - "Documenter des exemples anonymisés, compréhensibles sans ouvrir l’infrastructure interne."
 takeaway: "Une mémoire utile n’est pas celle qui retient tout : c’est celle dont on peut contrôler ce qu’elle croit savoir."
+related:
+- href: atelier-infrastructure.html
+  label: Atelier Infra
+  note: "Le contexte technique et les limites de la reprise de service."
+- href: atelier-charter.html
+  label: Charte de l’Atelier
+  note: "Les principes de partage, de confidentialité et de révision des règles."
 next_link:
   href: atelier-pocket-signal.html
   label: Pocket Signal
