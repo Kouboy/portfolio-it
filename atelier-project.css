@@ -53,3 +53,13 @@
 @media(max-width:850px){.ap-hero{grid-template-columns:1fr}.ap-hero-side{min-height:240px}.ap-section{grid-template-columns:1fr}.ap-section>header{border-right:0;border-bottom:1px solid #050505;padding:24px var(--gutter,24px)}.ap-content{padding-top:25px}.ap-hero h1{font-size:clamp(3rem,12vw,6rem)}}
 @media(max-width:600px){.ap-evidence{grid-template-columns:1fr}.ap-bottom{grid-template-columns:1fr}.ap-hero-side dl div{grid-template-columns:85px 1fr}.ap-hero-main{padding-top:35px}.ap-strip{line-height:1.5}}
 @media(prefers-reduced-motion:reduce){.atelier-project-page *{scroll-behavior:auto}}
+
+/* P/S evidence-first visuals: diagram identity, caption and enlarged source. */
+.ap-visual{margin:0;border-bottom:2px solid #050505;background:#121212;color:#f6f0df}
+.ap-visual>a{display:block;line-height:0;cursor:zoom-in}
+.ap-visual>a:focus-visible{outline:4px solid #f5b800;outline-offset:-4px}
+.ap-visual img{display:block;width:100%;height:auto;object-fit:contain}
+.ap-visual figcaption{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:16px var(--gutter,24px);border-top:1px solid #777}
+.ap-visual figcaption strong{color:#f5b800;font:900 .69rem var(--mono,monospace);letter-spacing:.07em;min-width:190px}
+.ap-visual figcaption span{font-size:.82rem;line-height:1.5;max-width:84ch}
+@media(max-width:650px){.ap-visual figcaption{display:block}.ap-visual figcaption strong{display:block;margin-bottom:9px}.ap-visual img{min-height:135px}}
