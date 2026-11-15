@@ -3,8 +3,8 @@ layout: training-project.njk
 tags:
 - project
 permalink: project3.html
-num: '10'
-order: 10
+num: '11'
+order: 11
 slug: project3
 title: LAN / WLAN Deployment
 display: Projet 3 — LAN / WLAN
@@ -34,11 +34,11 @@ facts:
   value: DHCP · DNS · AAA/RADIUS
 - label: STATE
   value: Projet validé
-footer_title: REVIEWER EYE / TRAINING NOTE 10
+footer_title: REVIEWER EYE / TRAINING NOTE 11
 footer_joke: Le meilleur ping est celui dont on sait exactement pourquoi il répond… ou pourquoi il ne doit pas répondre.
 prev:
-  file: archos-gamepad2.html
-  name: Archos GamePad 2
+  file: projet4.html
+  name: Projet 4 — Parc / FOG
 next:
   file: projet2.html
   name: Projet 2 — CAO / Deploy
