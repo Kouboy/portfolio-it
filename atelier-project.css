@@ -63,3 +63,14 @@
 .ap-visual figcaption strong{color:#f5b800;font:900 .69rem var(--mono,monospace);letter-spacing:.07em;min-width:190px}
 .ap-visual figcaption span{font-size:.82rem;line-height:1.5;max-width:84ch}
 @media(max-width:650px){.ap-visual figcaption{display:block}.ap-visual figcaption strong{display:block;margin-bottom:9px}.ap-visual img{min-height:135px}}
+
+.ap-related{padding:28px var(--gutter,24px) 40px;background:#f6f0df;border-bottom:2px solid #111}
+.ap-related-head{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:16px}
+.ap-related-head small{font:900 .7rem var(--mono,monospace);letter-spacing:.06em}
+.ap-related-head strong{font-size:1.5rem;letter-spacing:-.04em}
+.ap-related-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#111;border:1px solid #111}
+.ap-related-links a{background:#fff8e9;color:#111;text-decoration:none;padding:20px;min-width:0}
+.ap-related-links a:hover,.ap-related-links a:focus-visible{background:#f5b800}
+.ap-related-links strong{display:block;font-size:1.14rem;letter-spacing:-.03em;margin-bottom:8px}
+.ap-related-links span{display:block;line-height:1.5;font-size:.88rem}
+@media(max-width:650px){.ap-related-links{grid-template-columns:1fr}}
