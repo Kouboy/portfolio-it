@@ -3,8 +3,8 @@ layout: training-project.njk
 tags:
 - project
 permalink: projet2.html
-num: '11'
-order: 11
+num: '12'
+order: 12
 slug: projet2
 title: CAO / Windows Deploy
 display: Projet 2 — CAO / Deploy
@@ -34,14 +34,14 @@ facts:
   value: AutoCAD 2027
 - label: STATE
   value: Projet validé
-footer_title: ARCHIVE NODE / TRAINING NOTE 11
+footer_title: ARCHIVE NODE / TRAINING NOTE 12
 footer_joke: Quand le Deployment Summary affiche Success, même le serveur a l’air de sourire un peu.
 prev:
   file: project3.html
   name: Projet 3 — LAN / WLAN
 next:
-  file: projet4.html
-  name: Projet 4 — Parc / FOG
+  file: road-to-it.html
+  name: Road to IT
 feature: false
 overview: 'Projet de formation combinant choix matériel et déploiement système : concevoir une workstation adaptée à AutoCAD
   2027 dans une enveloppe donnée, puis préparer une chaîne MDT/WDS permettant d’installer Windows 11, les applications et
