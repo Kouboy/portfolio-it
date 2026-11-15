@@ -2135,3 +2135,7 @@ html.pt-covered.pt-reveal.pt-from-bottom::before {
   .training-gallery{grid-template-columns:1fr}
   .training-proof a{min-height:190px}
 }
+
+.training-proof.wide{grid-column:1/-1}
+.training-proof.wide a{background:#F6F0DF;min-height:0}
+.training-proof.wide img{max-height:none}
