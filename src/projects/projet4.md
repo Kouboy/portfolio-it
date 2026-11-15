@@ -3,8 +3,8 @@ layout: training-project.njk
 tags:
 - project
 permalink: projet4.html
-num: '12'
-order: 12
+num: '10'
+order: 10
 slug: projet4
 title: Windows 11 / FOG Deployment
 display: Projet 4 — Parc / FOG
@@ -33,14 +33,14 @@ facts:
   value: Windows 11 · FOG · Chocolatey
 - label: STATE
   value: Projet validé
-footer_title: REVIEWER EYE / TRAINING NOTE 12
+footer_title: REVIEWER EYE / TRAINING NOTE 10
 footer_joke: 'Une image restaurée ne suffit pas : il faut encore vérifier ce qui démarre, fonctionne et rejoint réellement le domaine.'
 prev:
-  file: projet2.html
-  name: Projet 2 — CAO / Deploy
+  file: archos-gamepad2.html
+  name: Archos GamePad 2
 next:
-  file: road-to-it.html
-  name: Road to IT
+  file: project3.html
+  name: Projet 3 — LAN / WLAN
 feature: false
 overview: >-
   Le scénario de formation consiste à moderniser le matériel d’un cybercafé puis à industrialiser
