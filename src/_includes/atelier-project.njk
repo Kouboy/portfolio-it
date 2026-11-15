@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="{{ lede }}">
+  <title>{{ title }} | L’Atelier · Paper / Signal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css">
+  <link rel="stylesheet" href="atelier-project.css">
+  <script src="page-transition.js"></script>
+</head>
+<body class="theme-workshop atelier-project-page">
+{% include "atelier-header.njk" %}
+<main id="content">
+<nav class="ap-breadcrumb" aria-label="Fil d’Ariane"><a href="index.html">TECHNICAL ARCHIVE</a><span aria-hidden="true">/</span><a href="atelier.html">ATELIER</a><span aria-hidden="true">/</span><span aria-current="page">{{ short_title }}</span></nav>
+<section class="ap-hero">
+  <div class="ap-hero-main">
+    <div class="ap-meta">{{ code }} / {{ category }} / 2026</div>
+    <h1>{{ title }}</h1>
+    <p class="ap-lede">{{ lede }}</p>
+    <div class="ap-tags">{% for tag in tags_list %}<span>{{ tag }}</span>{% endfor %}</div>
+  </div>
+  <aside class="ap-hero-side" aria-label="État documentaire">
+    <span class="ap-side-label">FIELD FILE / 状態</span>
+    <strong>{{ status }}</strong>
+    <p>{{ status_note }}</p>
+    <dl>{% for f in facts %}<div><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>{% endfor %}</dl>
+  </aside>
+</section>
+<div class="ap-strip"><span>CONTEXT → METHOD → EVIDENCE → LIMITS</span><span>PAPER / SIGNAL</span></div>
+{% if visual %}
+<figure class="ap-visual" aria-labelledby="ap-visual-caption">
+  <a href="{{ visual.src }}" target="_blank" rel="noopener" aria-label="Ouvrir le schéma en grand : {{ visual.label }}">
+    <img src="{{ visual.src }}" alt="{{ visual.alt }}" width="1140" height="430" loading="eager" decoding="async">
+  </a>
+  <figcaption id="ap-visual-caption"><strong>{{ visual.label }}</strong><span>{{ visual.caption }}</span></figcaption>
+</figure>
+{% endif %}
+<section class="ap-section" id="context">
+  <header><small>01 / CONTEXT / 背景</small><h2>Pourquoi ?</h2></header>
+  <div class="ap-content"><p class="ap-lead">{{ context }}</p><div class="ap-purpose"><b>OBJECTIVE / 目的</b><p>{{ objective }}</p></div></div>
+</section>
+<section class="ap-section" id="method">
+  <header><small>02 / METHOD / 構築</small><h2>Comment ?</h2></header>
+  <div class="ap-content"><div class="ap-steps">{% for s in method %}<article><span>{{ loop.index | pad2 }}</span><div><h3>{{ s.title }}</h3><p>{{ s.text }}</p></div></article>{% endfor %}</div></div>
+</section>
+<section class="ap-section" id="evidence">
+  <header><small>03 / EVIDENCE / 証拠</small><h2>Ce qui est établi</h2></header>
+  <div class="ap-content"><p class="ap-intro">{{ evidence_intro }}</p><div class="ap-evidence">{% for e in evidence %}<article><span class="ap-proof-state">{{ e.state }}</span><h3>{{ e.title }}</h3><p>{{ e.text }}</p>{% if e.reference %}<small>{{ e.reference }}</small>{% endif %}</article>{% endfor %}</div></div>
+</section>
+<section class="ap-section" id="limits">
+  <header><small>04 / LIMITS / 留保</small><h2>Les réserves</h2></header>
+  <div class="ap-content"><ul class="ap-limits">{% for l in limits %}<li>{{ l }}</li>{% endfor %}</ul></div>
+</section>
+<section class="ap-section" id="next">
+  <header><small>05 / NEXT / 次へ</small><h2>La suite</h2></header>
+  <div class="ap-content"><div class="ap-next">{% for n in next_steps %}<p>{{ n }}</p>{% endfor %}</div><p class="ap-last">{{ takeaway }}</p></div>
+</section>
+{% if related %}
+<section class="ap-related" aria-label="Dossiers connexes">
+  <div class="ap-related-head"><small>RELATED RECORDS / 関連</small><strong>Continuer l’exploration</strong></div>
+  <div class="ap-related-links">{% for item in related %}<a href="{{ item.href }}"><strong>{{ item.label }}</strong><span>{{ item.note }}</span></a>{% endfor %}</div>
+</section>
+{% endif %}
+<nav class="ap-bottom"><a href="atelier.html#atelier-work"><small>← BACK TO WORKSHOP</small><strong>Retour à l’Atelier</strong></a>{% if next_link %}<a href="{{ next_link.href }}"><small>READ NEXT →</small><strong>{{ next_link.label }}</strong></a>{% endif %}</nav>
+</main>
+<footer class="footer atelier-footer"><div class="footer-main"><strong>PAPER /<br>SIGNAL</strong><div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div></div><div class="footer-side"><div>ATELIER / FIELD FILE<br>{{ code }} / 2026</div><div>PUBLIC SUMMARY / NO PRIVATE CONFIG</div></div></footer>
+<script src="rrt4-safe.js"></script>
+</body>
+</html>

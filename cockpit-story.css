@@ -127,3 +127,18 @@
 .cs-breadcrumb{background:#f6f0df;color:#101010;padding:12px clamp(18px,3vw,44px);display:flex;flex-wrap:wrap;gap:12px;border-bottom:1px solid #101010;font:850 .67rem ui-monospace,monospace;letter-spacing:.05em}
 .cs-breadcrumb a{text-decoration:underline;text-underline-offset:3px}
 .cs-breadcrumb a:hover,.cs-breadcrumb a:focus-visible{background:#101010;color:#f6b500}
+
+/* Cockpit / authentic synthetic Motion Lab evidence, not product-data screenshot. */
+.cs-proof-image{display:block;max-width:1080px;background:#0b0b0b;border:2px solid #101010;line-height:0;cursor:zoom-in}
+.cs-proof-image img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+.cs-proof-image:focus-visible{outline:4px solid var(--cs-orange,#fe5c00);outline-offset:3px}
+.cs-media figcaption b{font-weight:900}
+.cs-media figcaption a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* Cockpit lab hero / safe synthetic fixture; no unpublished personal data */
+.cs-hero-proof{display:block;margin:auto 0;max-height:620px;overflow:hidden;background:#080808;border:1px solid #f5b800;line-height:0;cursor:zoom-in}
+.cs-hero-proof img{width:100%;height:auto;display:block;object-fit:cover;object-position:center;transition:transform .35s ease}
+.cs-hero-proof:hover img{transform:scale(1.025)}
+.cs-hero-proof:focus-visible{outline:4px solid #f5b800;outline-offset:4px}
+.cs-hero-visual>p{line-height:1.4;margin:20px 0 0}
+@media(prefers-reduced-motion:reduce){.cs-hero-proof img{transition:none}.cs-hero-proof:hover img{transform:none}}
