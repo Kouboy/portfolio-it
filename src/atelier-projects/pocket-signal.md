@@ -66,6 +66,13 @@ next_steps:
 - "Vérifier les conflits de versions, le comportement hors connexion et la possibilité d’exporter les notes."
 - "Documenter le redémarrage et la récupération des sessions après une interruption du service."
 takeaway: "Le succès n’est pas d’avoir ajouté des boutons : c’est d’avoir rendu la reprise d’une session plus légère que son oubli."
+related:
+- href: cockpit-signal.html
+  label: Cockpit Signal
+  note: "Un autre outil de l’Atelier consacré à la reprise du travail."
+- href: kouboypi.html
+  label: KouboyPi / Technical Archive
+  note: "La machine hôte, vue sous l’angle de l’exploitation informatique."
 next_link:
   href: atelier-infrastructure.html
   label: Atelier Infra
