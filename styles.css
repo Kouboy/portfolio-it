@@ -2078,34 +2078,37 @@ html.pt-covered.pt-reveal.pt-from-bottom::before {
   }
 }
 
-/* TRAINING / EVIDENCE: editorial image + caption pairs.
-   One media per row: no narrow caption columns or uneven baselines. */
+/* TRAINING / EVIDENCE / COMPACT
+   No fixed heights: each evidence card follows the actual image and its caption.
+   The caption label is a direct child; do not style JS-inserted per-character spans. */
 .training-gallery{
   display:grid;
   grid-template-columns:minmax(0,1fr);
-  gap:14px;
+  align-items:start;
+  gap:22px;
   width:100%;
   max-width:1100px;
-  margin:0 0 26px;
+  margin:0 0 28px;
 }
 .training-proof{
-  margin:0;
+  display:block;
+  width:100%;
+  max-width:850px;
   min-width:0;
-  display:grid;
-  grid-template-columns:minmax(0, 1.6fr) minmax(245px, 1fr);
-  align-items:stretch;
-  border:1px solid #111;
+  margin:0;
+  border:1px solid #171717;
   background:var(--paper,#f6f0df);
 }
 .training-proof>a{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-width:0;
-  min-height:265px;
-  padding:16px;
-  background:#131313;
+  display:block;
+  width:100%;
+  min-height:0;
+  box-sizing:border-box;
+  padding:12px;
+  line-height:0;
+  background:#151515;
   cursor:zoom-in;
+  text-align:center;
 }
 .training-proof>a:focus-visible{
   outline:4px solid var(--cyan,#32d9ee);
@@ -2113,78 +2116,60 @@ html.pt-covered.pt-reveal.pt-from-bottom::before {
 }
 .training-proof img{
   display:block;
-  width:100%;
+  width:auto;
+  max-width:100%;
   height:auto;
-  max-height:360px;
+  max-height:440px;
   object-fit:contain;
+  margin:0 auto;
 }
 .training-proof figcaption{
+  display:block;
+  box-sizing:border-box;
   min-width:0;
   min-height:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:18px;
-  padding:clamp(20px,3vw,34px);
-  border-left:6px solid var(--sun,#f6b500);
-  overflow-wrap:anywhere;
+  margin:0;
+  padding:15px 20px 18px;
+  border-top:5px solid var(--sun,#f6b500);
+  overflow-wrap:normal;
 }
-.training-proof figcaption span{
+.training-proof figcaption>span{
   display:block;
-  font:900 .72rem/1.55 var(--mono,monospace);
-  letter-spacing:.06em;
+  margin:0 0 7px;
+  font:900 .7rem/1.45 var(--mono,monospace);
+  letter-spacing:.055em;
   text-transform:uppercase;
 }
-.training-proof figcaption p{
+.training-proof figcaption>p{
   margin:0;
-  max-width:46ch;
-  font-size:clamp(.9rem,1vw,1.05rem);
-  line-height:1.65;
+  max-width:72ch;
+  font-size:.94rem;
+  font-family:var(--sans,sans-serif);
+  font-weight:400;
+  line-height:1.55;
+  letter-spacing:normal;
 }
 .training-proof.wide{
-  display:block;
+  max-width:1100px;
 }
 .training-proof.wide>a{
-  min-height:0;
   padding:0;
   background:#f6f0df;
 }
 .training-proof.wide img{
-  max-height:none;
-}
-.training-proof.wide figcaption{
   display:block;
-  padding:18px 26px 23px;
-  border-left:0;
-  border-top:6px solid var(--sun,#f6b500);
-}
-.training-proof.wide figcaption span{
-  margin-bottom:8px;
-}
-.training-proof.wide figcaption p{
-  max-width:80ch;
-}
-@media(max-width:1050px){
-  .training-proof:not(.wide){
-    grid-template-columns:minmax(0,1fr);
-  }
-  .training-proof:not(.wide) figcaption{
-    border-left:0;
-    border-top:6px solid var(--sun,#f6b500);
-    gap:10px;
-    padding:18px 20px 22px;
-  }
-  .training-proof:not(.wide)>a{
-    min-height:220px;
-  }
+  width:100%;
+  max-width:100%;
+  max-height:none;
+  height:auto;
 }
 @media(max-width:650px){
-  .training-proof>a{
-    padding:10px;
-  }
-  .training-proof.wide figcaption{
-    padding:18px 20px 22px;
-  }
+  .training-gallery{gap:16px}
+  .training-proof>a{padding:8px}
+  .training-proof.wide>a{padding:0}
+  .training-proof figcaption{padding:13px 15px 16px}
+  .training-proof img{max-height:320px}
+  .training-proof.wide img{max-height:none}
 }
 
 /* Cross-archive mobile navigation / PATCH 2026-11-15
