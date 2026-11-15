@@ -29,6 +29,14 @@
   </aside>
 </section>
 <div class="ap-strip"><span>CONTEXT → METHOD → EVIDENCE → LIMITS</span><span>PAPER / SIGNAL</span></div>
+{% if visual %}
+<figure class="ap-visual" aria-labelledby="ap-visual-caption">
+  <a href="{{ visual.src }}" target="_blank" rel="noopener" aria-label="Ouvrir le schéma en grand : {{ visual.label }}">
+    <img src="{{ visual.src }}" alt="{{ visual.alt }}" width="1140" height="430" loading="eager" decoding="async">
+  </a>
+  <figcaption id="ap-visual-caption"><strong>{{ visual.label }}</strong><span>{{ visual.caption }}</span></figcaption>
+</figure>
+{% endif %}
 <section class="ap-section" id="context">
   <header><small>01 / CONTEXT / 背景</small><h2>Pourquoi ?</h2></header>
   <div class="ap-content"><p class="ap-lead">{{ context }}</p><div class="ap-purpose"><b>OBJECTIVE / 目的</b><p>{{ objective }}</p></div></div>
