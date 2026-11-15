@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="306" viewBox="0 0 1080 306" role="img" aria-labelledby="title desc">
+<title id="title">Chaîne de masterisation et déploiement Windows 11 avec FOG</title>
+<desc id="desc">Préparer un poste Windows 11, capturer l’image FOG, la déployer sur deux machines avec PXE et Partclone, puis contrôler les applications et Active Directory. Schéma pédagogique, pas une capture.</desc>
+<rect width="1080" height="306" fill="#F6F0DF"/>
+<rect width="1080" height="49" fill="#050505"/>
+<text x="26" y="30" fill="#F6F0DF" font-size="18" font-weight="900" font-family="Arial,sans-serif">PROJET 04  /  MASTER → DÉPLOIEMENT → RECETTE</text>
+<text x="1055" y="29" fill="#F6B500" font-size="12" font-weight="700" text-anchor="end" font-family="monospace">SCHEMA / NOT A SCREENSHOT</text>
+<rect x="26" y="75" width="235" height="157" fill="#050505"/>
+<rect x="291" y="75" width="235" height="157" fill="#050505"/>
+<rect x="556" y="75" width="235" height="157" fill="#050505"/>
+<rect x="821" y="75" width="233" height="157" fill="#050505"/>
+<g font-family="Arial,sans-serif">
+<g fill="#F6B500" font-size="16" font-weight="900"><text x="44" y="105">01 / PREPARE</text><text x="309" y="105">02 / CAPTURE</text><text x="574" y="105">03 / DEPLOY</text><text x="839" y="105">04 / VERIFY</text></g>
+<g fill="white" font-size="23" font-weight="900"><text x="44" y="141">WINDOWS 11</text><text x="309" y="141">MASTER FOG</text><text x="574" y="141">PXE / PARTCLONE</text><text x="839" y="141">DEUX POSTES</text></g>
+<g fill="#dedacf" font-size="14"><text x="44" y="172">Audit + Chocolatey</text><text x="44" y="193">unattend.xml + Sysprep</text><text x="309" y="172">Image de référence</text><text x="309" y="193">29,82 Gio, 18/10/2026</text><text x="574" y="172">Restauration réseau</text><text x="574" y="193">Identités distinctes</text><text x="839" y="172">Applications + domaine</text><text x="839" y="193">Contrôles et réserves</text></g>
+</g>
+<g stroke="#FF5B00" stroke-width="3" fill="none"><path d="M261 154 H289"/><path d="M526 154 H554"/><path d="M791 154 H819"/></g>
+<g fill="#FF5B00"><polygon points="285,147 292,154 285,161"/><polygon points="550,147 557,154 550,161"/><polygon points="815,147 822,154 815,161"/></g>
+<rect x="26" y="258" width="1028" height="2" fill="#050505"/>
+<text x="26" y="286" fill="#050505" font-size="13" font-family="monospace">CHAIN / HARDWARE · SYSTEM · NETWORK · VALIDATION</text>
+<text x="1054" y="286" fill="#050505" font-size="13" font-family="monospace" text-anchor="end">BYTECAFÉ / LAB EXERCISE / 2026</text>
+</svg>

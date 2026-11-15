@@ -40,8 +40,8 @@ prev:
   file: project3.html
   name: Projet 3 — LAN / WLAN
 next:
-  file: road-to-it.html
-  name: Road to IT
+  file: projet4.html
+  name: Projet 4 — Parc / FOG
 feature: false
 overview: 'Projet de formation combinant choix matériel et déploiement système : concevoir une workstation adaptée à AutoCAD
   2027 dans une enveloppe donnée, puis préparer une chaîne MDT/WDS permettant d’installer Windows 11, les applications et

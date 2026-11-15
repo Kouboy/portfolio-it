@@ -2077,3 +2077,65 @@ html.pt-covered.pt-reveal.pt-from-bottom::before {
     animation: none !important;
   }
 }
+
+/* TRAINING / EVIDENCE: genuine screenshots, optional for OpenClassrooms projects. */
+.training-gallery {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  max-width:1100px;
+  margin:0 0 20px;
+  background:#050505;
+  border:1px solid #050505;
+}
+.training-proof {
+  min-width:0;
+  margin:0;
+  background:var(--paper);
+  display:flex;
+  flex-direction:column;
+}
+.training-proof a {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:225px;
+  padding:12px;
+  background:#141414;
+  cursor:zoom-in;
+}
+.training-proof a:focus-visible {
+  outline:4px solid var(--cyan,#32D9EE);
+  outline-offset:-4px;
+}
+.training-proof img {
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:425px;
+  object-fit:contain;
+}
+.training-proof figcaption {
+  padding:16px 18px 20px;
+  flex:1;
+  border-top:5px solid var(--sun,#F6B500);
+}
+.training-proof figcaption span {
+  display:block;
+  font:900 .65rem var(--mono);
+  letter-spacing:.09em;
+}
+.training-proof figcaption p {
+  margin:9px 0 0;
+  font-size:.9rem;
+  line-height:1.5;
+  max-width:50ch;
+}
+@media(max-width:720px){
+  .training-gallery{grid-template-columns:1fr}
+  .training-proof a{min-height:190px}
+}
+
+.training-proof.wide{grid-column:1/-1}
+.training-proof.wide a{background:#F6F0DF;min-height:0}
+.training-proof.wide img{max-height:none}
