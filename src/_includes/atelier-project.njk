@@ -57,6 +57,12 @@
   <header><small>05 / NEXT / 次へ</small><h2>La suite</h2></header>
   <div class="ap-content"><div class="ap-next">{% for n in next_steps %}<p>{{ n }}</p>{% endfor %}</div><p class="ap-last">{{ takeaway }}</p></div>
 </section>
+{% if related %}
+<section class="ap-related" aria-label="Dossiers connexes">
+  <div class="ap-related-head"><small>RELATED RECORDS / 関連</small><strong>Continuer l’exploration</strong></div>
+  <div class="ap-related-links">{% for item in related %}<a href="{{ item.href }}"><strong>{{ item.label }}</strong><span>{{ item.note }}</span></a>{% endfor %}</div>
+</section>
+{% endif %}
 <nav class="ap-bottom"><a href="atelier.html#atelier-work"><small>← BACK TO WORKSHOP</small><strong>Retour à l’Atelier</strong></a>{% if next_link %}<a href="{{ next_link.href }}"><small>READ NEXT →</small><strong>{{ next_link.label }}</strong></a>{% endif %}</nav>
 </main>
 <footer class="footer atelier-footer"><div class="footer-main"><strong>PAPER /<br>SIGNAL</strong><div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div></div><div class="footer-side"><div>ATELIER / FIELD FILE<br>{{ code }} / 2026</div><div>PUBLIC SUMMARY / NO PRIVATE CONFIG</div></div></footer>
