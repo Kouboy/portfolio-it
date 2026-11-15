@@ -13,6 +13,11 @@ tags_list:
 - DEBIAN
 - WINDOWS
 - SYNC
+visual:
+  src: assets/atelier/pocket-signal/session-sync-public.svg
+  alt: "Principe de Pocket Signal : sessions versionnées synchronisées entre le navigateur Debian de l’Alpha, le service Atelier Pocket sur KouboyPi et un client Windows Imperator."
+  label: "FLUX DE SYNCHRONISATION / SCHÉMA DE PRINCIPE"
+  caption: "Ce schéma illustre les échanges documentés et non une capture de l’application. Les scénarios de conflits ou de travail hors ligne restent à tester."
 facts:
 - label: SERVICE
   value: Atelier Pocket
