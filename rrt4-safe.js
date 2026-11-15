@@ -524,7 +524,7 @@
     // Text inside structured blocks must be played exclusively by that block's
     // own choreography, otherwise protocol descriptions appear before LOG labels.
     const paragraphs=[...body?.querySelectorAll('p,.side-note,.project-head-note,.evidence-caption')||[]]
-      .filter(el=>el!==title && !el.closest(structuredSelector));
+      .filter(el=>el!==title && !el.closest(structuredSelector) && !el.closest('.training-gallery'));
     paragraphs.forEach(el=>{
       buildText(el,11);
       armText(el);
