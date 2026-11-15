@@ -1,5 +1,5 @@
 {
-  "revision": "BUILD 0.4",
+  "revision": "FIELD NOTES / NOV 2026",
   "hero": {
     "kicker": "PORTFOLIO / ATELIER / 2026",
     "title": [
@@ -12,46 +12,52 @@
     "rail": "RESEARCH / BUILD / TEST / DOCUMENT / REUSE / SHARE"
   },
   "status": {
-    "label": "PREPARING",
-    "note": "ça se branche",
+    "label": "IN USE / EVOLVING",
+    "note": "systèmes actifs, qualifications partielles",
     "machines": [
       {
         "name": "WAR RIG",
         "role": "WORKSTATION",
-        "state": "INCOMING",
-        "tone": "warm"
+        "state": "ACTIVE",
+        "tone": "live"
       },
       {
         "name": "IMPERATOR",
-        "role": "LOCAL NODE",
+        "role": "WINDOWS / AGENTS",
+        "state": "ACTIVE",
+        "tone": "live"
+      },
+      {
+        "name": "KOUBOYPI",
+        "role": "NETWORK / SERVICES",
         "state": "ACTIVE",
         "tone": "live"
       },
       {
         "name": "KOUBOYPRO",
-        "role": "MOBILE",
+        "role": "MOBILE / ACCESS",
         "state": "ACTIVE",
         "tone": "live"
       },
       {
-        "name": "SERVICES",
-        "role": "HYBRID",
-        "state": "MIXED",
+        "name": "SWITCH ALPHA",
+        "role": "DEBIAN / CLIENT",
+        "state": "TESTED",
         "tone": "soft"
       }
     ],
     "counts": [
       {
-        "label": "AGENTS",
-        "value": "03"
+        "label": "WORK UNITS",
+        "value": "09"
       },
       {
-        "label": "TOOLS",
-        "value": "—"
+        "label": "SYSTEMS",
+        "value": "MIXED"
       },
       {
-        "label": "PROJECTS",
-        "value": "06"
+        "label": "STATE",
+        "value": "ITERATING"
       }
     ]
   },
@@ -81,30 +87,30 @@
     "jp": "システム構成",
     "fr": "Architecture",
     "paragraphs": [
-      "Plusieurs machines. Plusieurs modèles. Des rôles différents.",
-      "Le but n’est pas de faire travailler vingt agents là où deux suffisent. Chaque tâche va autant que possible vers l’outil qui lui convient, avec assez de contexte pour travailler correctement et assez de traces pour comprendre ensuite ce qui s’est passé."
+      "Une infrastructure personnelle réellement utilisée pour expérimenter des outils, des agents et des méthodes de reprise, entre plusieurs machines et services.",
+      "Les composants n’ont pas tous le même niveau de maturité. Un service accessible, une sauvegarde vérifiée sur fichiers et une restauration complète sont trois choses différentes."
     ],
-    "note": "TARGET MAP / les fils ne sont pas encore tous branchés",
+    "note": "FIELD MAP / vue de principe, pas inventaire en temps réel",
     "nodes": [
       {
         "name": "HUMAN",
-        "meta": "idée / choix"
+        "meta": "décision / validation"
       },
       {
         "name": "ORCHESTRATION",
-        "meta": "contexte / routage"
+        "meta": "rôles / outils"
       },
       {
-        "name": "LOCAL TOOLS",
-        "meta": "code / assets / tests"
+        "name": "SYSTEMS",
+        "meta": "machines / réseau"
       },
       {
-        "name": "MODELS",
-        "meta": "local / frontier"
+        "name": "POCKET SIGNAL",
+        "meta": "sessions / reprise"
       },
       {
-        "name": "ARCHIVE",
-        "meta": "docs / mémoire"
+        "name": "MNEMOSYNT",
+        "meta": "mémoire / provenance"
       }
     ]
   },
@@ -112,22 +118,49 @@
     "en": "04 / CURRENT WORK",
     "jp": "現在の作業",
     "fr": "En cours",
-    "intro": "Des projets finis, d’autres beaucoup moins. Certains servent à produire quelque chose. D’autres servent surtout à comprendre comment le produire. Les deux ont leur place ici.",
+    "intro": "Des outils déjà utilisés et des expériences encore fragiles. Chaque fiche distingue ce qui a été réalisé, ce qui a été testé et ce qui reste à vérifier.",
     "items": [
       {
         "num": "01",
         "title": "ATELIER INFRA",
-        "subtitle": "Machines, modèles et outils",
-        "status": "BUILD",
-        "tone": "warm",
+        "subtitle": "Machines, services, sécurité et reprise",
+        "status": "FIELD LOG",
+        "tone": "cyan",
         "tags": [
-          "LOCAL",
-          "MCP",
-          "DOCS"
-        ]
+          "SYSTEMS",
+          "NETWORK",
+          "BACKUP"
+        ],
+        "href": "atelier-infrastructure.html"
       },
       {
         "num": "02",
+        "title": "MNEMOSYNT",
+        "subtitle": "Mémoire, provenance et continuité",
+        "status": "PILOT",
+        "tone": "warm",
+        "tags": [
+          "MEMORY",
+          "MCP",
+          "GOVERNANCE"
+        ],
+        "href": "atelier-mnemosynt.html"
+      },
+      {
+        "num": "03",
+        "title": "POCKET SIGNAL",
+        "subtitle": "Sessions synchronisées, outil léger",
+        "status": "PROTOTYPE",
+        "tone": "cyan",
+        "tags": [
+          "WEB",
+          "SYNC",
+          "LIGHTWEIGHT"
+        ],
+        "href": "atelier-pocket-signal.html"
+      },
+      {
+        "num": "04",
         "title": "MOTOR MASSACRE",
         "subtitle": "Prototype / gamefeel",
         "status": "ACTIVE",
@@ -139,7 +172,7 @@
         ]
       },
       {
-        "num": "03",
+        "num": "05",
         "title": "ATLAS KARST",
         "subtitle": "Exploration générative",
         "status": "RESEARCH",
@@ -151,7 +184,7 @@
         ]
       },
       {
-        "num": "04",
+        "num": "06",
         "title": "AVA RASTER",
         "subtitle": "Pipeline image / vidéo",
         "status": "PIPELINE",
@@ -163,7 +196,7 @@
         ]
       },
       {
-        "num": "05",
+        "num": "07",
         "title": "COCKPIT SIGNAL",
         "subtitle": "Choisir, reprendre, relier les projets",
         "status": "ALPHA",
@@ -176,9 +209,9 @@
         "href": "cockpit-signal.html"
       },
       {
-        "num": "06",
+        "num": "08",
         "title": "LAZARE",
-        "subtitle": "Diagnostic, réemploi & archives",
+        "subtitle": "Diagnostic, réemploi et archives",
         "status": "FIELD LOG",
         "tone": "warm",
         "tags": [
@@ -187,6 +220,18 @@
           "ARCHIVE"
         ],
         "href": "lazare.html"
+      },
+      {
+        "num": "09",
+        "title": "ATELIER / REMOTE",
+        "subtitle": "Accès distant et réveil des machines",
+        "status": "TESTED",
+        "tone": "soft",
+        "tags": [
+          "TAILSCALE",
+          "WOL",
+          "SUPPORT"
+        ]
       }
     ]
   },
@@ -223,6 +268,21 @@
     "fr": "Carnet d’établi",
     "items": [
       {
+        "date": "2026.11.15",
+        "title": "DOCUMENTATION / THREE FIELD FILES",
+        "text": "Ouverture de trois dossiers de synthèse publique : infrastructure, mémoire MNEMOSYNT et sessions Pocket Signal. Les éléments techniques sensibles restent hors du site."
+      },
+      {
+        "date": "2026.11.03",
+        "title": "MNEMOSYNT / FIRST MCP INTEGRATION",
+        "text": "Une première intégration de la mémoire multi-agent est disponible ; la qualification complète des chemins, des permissions et de la reprise reste un chantier distinct."
+      },
+      {
+        "date": "2026.11",
+        "title": "POCKET SIGNAL / LIGHT CLIENT",
+        "text": "Sessions synchronisées depuis plusieurs machines au moyen d’un service léger ; des parcours fonctionnent, la robustesse et les captures de référence restent à documenter."
+      },
+      {
         "date": "2026.10.10",
         "title": "LAZARE / CASE 001",
         "text": "Premier dossier publié : un disque LaCie rendu inaccessible par sa chaîne USB, remis en service avec une interface SATA-USB alimentée, après diagnostic croisé et vérification NTFS."
@@ -254,7 +314,7 @@
     "jp": "チーム",
     "fr": "L’équipe",
     "intro": "Un humain, des agents et des rôles différents. Une partie de l’équipe est désormais incarnée ; d’autres fonctions restent prévisionnelles. Les identités sont pensées pour durer plus longtemps que les modèles qui les feront tourner.",
-    "note": "LUNA FAIT SES PREUVES PAR SON TRAVAIL / HERMES ORGANISE / MÉRIDIEN VÉRIFIE · IDENTITY ≠ MODEL",
+    "note": "RÔLES ET OUTILS ÉVOLUTIFS / LES ESSAIS SONT SIGNALÉS COMME TELS · IDENTITY ≠ MODEL",
     "members": [
       {
         "id": "H.01",
@@ -263,7 +323,7 @@
         "status": "ACTIVE",
         "tone": "warm",
         "mark": "repair",
-        "copy": "Idées, arbitrages, game design, playtests et bricolage. Il garde aussi la responsabilité matérielle, juridique et le droit très utile de dire : « non, ça, c’est nul »."
+        "copy": "Propose, teste, arbitre, joue et documente. Il conserve les décisions matérielles, juridiques et les permissions sensibles."
       },
       {
         "id": "A.01",
@@ -272,61 +332,70 @@
         "status": "ACTIVE",
         "tone": "cyan",
         "mark": "diagnostic",
-        "copy": "Contexte, synthèse, coordination, mémoire et continuité entre les projets. Elle aide à relier les intentions, les outils et les traces sans prétendre être partout à la fois."
+        "copy": "Synthèse, coordination et continuité documentaire. Les informations et les décisions doivent rester vérifiables, même quand plusieurs outils participent."
       },
       {
         "id": "A.02",
         "name": "MÉRIDIEN",
-        "role": "ARCHITECT / TECHNICIAN / REVIEW",
+        "role": "ARCHITECTURE / TECHNICAL REVIEW",
         "status": "ACTIVE",
         "tone": "cyan",
         "mark": "system",
-        "copy": "Architecte et technicien de l’Atelier, actuellement gardien technique d’Hermes sur Imperator. Il vérifie, expérimente, documente les limites et relit les propositions avant qu’elles ne deviennent des décisions."
+        "copy": "Architecture, diagnostic, qualification et documentation de l’infrastructure. Les résultats sont consignés avec leurs réserves."
       },
       {
         "id": "A.03",
         "name": "LUNA",
-        "role": "ARCHIVIST / SOURCES / DOCUMENTATION",
-        "status": "ACTIVE",
+        "role": "ARCHIVES / SOURCES / CONTEXT",
+        "status": "PILOT",
         "tone": "soft",
         "mark": "diagnostic",
-        "copy": "Archiviste documentaire de l’Atelier, avec son espace de travail Hermes/WebView. Elle lit les sources, les interprète dans leur contexte et prépare des propositions documentaires en conservant provenance et contradictions. Elle n’a pas d’autonomie canonique."
+        "copy": "Profil archiviste expérimental chargé des sources et de la continuité documentaire, sans accès illimité ni autorité canonique autonome."
       },
       {
         "id": "A.04",
-        "name": "LEAD PROGRAMMER",
-        "role": "CODE / ARCHITECTURE / GAMEPLAY",
-        "status": "PLANNED",
-        "tone": "soft",
-        "mark": "system",
-        "copy": "Structure, systèmes critiques, intégration, performances et gamefeel. Le mécanique peut se déléguer ; les choix qui engagent toute l’architecture, beaucoup moins."
+        "name": "COMPAS",
+        "role": "LEAD PROGRAMMER / GAMEPLAY",
+        "status": "PILOT",
+        "tone": "cyan",
+        "mark": "tool",
+        "copy": "Rôle de programmation et revue de prototypes de jeu. Son intégration dans le travail collectif reste expérimentale."
       },
       {
         "id": "A.05",
+        "name": "PORTIER",
+        "role": "DISCORD / EVENT ROUTING",
+        "status": "TESTING",
+        "tone": "warm",
+        "mark": "system",
+        "copy": "Assure des essais de routage des invitations et mentions Discord. La réception ne doit pas être considérée comme garantie dans tous les cas."
+      },
+      {
+        "id": "A.06",
+        "name": "STAGIAIRE",
+        "role": "LOCAL / SUPPORT TASKS",
+        "status": "PILOT",
+        "tone": "warm",
+        "mark": "repair",
+        "copy": "Expérimentation d’un petit modèle supervisé pour les tâches simples, sans lui confier les arbitrages risqués."
+      },
+      {
+        "id": "A.07",
         "name": "ARTIST",
         "role": "VISUAL / ASSETS / TECH ART",
         "status": "PLANNED",
         "tone": "pink",
         "mark": "tool",
-        "copy": "Direction visuelle, assets, diégèse et cohérence plastique. Un pont entre l’intention, les contraintes techniques et les images qui doivent réellement finir dans le projet."
+        "copy": "Fonction créative envisagée, sans agent opérationnel permanent déclaré."
       },
       {
-        "id": "A.06",
+        "id": "A.08",
         "name": "REVIEWER",
         "role": "QA / GAMEFEEL / CONTRADICTION",
         "status": "PLANNED",
         "tone": "cyan",
         "mark": "diagnostic",
-        "copy": "Teste, contredit, cherche les blockers et vérifie que ce qu’on croit avoir construit existe vraiment. Son métier consiste parfois à casser poliment les bonnes nouvelles."
-      },
-      {
-        "id": "A.07",
-        "name": "STAGIAIRE",
-        "role": "LOCAL / REPETITIVE / LEARNING",
-        "status": "PLANNED",
-        "tone": "warm",
-        "mark": "repair",
-        "copy": "Tri, extraction, boilerplate et petites tâches répétitives. Peu de prestige, beaucoup d’utilité, et une excellente raison de ne pas mobiliser un gros modèle pour renommer quarante fichiers."
+        "copy": "Rôle de revue et de contradiction envisagé, à éprouver avant de le déclarer opérationnel."
       }
     ]
   },
