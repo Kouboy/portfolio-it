@@ -37,8 +37,8 @@ facts:
 footer_title: SPARK / FIELD NOTE 13
 footer_joke: 'Le DNS paraît toujours simple jusqu’au moment où quelqu’un demande : « oui, mais qui parle à qui ? »'
 prev:
-  file: projet4.html
-  name: Projet 4 — Parc / FOG
+  file: projet2.html
+  name: Projet 2 — CAO / Deploy
 next:
   file: kouboypi.html
   name: KouboyPi
