@@ -131,7 +131,9 @@
           "NETWORK",
           "BACKUP"
         ],
-        "href": "atelier-infrastructure.html"
+        "href": "atelier-infrastructure.html",
+        "image": "assets/atelier/infrastructure/topology-public.svg",
+        "imageAlt": "Schéma public des quatre rôles de l’infrastructure de l’Atelier."
       },
       {
         "num": "02",
@@ -144,7 +146,9 @@
           "MCP",
           "GOVERNANCE"
         ],
-        "href": "atelier-mnemosynt.html"
+        "href": "atelier-mnemosynt.html",
+        "image": "assets/atelier/mnemosynt/memory-model-public.svg",
+        "imageAlt": "Chaîne conceptuelle observation, interprétation, état, provenance."
       },
       {
         "num": "03",
@@ -157,7 +161,9 @@
           "SYNC",
           "LIGHTWEIGHT"
         ],
-        "href": "atelier-pocket-signal.html"
+        "href": "atelier-pocket-signal.html",
+        "image": "assets/atelier/pocket-signal/session-sync-public.svg",
+        "imageAlt": "Flux de synchronisation entre Alpha, KouboyPi et Imperator."
       },
       {
         "num": "04",
@@ -206,7 +212,9 @@
           "DESIGN",
           "RUST"
         ],
-        "href": "cockpit-signal.html"
+        "href": "cockpit-signal.html",
+        "image": "assets/projects/cockpit-signal/motion-lab021-mesh4.png",
+        "imageAlt": "Capture authentique du laboratoire Constellation, avec graphe fictif et panneau de réglage."
       },
       {
         "num": "08",
