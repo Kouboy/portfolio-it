@@ -172,12 +172,16 @@ permalink: atelier.html
         <span class="atelier-badge {{ item.tone }}">{{ item.status }}</span>
       </div>
       <div class="atelier-work-visual visual-{{ loop.index }}">
+        {% if item.image %}
+        <img src="{{ item.image }}" alt="{{ item.imageAlt }}" loading="lazy" decoding="async">
+        {% else %}
         <span>
           {% if loop.index == 1 %}{{ themeMark("system") | safe }}
           {% elif loop.index == 2 %}{{ themeMark("repair") | safe }}
           {% elif loop.index == 3 %}{{ themeMark("diagnostic") | safe }}
           {% else %}{{ themeMark("tool") | safe }}{% endif %}
         </span>
+        {% endif %}
       </div>
       <h3>{{ item.title }}</h3>
       <p>{{ item.subtitle }}</p>
