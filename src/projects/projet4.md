@@ -66,6 +66,11 @@ gallery:
   alt: 'Console Utilisateurs et ordinateurs Active Directory, conteneur Computers avec PC-W11-01, PC-ADMIN-CYBER et PC-W11-02.'
   label: 'CAPTURE ORIGINALE / ACTIVE DIRECTORY'
   caption: 'Deux postes issus du master et le poste administratif apparaissent dans le domaine de laboratoire cybercafe.lan. La capture ne suffit pas à confirmer la santé du canal sécurisé.'
+- src: assets/projects/projet4/deployment-flow.svg
+  alt: 'Schéma explicatif en quatre étapes : préparer le master Windows 11, capturer dans FOG, déployer par PXE et Partclone, contrôler les deux postes.'
+  label: 'SCHÉMA EXPLICATIF / CHAÎNE DE DÉPLOIEMENT'
+  wide: true
+  caption: 'Repère pédagogique construit à partir du guide du projet ; ce diagramme n’est pas une capture d’exécution.'
 evidence:
 - 'Devis matériel final du 12 octobre 2026 : 8 955,45 € HT pour un budget maximal de 9 000 € HT.'
 - 'Export Chocolatey : six applications demandées identifiées parmi 13 paquets installés.'
