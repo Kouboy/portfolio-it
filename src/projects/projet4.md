@@ -61,16 +61,16 @@ gallery:
 - src: assets/projects/projet4/fog-master.png
   alt: 'Console FOG affichant le master Windows 11, sa taille de 29,82 Gio et la date de capture du 18 octobre 2026.'
   label: 'CAPTURE ORIGINALE / MASTER FOG'
-  caption: 'L’image de référence est enregistrée dans FOG : nom, taille et date sont visibles. Cette capture atteste l’existence de l’image, pas à elle seule sa bonne restauration.'
+  caption: 'Master Windows 11 enregistré dans FOG, 29,82 Gio. La capture prouve sa présence dans le catalogue, pas encore sa restauration sur un poste.'
 - src: assets/projects/projet4/active-directory.png
   alt: 'Console Utilisateurs et ordinateurs Active Directory, conteneur Computers avec PC-W11-01, PC-ADMIN-CYBER et PC-W11-02.'
   label: 'CAPTURE ORIGINALE / ACTIVE DIRECTORY'
-  caption: 'Deux postes issus du master et le poste administratif apparaissent dans le domaine de laboratoire cybercafe.lan. La capture ne suffit pas à confirmer la santé du canal sécurisé.'
+  caption: 'Les deux postes déployés et le poste administratif apparaissent dans Active Directory. Le canal sécurisé doit être vérifié séparément.'
 - src: assets/projects/projet4/deployment-flow.svg
   alt: 'Schéma explicatif en quatre étapes : préparer le master Windows 11, capturer dans FOG, déployer par PXE et Partclone, contrôler les deux postes.'
   label: 'SCHÉMA EXPLICATIF / CHAÎNE DE DÉPLOIEMENT'
   wide: true
-  caption: 'Repère pédagogique construit à partir du guide du projet ; ce diagramme n’est pas une capture d’exécution.'
+  caption: 'Synthèse du parcours : préparer, capturer, déployer, contrôler. Schéma explicatif issu du guide de formation, pas une capture d’exécution.'
 evidence:
 - 'Devis matériel final du 12 octobre 2026 : 8 955,45 € HT pour un budget maximal de 9 000 € HT.'
 - 'Export Chocolatey : six applications demandées identifiées parmi 13 paquets installés.'
