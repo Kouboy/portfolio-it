@@ -13,6 +13,11 @@ tags_list:
 - MCP
 - PROVENANCE
 - PRIVACY
+visual:
+  src: assets/atelier/mnemosynt/memory-model-public.svg
+  alt: "Modèle de mémoire : une observation datée mène à une interprétation révisable, à un état courant, puis à son historique et sa provenance. Les mémoires partagées et individuelles restent distinctes."
+  label: "MODÈLE / ÉTAT ET PROVENANCE"
+  caption: "L’architecture conceptuelle distingue observation, interprétation et vérité opératoire. Le dessin présente un modèle à éprouver, pas une validation complète des comportements de MNEMOSYNT."
 facts:
 - label: ROLE
   value: Mémoire commune et espaces propres aux agents
@@ -48,6 +53,10 @@ evidence:
   title: Qualification A1
   text: "Le 5 novembre, un relevé borné des métadonnées, emplacements et permissions a obtenu un résultat PASS. Aucun contenu privé n’a été ouvert pour ce contrôle."
   reference: "Registre d’audit : A1 / 05.11.2026."
+- state: OBSERVED / SERVICE
+  title: Disponibilité technique ponctuelle
+  text: "Le 5 novembre, l’inventaire a relevé deux services accessibles avec réponses HTTP 200 sur leurs contrôles de santé. Cela ne prouve ni le rappel correct ni la séparation effective entre espaces privés."
+  reference: "Registre d’exploitation MNEMOSYNT, relevé du 05.11.2026."
 - state: PARTIAL / RECOVERY
   title: Continuité à démontrer
   text: "Les contrôles de sauvegarde d’autres services de l’Atelier ne prouvent pas une restauration fonctionnelle complète de la mémoire MNEMOSYNT."
