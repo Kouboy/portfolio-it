@@ -57,6 +57,15 @@ skills:
 - 'Enregistrer les postes par PXE, associer le master, lancer Deploy et restaurer les partitions avec Partclone.'
 - 'Valider les postes après déploiement : nom, applications, domaine, accès SYSVOL, assistance RustDesk et administration distante.'
 - 'Documenter les écarts et éviter de conclure à une réussite complète à partir d’un seul indicateur de contrôle.'
+gallery:
+- src: assets/projects/projet4/fog-master.png
+  alt: 'Console FOG affichant le master Windows 11, sa taille de 29,82 Gio et la date de capture du 18 octobre 2026.'
+  label: 'CAPTURE ORIGINALE / MASTER FOG'
+  caption: 'L’image de référence est enregistrée dans FOG : nom, taille et date sont visibles. Cette capture atteste l’existence de l’image, pas à elle seule sa bonne restauration.'
+- src: assets/projects/projet4/active-directory.png
+  alt: 'Console Utilisateurs et ordinateurs Active Directory, conteneur Computers avec PC-W11-01, PC-ADMIN-CYBER et PC-W11-02.'
+  label: 'CAPTURE ORIGINALE / ACTIVE DIRECTORY'
+  caption: 'Deux postes issus du master et le poste administratif apparaissent dans le domaine de laboratoire cybercafe.lan. La capture ne suffit pas à confirmer la santé du canal sécurisé.'
 evidence:
 - 'Devis matériel final du 12 octobre 2026 : 8 955,45 € HT pour un budget maximal de 9 000 € HT.'
 - 'Export Chocolatey : six applications demandées identifiées parmi 13 paquets installés.'
