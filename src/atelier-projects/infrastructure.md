@@ -70,6 +70,13 @@ next_steps:
 - "Terminer la qualification des sauvegardes du Raspberry Pi et des configurations associées."
 - "Produire une carte de l’architecture publique qui montre les dépendances sans exposer les paramètres d’accès."
 takeaway: "Une infrastructure fiable n’est pas celle qui ne tombe jamais : c’est celle dont on connaît les limites, et dont la reprise est vérifiable."
+related:
+- href: kouboypi.html
+  label: KouboyPi / Technical Archive
+  note: "Inventaire, dépannage et administration de la machine, côté compétences IT."
+- href: cockpit-signal.html
+  label: Cockpit Signal
+  note: "Un outil construit sur cette infrastructure de travail."
 next_link:
   href: atelier-mnemosynt.html
   label: MNEMOSYNT
