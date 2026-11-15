@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Des machines hétérogènes, des services modestes et une règle d’exploitation : pouvoir comprendre ce qui tourne, pourquoi, et comment le remettre sur pied.">
+  <title>ATELIER INFRA | L’Atelier · Paper / Signal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css">
+  <link rel="stylesheet" href="atelier-project.css">
+  <script src="page-transition.js"></script>
+  <script src="analytics.js"></script>
+</head>
+<body class="theme-workshop atelier-project-page">
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header workshop-header">
+  <a class="brand" href="atelier.html"><span class="brandmark">A</span><span>L'ATELIER</span><small>PAPER / SIGNAL · WORKSHOP</small></a>
+  <nav class="nav" aria-label="Navigation de l'Atelier">
+    <a href="index.html" class="nav-return">← Technical Archive</a>
+    <a href="atelier.html">Atelier</a>
+    <a href="atelier.html#atelier-work">Projets</a>
+    <a href="atelier-charter.html">Charte</a>
+    <a href="atelier-system.html">Paper / Signal</a>
+  </nav>
+</header>
+
+<main id="content">
+<nav class="ap-breadcrumb" aria-label="Fil d’Ariane"><a href="index.html">TECHNICAL ARCHIVE</a><span aria-hidden="true">/</span><a href="atelier.html">ATELIER</a><span aria-hidden="true">/</span><span aria-current="page">ATELIER INFRA</span></nav>
+<section class="ap-hero">
+  <div class="ap-hero-main">
+    <div class="ap-meta">AT / SYSTEMS / 01 / SYSTEMS / OPERATIONS / 2026</div>
+    <h1>ATELIER INFRA</h1>
+    <p class="ap-lede">Des machines hétérogènes, des services modestes et une règle d’exploitation : pouvoir comprendre ce qui tourne, pourquoi, et comment le remettre sur pied.</p>
+    <div class="ap-tags"><span>LINUX</span><span>WINDOWS</span><span>NETWORK</span><span>BACKUPS</span></div>
+  </div>
+  <aside class="ap-hero-side" aria-label="État documentaire">
+    <span class="ap-side-label">FIELD FILE / 状態</span>
+    <strong>ACTIVE / QUALIFYING</strong>
+    <p>Services et accès utilisés au quotidien ; les sauvegardes et restaurations n’ont pas toutes le même niveau de validation.</p>
+    <dl><div><dt>NODES</dt><dd>Workstation / Windows / Raspberry Pi / Debian</dd></div><div><dt>ACCESS</dt><dd>Réseau privé / Tailscale</dd></div><div><dt>FOCUS</dt><dd>Inventaire, disponibilité et reprise</dd></div></dl>
+  </aside>
+</section>
+<div class="ap-strip"><span>CONTEXT → METHOD → EVIDENCE → LIMITS</span><span>PAPER / SIGNAL</span></div>
+
+<figure class="ap-visual" aria-labelledby="ap-visual-caption">
+  <a href="assets/atelier/infrastructure/topology-public.svg" target="_blank" rel="noopener" aria-label="Ouvrir le schéma en grand : ARCHITECTURE / CARTE DE PRINCIPE">
+    <img src="assets/atelier/infrastructure/topology-public.svg" alt="Architecture de principe : War Rig pour la création, Imperator pour les outils, KouboyPi pour les services réseau, et clients Debian ou Windows sur réseau privé." width="1140" height="430" loading="eager" decoding="async">
+  </a>
+  <figcaption id="ap-visual-caption"><strong>ARCHITECTURE / CARTE DE PRINCIPE</strong><span>Schéma pédagogique fondé sur les rôles documentés. Les liaisons représentées sont fonctionnelles : ce n’est ni un plan d’adressage ni un état de disponibilité en temps réel.</span></figcaption>
+</figure>
+
+<section class="ap-section" id="context">
+  <header><small>01 / CONTEXT / 背景</small><h2>Pourquoi ?</h2></header>
+  <div class="ap-content"><p class="ap-lead">L’Atelier s’est développé autour de besoins concrets : héberger des services utiles, retrouver ses travaux, accéder à ses machines à distance et expérimenter des outils IA. À mesure que les composants s’ajoutent, le risque est de ne plus savoir ce qui dépend de quoi, où se trouvent les données et ce qu’une sauvegarde permet vraiment de restaurer.</p><div class="ap-purpose"><b>OBJECTIVE / 目的</b><p>Maintenir un petit environnement personnel vérifiable, documenté et proportionné aux besoins. Les systèmes sont classés par fonction ; les services, permissions, dépendances et procédures de reprise ont un état explicite.</p></div></div>
+</section>
+<section class="ap-section" id="method">
+  <header><small>02 / METHOD / 構築</small><h2>Comment ?</h2></header>
+  <div class="ap-content"><div class="ap-steps"><article><span>01</span><div><h3>Distinguer les nœuds</h3><p>Répartir les rôles entre station de travail, poste Windows, Raspberry Pi pour les services permanents et client Debian léger.</p></div></article><article><span>02</span><div><h3>Limiter l’exposition</h3><p>Privilégier un réseau privé pour les connexions à distance ; ne pas transformer une commodité domestique en service exposé publiquement.</p></div></article><article><span>03</span><div><h3>Inventorier avant de déplacer</h3><p>Identifier les exécutables, dépendances, emplacements de données et commandes de démarrage avant toute réorganisation.</p></div></article><article><span>04</span><div><h3>Prouver la reprise par étapes</h3><p>Contrôler séparément copie, intégrité des fichiers et bases, puis restauration du service complet. Une réussite sur fichiers ne valide pas tout le système.</p></div></article></div></div>
+</section>
+<section class="ap-section" id="evidence">
+  <header><small>03 / EVIDENCE / 証拠</small><h2>Ce qui est établi</h2></header>
+  <div class="ap-content"><p class="ap-intro">Les traces de novembre décrivent à la fois des parcours réussis et des zones qui restent à éprouver. Aucun état n’est présenté comme une mesure permanente de disponibilité.</p><div class="ap-evidence"><article><span class="ap-proof-state">OBSERVED / SERVICES</span><h3>KouboyPi en service</h3><p>Les contrôles système récents ont retrouvé Pi-hole, Tailscale, Atelier Remote et Atelier Pocket parmi les services actifs, ainsi qu’un volume externe monté à la demande.</p><small>État technique KouboyPi, novembre 2026.</small></article><article><span class="ap-proof-state">TESTED / REMOTE</span><h3>Accès distant privé</h3><p>Les essais via Tailscale ont permis l’accès distant et le réveil d’une machine depuis un autre réseau, sans publication de l’adresse ni des identifiants.</p><small>Essais Atelier Remote, octobre 2026.</small></article><article><span class="ap-proof-state">PASS / FILES ONLY</span><h3>Sauvegardes et restauration de fichiers</h3><p>Des ensembles ont été copiés puis contrôlés sur un stockage distinct, avec comparaison de fichiers et vérifications de bases SQLite. Ce test ne constitue pas une restauration générale de tous les services.</p><small>Lot 1 / 05.11.2026 ; périmètres et réserves conservés.</small></article><article><span class="ap-proof-state">OPEN / SYSTEM RECOVERY</span><h3>Reconstruction complète</h3><p>Les dépendances, identités et connexions réelles après restauration restent à qualifier pour plusieurs composants.</p><small>Registre de services et plan de reprise.</small></article></div></div>
+</section>
+<section class="ap-section" id="limits">
+  <header><small>04 / LIMITS / 留保</small><h2>Les réserves</h2></header>
+  <div class="ap-content"><ul class="ap-limits"><li>Le statut d’un service à une date donnée ne garantit pas sa disponibilité aujourd’hui.</li><li>Une archive cohérente sur disque ne prouve pas que l’application reconstruite fonctionnera avec ses permissions et intégrations.</li><li>Les chemins locaux, secrets, identifiants, IP privées et détails d’exploitation restent hors du site public.</li></ul></div>
+</section>
+<section class="ap-section" id="next">
+  <header><small>05 / NEXT / 次へ</small><h2>La suite</h2></header>
+  <div class="ap-content"><div class="ap-next"><p>Établir des recettes courtes de reprise pour les composants critiques, avec critères d’arrêt explicites.</p><p>Terminer la qualification des sauvegardes du Raspberry Pi et des configurations associées.</p><p>Produire une carte de l’architecture publique qui montre les dépendances sans exposer les paramètres d’accès.</p></div><p class="ap-last">Une infrastructure fiable n’est pas celle qui ne tombe jamais : c’est celle dont on connaît les limites, et dont la reprise est vérifiable.</p></div>
+</section>
+
+<section class="ap-related" aria-label="Dossiers connexes">
+  <div class="ap-related-head"><small>RELATED RECORDS / 関連</small><strong>Continuer l’exploration</strong></div>
+  <div class="ap-related-links"><a href="kouboypi.html"><strong>KouboyPi / Technical Archive</strong><span>Inventaire, dépannage et administration de la machine, côté compétences IT.</span></a><a href="cockpit-signal.html"><strong>Cockpit Signal</strong><span>Un outil construit sur cette infrastructure de travail.</span></a></div>
+</section>
+
+<nav class="ap-bottom"><a href="atelier.html#atelier-work"><small>← BACK TO WORKSHOP</small><strong>Retour à l’Atelier</strong></a><a href="atelier-mnemosynt.html"><small>READ NEXT →</small><strong>MNEMOSYNT</strong></a></nav>
+</main>
+<footer class="footer atelier-footer"><div class="footer-main"><strong>PAPER /<br>SIGNAL</strong><div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div></div><div class="footer-side"><div>ATELIER / FIELD FILE<br>AT / SYSTEMS / 01 / 2026</div><div>PUBLIC SUMMARY / NO PRIVATE CONFIG</div></div></footer>
+<script src="rrt4-safe.js"></script>
+</body>
+</html>

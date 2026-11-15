@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Une interface Kivy disponible sur desktop et Android pour consulter les données de KouboyPi avec des états ONLINE, CACHE et OFFLINE explicites."><title>UNIT 03 — ImperatorDeck</title><link rel="stylesheet" href="styles.css"><script src="page-transition.js"></script></head><body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header">
+  <a class="brand" href="index.html"><span class="brandmark">NG</span><span>NICOLAS GEORGET</span><small>TECHNICAL ARCHIVE / REV.09</small></a>
+  <nav class="nav">
+    <a href="index.html#index">Projects</a>
+    <a href="atelier.html">Atelier</a>
+    <a href="index.html#protocol">Protocol</a>
+    <a href="index.html#profile">Profile</a>
+    <a href="system.html">System</a>
+  </nav>
+</header>
+<div class="utility-band"><div class="gray">UNIT 03 / TOOLS / MULTIPLATFORM</div><div><span class="mascot-chip tool">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+
+<span>TOOLS / MULTIPLATFORM</span></span></div><div class="black">FUNCTIONAL</div></div>
+<main id="content">
+<section class="project-head"><div class="project-head-main"><div class="crumb">TECHNICAL ARCHIVE / UNIT 03 / TOOLS / MULTIPLATFORM</div><span class="status live">FUNCTIONAL</span><h1>ImperatorDeck</h1><div class="lede">Une interface Kivy disponible sur desktop et Android pour consulter les données de KouboyPi avec des états ONLINE, CACHE et OFFLINE explicites.</div><div class="lang-ribbon"><span class="tri-label"><span class="en">CLIENT</span><span class="jp">制御</span><span class="fr">Client</span></span><span class="tri-label"><span class="en">MULTIPLATFORM</span><span class="jp">構築</span><span class="fr">Multi-plateforme</span></span><span class="tri-label"><span class="en">STATE</span><span class="jp">観測</span><span class="fr">États</span></span></div></div>
+<aside class="project-head-side"><div class="fact"><small>DESKTOP</small>v0.4.1 stable</div><div class="fact"><small>ANDROID</small>v0.5.3.5 fonctionnelle</div><div class="fact"><small>BUILD</small>Buildozer / python-for-Android</div><div class="fact"><small>STATE</small>Deux clients implémentés</div><div class="jp-big">制御</div></aside></section>
+
+<section class="project-section"><aside class="rail"><div class="num">01</div><div class="tri-stack"><span class="en">CONTEXT</span><span class="jp">背景</span><span class="fr">Contexte</span></div></aside><div class="body"><span class="mascot-chip tool">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+
+<span>PROJECT THEME</span></span><h2>Context</h2><div class="prose"><p>ImperatorDeck reprend le backend commun de KouboyPi dans une interface destinée à des écrans modernes. Le projet sépare clairement la collecte des données et leur présentation afin que desktop et Android partagent la même logique métier.</p></div></div></section>
+<section class="project-section"><aside class="rail"><div class="num">02</div><div class="tri-stack"><span class="en">OBJECTIVE</span><span class="jp">目的</span><span class="fr">Objectif</span></div></aside><div class="body"><div class="side-note gray">scope / formal</div><h2>Objective</h2><div class="prose"><p>Construire un client multi-format capable de représenter correctement la fraîcheur des données, de conserver certaines préférences locales et de rester lisible sur desktop comme sur écran tactile.</p></div></div></section>
+<section class="project-section" id="fieldlog"><aside class="rail"><div class="num">03</div><div class="tri-stack"><span class="en">FIELD LOG</span><span class="jp">記録</span><span class="fr">Démarche</span></div></aside><div class="body"><h2>Protocol</h2><div class="log"><div class="log-item"><div class="log-id">LOG 01</div><div class="log-copy"><strong>Desktop</strong><p>Stabiliser une version Kivy/SDL2 avec HOME, stockage et préférences locales.</p></div></div><div class="log-item"><div class="log-id">LOG 02</div><div class="log-copy"><strong>États</strong><p>Représenter ONLINE, CACHE et OFFLINE comme des états fonctionnels distincts.</p></div></div><div class="log-item"><div class="log-id">LOG 03</div><div class="log-copy"><strong>Tests</strong><p>Valider la version desktop avec une batterie de 12 tests réussis.</p></div></div><div class="log-item"><div class="log-id">LOG 04</div><div class="log-copy"><strong>Android</strong><p>Construire une version mobile avec Buildozer et python-for-Android sous WSL Ubuntu.</p></div></div><div class="log-item"><div class="log-id">LOG 05</div><div class="log-copy"><strong>Itérations UI</strong><p>Adapter HOME, NETWORK et DEVICE au tactile et corriger progressivement la lisibilité.</p></div></div></div></div></section>
+
+<section class="project-section" id="evidence"><aside class="rail"><div class="num">04</div><div class="tri-stack"><span class="en">EVIDENCE</span><span class="jp">証拠</span><span class="fr">Preuves</span></div></aside><div class="body"><span class="mascot-chip diagnostic">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M7 40 Q22 18 40 18 Q58 18 73 40 Q58 62 40 62 Q22 62 7 40Z" fill="#050505" stroke="currentColor" stroke-width="3"/><circle cx="40" cy="40" r="12" fill="currentColor"/><circle cx="40" cy="40" r="5" fill="#32d9ee"/></svg>
+
+<span>EVIDENCE / PROOF</span></span><h2>Evidence</h2><div class="evidence-grid"><div class="evidence wide"><small>EVIDENCE 01 / 証拠</small><strong>HOME desktop</strong></div><div class="evidence"><small>EVIDENCE 02 / 証拠</small><strong>Stockage / desktop</strong></div><div class="evidence"><small>EVIDENCE 03 / 証拠</small><strong>État CACHE ou OFFLINE</strong></div><div class="evidence"><small>EVIDENCE 04 / 証拠</small><strong>HOME / NETWORK / DEVICE Android</strong></div></div><p class="evidence-caption">Ces emplacements sont destinés aux captures et photographies réelles du projet. La structure est déjà prête pour les intégrer sans modifier la mise en page.</p></div></section>
+
+<section class="project-section"><aside class="rail"><div class="num">05</div><div class="tri-stack"><span class="en">OUTCOME</span><span class="jp">結果</span><span class="fr">Résultat</span></div></aside><div class="body"><h2>Outcome</h2><div class="outcome"><strong>ImperatorDeck</strong><p>ImperatorDeck fonctionne aujourd’hui sur desktop et Android. Les deux clients interrogent KouboyPi, gèrent les états de disponibilité et présentent les informations domestiques sans dupliquer la logique de collecte.</p></div></div></section>
+
+<section class="project-section"><aside class="rail"><div class="num">06</div><div class="tri-stack"><span class="en">LESSONS</span><span class="jp">学び</span><span class="fr">Enseignements</span></div></aside><div class="body"><h2>What stayed</h2><div class="lesson-list"><div class="lesson"><b>L01</b><span>Séparer backend et clients de présentation.</span></div><div class="lesson"><b>L02</b><span>Adapter une même logique d’interface à plusieurs formats d’écran.</span></div><div class="lesson"><b>L03</b><span>Traiter cache et indisponibilité comme des états de première classe.</span></div><div class="lesson"><b>L04</b><span>Documenter la chaîne de build mobile pour la rendre reproductible.</span></div></div></div></section>
+<nav class="nextbar"><a href="chipdeck.html"><small>← PREVIOUS UNIT</small><strong>CHIPdeck</strong></a><a href="macbook-a1534.html"><small>NEXT UNIT →</small><strong>MacBook A1534</strong></a></nav></main>
+<footer class="footer"><div class="footer-main"><strong>UNIT 03<br>ImperatorDeck</strong><div class="project-footer-joke"><span class="theme-mark tool">
+
+<svg viewBox="0 0 80 80" aria-hidden="true"><polygon points="40,7 49,29 72,25 55,42 69,63 45,54 34,74 31,50 8,54 26,38 12,18 35,28" fill="#080808"/><circle cx="40" cy="40" r="7" fill="currentColor"/></svg>
+
+</span><span><b>SPARK / FIELD NOTE 03</b><br>Si l’écran dit OFFLINE avec élégance, c’est déjà une partie du bug qui a été vaincue.</span></div><div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div></div><div class="footer-side"><div>TOOLS / MULTIPLATFORM<br>制御 / TECHNICAL ARCHIVE</div><div>REV.09 / 2026</div></div></footer>
+<script src="rrt4-safe.js"></script></body></html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Une mémoire de travail pour les agents de l’Atelier : garder les décisions, leur provenance et leurs contradictions, sans confondre un souvenir avec une preuve.">
+  <title>MNEMOSYNT | L’Atelier · Paper / Signal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css">
+  <link rel="stylesheet" href="atelier-project.css">
+  <script src="page-transition.js"></script>
+  <script src="analytics.js"></script>
+</head>
+<body class="theme-workshop atelier-project-page">
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header workshop-header">
+  <a class="brand" href="atelier.html"><span class="brandmark">A</span><span>L'ATELIER</span><small>PAPER / SIGNAL · WORKSHOP</small></a>
+  <nav class="nav" aria-label="Navigation de l'Atelier">
+    <a href="index.html" class="nav-return">← Technical Archive</a>
+    <a href="atelier.html">Atelier</a>
+    <a href="atelier.html#atelier-work">Projets</a>
+    <a href="atelier-charter.html">Charte</a>
+    <a href="atelier-system.html">Paper / Signal</a>
+  </nav>
+</header>
+
+<main id="content">
+<nav class="ap-breadcrumb" aria-label="Fil d’Ariane"><a href="index.html">TECHNICAL ARCHIVE</a><span aria-hidden="true">/</span><a href="atelier.html">ATELIER</a><span aria-hidden="true">/</span><span aria-current="page">MNEMOSYNT</span></nav>
+<section class="ap-hero">
+  <div class="ap-hero-main">
+    <div class="ap-meta">AT / MEMORY / 02 / MEMORY / CONTINUITY / 2026</div>
+    <h1>MNEMOSYNT</h1>
+    <p class="ap-lede">Une mémoire de travail pour les agents de l’Atelier : garder les décisions, leur provenance et leurs contradictions, sans confondre un souvenir avec une preuve.</p>
+    <div class="ap-tags"><span>MULTI-AGENT</span><span>MCP</span><span>PROVENANCE</span><span>PRIVACY</span></div>
+  </div>
+  <aside class="ap-hero-side" aria-label="État documentaire">
+    <span class="ap-side-label">FIELD FILE / 状態</span>
+    <strong>PILOT / PARTIAL</strong>
+    <p>Première intégration documentée ; persistance, rappel et reprise complète encore en qualification.</p>
+    <dl><div><dt>ROLE</dt><dd>Mémoire commune et espaces propres aux agents</dd></div><div><dt>INTERFACE</dt><dd>MCP / OpenViking / Hermès</dd></div><div><dt>PHASE</dt><dd>Novembre 2026</dd></div></dl>
+  </aside>
+</section>
+<div class="ap-strip"><span>CONTEXT → METHOD → EVIDENCE → LIMITS</span><span>PAPER / SIGNAL</span></div>
+
+<figure class="ap-visual" aria-labelledby="ap-visual-caption">
+  <a href="assets/atelier/mnemosynt/memory-model-public.svg" target="_blank" rel="noopener" aria-label="Ouvrir le schéma en grand : MODÈLE / ÉTAT ET PROVENANCE">
+    <img src="assets/atelier/mnemosynt/memory-model-public.svg" alt="Modèle de mémoire : une observation datée mène à une interprétation révisable, à un état courant, puis à son historique et sa provenance. Les mémoires partagées et individuelles restent distinctes." width="1140" height="430" loading="eager" decoding="async">
+  </a>
+  <figcaption id="ap-visual-caption"><strong>MODÈLE / ÉTAT ET PROVENANCE</strong><span>L’architecture conceptuelle distingue observation, interprétation et vérité opératoire. Le dessin présente un modèle à éprouver, pas une validation complète des comportements de MNEMOSYNT.</span></figcaption>
+</figure>
+
+<section class="ap-section" id="context">
+  <header><small>01 / CONTEXT / 背景</small><h2>Pourquoi ?</h2></header>
+  <div class="ap-content"><p class="ap-lead">Quand plusieurs agents contribuent à un même chantier, les conclusions se dispersent : une décision se perd entre deux sessions, une hypothèse finit par se faire passer pour un fait, ou un agent recommence une enquête déjà menée. La difficulté n’est pas simplement de stocker du texte ; c’est de savoir ce qui mérite d’être rappelé et pourquoi.</p><div class="ap-purpose"><b>OBJECTIVE / 目的</b><p>Expérimenter deux niveaux de mémoire, commune et propre à chaque agent, avec des traces de provenance, des états de confiance et une procédure de rappel. Les mémoires privées ne sont pas un réservoir universel accessible à tout le monde.</p></div></div>
+</section>
+<section class="ap-section" id="method">
+  <header><small>02 / METHOD / 構築</small><h2>Comment ?</h2></header>
+  <div class="ap-content"><div class="ap-steps"><article><span>01</span><div><h3>Définir les frontières</h3><p>Distinguer les décisions communes, la documentation partagée et les espaces propres aux agents. Décrire qui peut proposer, lire, corriger ou confirmer.</p></div></article><article><span>02</span><div><h3>Raccorder sans dupliquer</h3><p>Utiliser des outils d’accès plutôt qu’une seconde copie improvisée des mêmes données ; conserver la séparation entre collecte, mémorisation et restitution.</p></div></article><article><span>03</span><div><h3>Vérifier les chemins et permissions</h3><p>Relever la structure des données et les droits sans ouvrir le contenu privé ni faire passer un contrôle de métadonnées pour un test fonctionnel.</p></div></article><article><span>04</span><div><h3>Préparer un rappel contrôlé</h3><p>Prévoir un parcours où chaque élément retrouvé indique sa source, sa date et sa confiance, puis où les contradictions restent visibles.</p></div></article></div></div>
+</section>
+<section class="ap-section" id="evidence">
+  <header><small>03 / EVIDENCE / 証拠</small><h2>Ce qui est établi</h2></header>
+  <div class="ap-content"><p class="ap-intro">Les preuves suivantes correspondent à l’état documentaire relevé début novembre 2026. Elles n’attestent pas une mémoire autonome entièrement validée.</p><div class="ap-evidence"><article><span class="ap-proof-state">CONNECTED / DOCUMENTED</span><h3>Première intégration MCP</h3><p>Le raccordement MNEMOSYNT à l’environnement de l’Atelier a été documenté début novembre ; son usage de bout en bout reste un périmètre de recette distinct.</p><small>Source interne : journal Atelier, novembre 2026.</small></article><article><span class="ap-proof-state">PASS / METADATA ONLY</span><h3>Qualification A1</h3><p>Le 5 novembre, un relevé borné des métadonnées, emplacements et permissions a obtenu un résultat PASS. Aucun contenu privé n’a été ouvert pour ce contrôle.</p><small>Registre d’audit : A1 / 05.11.2026.</small></article><article><span class="ap-proof-state">OBSERVED / SERVICE</span><h3>Disponibilité technique ponctuelle</h3><p>Le 5 novembre, l’inventaire a relevé deux services accessibles avec réponses HTTP 200 sur leurs contrôles de santé. Cela ne prouve ni le rappel correct ni la séparation effective entre espaces privés.</p><small>Registre d’exploitation MNEMOSYNT, relevé du 05.11.2026.</small></article><article><span class="ap-proof-state">PARTIAL / RECOVERY</span><h3>Continuité à démontrer</h3><p>Les contrôles de sauvegarde d’autres services de l’Atelier ne prouvent pas une restauration fonctionnelle complète de la mémoire MNEMOSYNT.</p><small>Passation infrastructure / lot 1.</small></article></div></div>
+</section>
+<section class="ap-section" id="limits">
+  <header><small>04 / LIMITS / 留保</small><h2>Les réserves</h2></header>
+  <div class="ap-content"><ul class="ap-limits"><li>Le stockage réellement utilisé par le moteur et son registre physique demandaient encore une qualification spécifique après A1.</li><li>La qualité du rappel, la détection des contradictions et la séparation effective des droits doivent être évaluées par des scénarios reproductibles.</li><li>Les archives privées, identités et clés restent hors de la documentation publique.</li></ul></div>
+</section>
+<section class="ap-section" id="next">
+  <header><small>05 / NEXT / 次へ</small><h2>La suite</h2></header>
+  <div class="ap-content"><div class="ap-next"><p>Tester le rappel de décisions avec provenance, puis tenter volontairement une contradiction et observer sa restitution.</p><p>Qualifier une reprise isolée, des permissions effectives et la cohérence de la mémoire restaurée.</p><p>Documenter des exemples anonymisés, compréhensibles sans ouvrir l’infrastructure interne.</p></div><p class="ap-last">Une mémoire utile n’est pas celle qui retient tout : c’est celle dont on peut contrôler ce qu’elle croit savoir.</p></div>
+</section>
+
+<section class="ap-related" aria-label="Dossiers connexes">
+  <div class="ap-related-head"><small>RELATED RECORDS / 関連</small><strong>Continuer l’exploration</strong></div>
+  <div class="ap-related-links"><a href="atelier-infrastructure.html"><strong>Atelier Infra</strong><span>Le contexte technique et les limites de la reprise de service.</span></a><a href="atelier-charter.html"><strong>Charte de l’Atelier</strong><span>Les principes de partage, de confidentialité et de révision des règles.</span></a></div>
+</section>
+
+<nav class="ap-bottom"><a href="atelier.html#atelier-work"><small>← BACK TO WORKSHOP</small><strong>Retour à l’Atelier</strong></a><a href="atelier-pocket-signal.html"><small>READ NEXT →</small><strong>Pocket Signal</strong></a></nav>
+</main>
+<footer class="footer atelier-footer"><div class="footer-main"><strong>PAPER /<br>SIGNAL</strong><div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div></div><div class="footer-side"><div>ATELIER / FIELD FILE<br>AT / MEMORY / 02 / 2026</div><div>PUBLIC SUMMARY / NO PRIVATE CONFIG</div></div></footer>
+<script src="rrt4-safe.js"></script>
+</body>
+</html>

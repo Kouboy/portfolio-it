@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Un petit établi de poche pour garder ses notes de session et retrouver son travail d’une machine à l’autre, sans installer une usine à gaz.">
+  <title>POCKET SIGNAL | L’Atelier · Paper / Signal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="atelier.css">
+  <link rel="stylesheet" href="atelier-project.css">
+  <script src="page-transition.js"></script>
+  <script src="analytics.js"></script>
+</head>
+<body class="theme-workshop atelier-project-page">
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="header workshop-header">
+  <a class="brand" href="atelier.html"><span class="brandmark">A</span><span>L'ATELIER</span><small>PAPER / SIGNAL · WORKSHOP</small></a>
+  <nav class="nav" aria-label="Navigation de l'Atelier">
+    <a href="index.html" class="nav-return">← Technical Archive</a>
+    <a href="atelier.html">Atelier</a>
+    <a href="atelier.html#atelier-work">Projets</a>
+    <a href="atelier-charter.html">Charte</a>
+    <a href="atelier-system.html">Paper / Signal</a>
+  </nav>
+</header>
+
+<main id="content">
+<nav class="ap-breadcrumb" aria-label="Fil d’Ariane"><a href="index.html">TECHNICAL ARCHIVE</a><span aria-hidden="true">/</span><a href="atelier.html">ATELIER</a><span aria-hidden="true">/</span><span aria-current="page">POCKET SIGNAL</span></nav>
+<section class="ap-hero">
+  <div class="ap-hero-main">
+    <div class="ap-meta">AT / TOOLS / 03 / TOOLS / SYNC / WEB / 2026</div>
+    <h1>POCKET SIGNAL</h1>
+    <p class="ap-lede">Un petit établi de poche pour garder ses notes de session et retrouver son travail d’une machine à l’autre, sans installer une usine à gaz.</p>
+    <div class="ap-tags"><span>LIGHT WEBAPP</span><span>DEBIAN</span><span>WINDOWS</span><span>SYNC</span></div>
+  </div>
+  <aside class="ap-hero-side" aria-label="État documentaire">
+    <span class="ap-side-label">FIELD FILE / 状態</span>
+    <strong>WORKING PROTOTYPE</strong>
+    <p>Parcours de synchronisation éprouvés sur plusieurs machines ; robustesse et reprise encore à documenter.</p>
+    <dl><div><dt>SERVICE</dt><dd>Atelier Pocket</dd></div><div><dt>CLIENTS</dt><dd>Debian / Windows / navigateur</dd></div><div><dt>APPROACH</dt><dd>Sessions versionnées sur réseau privé</dd></div></dl>
+  </aside>
+</section>
+<div class="ap-strip"><span>CONTEXT → METHOD → EVIDENCE → LIMITS</span><span>PAPER / SIGNAL</span></div>
+
+<figure class="ap-visual" aria-labelledby="ap-visual-caption">
+  <a href="assets/atelier/pocket-signal/session-sync-public.svg" target="_blank" rel="noopener" aria-label="Ouvrir le schéma en grand : FLUX DE SYNCHRONISATION / SCHÉMA DE PRINCIPE">
+    <img src="assets/atelier/pocket-signal/session-sync-public.svg" alt="Principe de Pocket Signal : sessions versionnées synchronisées entre le navigateur Debian de l’Alpha, le service Atelier Pocket sur KouboyPi et un client Windows Imperator." width="1140" height="430" loading="eager" decoding="async">
+  </a>
+  <figcaption id="ap-visual-caption"><strong>FLUX DE SYNCHRONISATION / SCHÉMA DE PRINCIPE</strong><span>Ce schéma illustre les échanges documentés et non une capture de l’application. Les scénarios de conflits ou de travail hors ligne restent à tester.</span></figcaption>
+</figure>
+
+<section class="ap-section" id="context">
+  <header><small>01 / CONTEXT / 背景</small><h2>Pourquoi ?</h2></header>
+  <div class="ap-content"><p class="ap-lead">Reprendre un travail entre un PC principal, une tablette Linux légère et un petit serveur peut coûter plus d’attention que le travail lui-même. Les discussions, notes et prochains gestes se dispersent. Pocket Signal part d’un besoin simple : ne pas perdre le fil en changeant d’appareil.</p><div class="ap-purpose"><b>OBJECTIVE / 目的</b><p>Construire une interface très légère, utilisable sur des machines modestes, avec des sessions synchronisées et un accès rapide aux outils habituels. Le serveur conserve des versions ; l’interface laisse la priorité à l’écriture et à la reprise.</p></div></div>
+</section>
+<section class="ap-section" id="method">
+  <header><small>02 / METHOD / 構築</small><h2>Comment ?</h2></header>
+  <div class="ap-content"><div class="ap-steps"><article><span>01</span><div><h3>Héberger un petit service</h3><p>Installer Atelier Pocket comme service sur le Raspberry Pi, accessible aux appareils autorisés par le réseau privé.</p></div></article><article><span>02</span><div><h3>Synchroniser les sessions</h3><p>Échanger les sessions avec le serveur au moyen d’opérations versionnées, pour que les changements puissent être retrouvés depuis d’autres machines.</p></div></article><article><span>03</span><div><h3>Vérifier les parcours réels</h3><p>Tester la création, la reprise et la suppression persistante des sessions sur l’Alpha et Imperator ; corriger les comportements constatés.</p></div></article><article><span>04</span><div><h3>Garder une interface discrète</h3><p>Réserver la majeure partie de l’écran au contenu. Le raccourci Noema ouvre ChatGPT ; il ne prétend pas constituer une intégration autonome entre les deux applications.</p></div></article></div></div>
+</section>
+<section class="ap-section" id="evidence">
+  <header><small>03 / EVIDENCE / 証拠</small><h2>Ce qui est établi</h2></header>
+  <div class="ap-content"><p class="ap-intro">Les tests ont été effectués dans l’environnement personnel de l’Atelier. Le code complet et les captures publiques restent à préparer.</p><div class="ap-evidence"><article><span class="ap-proof-state">OBSERVED / LOCAL</span><h3>Service Pocket en fonctionnement</h3><p>Le service Atelier Pocket figure parmi les services actifs de KouboyPi lors des contrôles de novembre 2026.</p><small>Contrôles système KouboyPi, novembre 2026.</small></article><article><span class="ap-proof-state">TESTED / MULTI-DEVICE</span><h3>Reprise sur plusieurs appareils</h3><p>Des essais de synchronisation ont été menés depuis l’Acer Switch Alpha sous Debian et depuis Imperator.</p><small>Journal d’essais Atelier Pocket v0.3.</small></article><article><span class="ap-proof-state">FIXED / REGRESSION</span><h3>Suppression persistante</h3><p>Un problème de doublon à la première session et un défaut de persistance lors de la suppression ont été corrigés pendant les essais.</p><small>Journal de corrections de l’interface.</small></article></div></div>
+</section>
+<section class="ap-section" id="limits">
+  <header><small>04 / LIMITS / 留保</small><h2>Les réserves</h2></header>
+  <div class="ap-content"><ul class="ap-limits"><li>Les essais ponctuels ne démontrent pas une résistance à toutes les coupures réseau, écritures concurrentes ou pannes de stockage.</li><li>Le bouton Noema sert de raccourci d’ouverture et non de commande directe de ChatGPT.</li><li>Les accès du réseau privé, sessions personnelles et paramètres du serveur ne sont pas rendus publics.</li></ul></div>
+</section>
+<section class="ap-section" id="next">
+  <header><small>05 / NEXT / 次へ</small><h2>La suite</h2></header>
+  <div class="ap-content"><div class="ap-next"><p>Capturer une session de démonstration avec des données fictives et mesurer le confort d’usage sur l’Alpha à 4 Go de RAM.</p><p>Vérifier les conflits de versions, le comportement hors connexion et la possibilité d’exporter les notes.</p><p>Documenter le redémarrage et la récupération des sessions après une interruption du service.</p></div><p class="ap-last">Le succès n’est pas d’avoir ajouté des boutons : c’est d’avoir rendu la reprise d’une session plus légère que son oubli.</p></div>
+</section>
+
+<section class="ap-related" aria-label="Dossiers connexes">
+  <div class="ap-related-head"><small>RELATED RECORDS / 関連</small><strong>Continuer l’exploration</strong></div>
+  <div class="ap-related-links"><a href="cockpit-signal.html"><strong>Cockpit Signal</strong><span>Un autre outil de l’Atelier consacré à la reprise du travail.</span></a><a href="kouboypi.html"><strong>KouboyPi / Technical Archive</strong><span>La machine hôte, vue sous l’angle de l’exploitation informatique.</span></a></div>
+</section>
+
+<nav class="ap-bottom"><a href="atelier.html#atelier-work"><small>← BACK TO WORKSHOP</small><strong>Retour à l’Atelier</strong></a><a href="atelier-infrastructure.html"><small>READ NEXT →</small><strong>Atelier Infra</strong></a></nav>
+</main>
+<footer class="footer atelier-footer"><div class="footer-main"><strong>PAPER /<br>SIGNAL</strong><div class="footer-languages"><span>FR / CONTENT</span><span>EN / UI</span><span class="jp">JP / 記号</span></div></div><div class="footer-side"><div>ATELIER / FIELD FILE<br>AT / TOOLS / 03 / 2026</div><div>PUBLIC SUMMARY / NO PRIVATE CONFIG</div></div></footer>
+<script src="rrt4-safe.js"></script>
+</body>
+</html>
