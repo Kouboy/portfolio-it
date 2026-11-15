@@ -13,6 +13,11 @@ tags_list:
 - WINDOWS
 - NETWORK
 - BACKUPS
+visual:
+  src: assets/atelier/infrastructure/topology-public.svg
+  alt: "Architecture de principe : War Rig pour la création, Imperator pour les outils, KouboyPi pour les services réseau, et clients Debian ou Windows sur réseau privé."
+  label: "ARCHITECTURE / CARTE DE PRINCIPE"
+  caption: "Schéma pédagogique fondé sur les rôles documentés. Les liaisons représentées sont fonctionnelles : ce n’est ni un plan d’adressage ni un état de disponibilité en temps réel."
 facts:
 - label: NODES
   value: Workstation / Windows / Raspberry Pi / Debian
