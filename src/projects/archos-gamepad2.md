@@ -40,8 +40,8 @@ prev:
   file: eureka-stories.html
   name: Eurêka Stories
 next:
-  file: project3.html
-  name: Projet 3 — LAN / WLAN
+  file: projet4.html
+  name: Projet 4 — Parc / FOG
 feature: false
 context: La GamePad 2 reste fonctionnelle et constitue un objet intéressant de patrimoine technologique. Son système ancien
   et sa batterie d’origine imposent une approche conservatrice et documentée.
