@@ -2078,67 +2078,114 @@ html.pt-covered.pt-reveal.pt-from-bottom::before {
   }
 }
 
-/* TRAINING / EVIDENCE: genuine screenshots, optional for OpenClassrooms projects. */
-.training-gallery {
+/* TRAINING / EVIDENCE: editorial image + caption pairs.
+   One media per row: no narrow caption columns or uneven baselines. */
+.training-gallery{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1px;
+  grid-template-columns:minmax(0,1fr);
+  gap:14px;
+  width:100%;
   max-width:1100px;
-  margin:0 0 20px;
-  background:#050505;
-  border:1px solid #050505;
+  margin:0 0 26px;
 }
-.training-proof {
-  min-width:0;
+.training-proof{
   margin:0;
-  background:var(--paper);
-  display:flex;
-  flex-direction:column;
+  min-width:0;
+  display:grid;
+  grid-template-columns:minmax(0, 1.6fr) minmax(245px, 1fr);
+  align-items:stretch;
+  border:1px solid #111;
+  background:var(--paper,#f6f0df);
 }
-.training-proof a {
+.training-proof>a{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:225px;
-  padding:12px;
-  background:#141414;
+  min-width:0;
+  min-height:265px;
+  padding:16px;
+  background:#131313;
   cursor:zoom-in;
 }
-.training-proof a:focus-visible {
-  outline:4px solid var(--cyan,#32D9EE);
+.training-proof>a:focus-visible{
+  outline:4px solid var(--cyan,#32d9ee);
   outline-offset:-4px;
 }
-.training-proof img {
+.training-proof img{
   display:block;
   width:100%;
   height:auto;
-  max-height:425px;
+  max-height:360px;
   object-fit:contain;
 }
-.training-proof figcaption {
-  padding:16px 18px 20px;
-  flex:1;
-  border-top:5px solid var(--sun,#F6B500);
+.training-proof figcaption{
+  min-width:0;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:18px;
+  padding:clamp(20px,3vw,34px);
+  border-left:6px solid var(--sun,#f6b500);
+  overflow-wrap:anywhere;
 }
-.training-proof figcaption span {
+.training-proof figcaption span{
   display:block;
-  font:900 .65rem var(--mono);
-  letter-spacing:.09em;
+  font:900 .72rem/1.55 var(--mono,monospace);
+  letter-spacing:.06em;
+  text-transform:uppercase;
 }
-.training-proof figcaption p {
-  margin:9px 0 0;
-  font-size:.9rem;
-  line-height:1.5;
-  max-width:50ch;
+.training-proof figcaption p{
+  margin:0;
+  max-width:46ch;
+  font-size:clamp(.9rem,1vw,1.05rem);
+  line-height:1.65;
 }
-@media(max-width:720px){
-  .training-gallery{grid-template-columns:1fr}
-  .training-proof a{min-height:190px}
+.training-proof.wide{
+  display:block;
 }
-
-.training-proof.wide{grid-column:1/-1}
-.training-proof.wide a{background:#F6F0DF;min-height:0}
-.training-proof.wide img{max-height:none}
+.training-proof.wide>a{
+  min-height:0;
+  padding:0;
+  background:#f6f0df;
+}
+.training-proof.wide img{
+  max-height:none;
+}
+.training-proof.wide figcaption{
+  display:block;
+  padding:18px 26px 23px;
+  border-left:0;
+  border-top:6px solid var(--sun,#f6b500);
+}
+.training-proof.wide figcaption span{
+  margin-bottom:8px;
+}
+.training-proof.wide figcaption p{
+  max-width:80ch;
+}
+@media(max-width:1050px){
+  .training-proof:not(.wide){
+    grid-template-columns:minmax(0,1fr);
+  }
+  .training-proof:not(.wide) figcaption{
+    border-left:0;
+    border-top:6px solid var(--sun,#f6b500);
+    gap:10px;
+    padding:18px 20px 22px;
+  }
+  .training-proof:not(.wide)>a{
+    min-height:220px;
+  }
+}
+@media(max-width:650px){
+  .training-proof>a{
+    padding:10px;
+  }
+  .training-proof.wide figcaption{
+    padding:18px 20px 22px;
+  }
+}
 
 /* Cross-archive mobile navigation / PATCH 2026-11-15
    Keep primary links discoverable instead of hiding the entire nav below 650px.
