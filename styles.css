@@ -2139,3 +2139,33 @@ html.pt-covered.pt-reveal.pt-from-bottom::before {
 .training-proof.wide{grid-column:1/-1}
 .training-proof.wide a{background:#F6F0DF;min-height:0}
 .training-proof.wide img{max-height:none}
+
+/* Cross-archive mobile navigation / PATCH 2026-11-15
+   Keep primary links discoverable instead of hiding the entire nav below 650px.
+   Two-row sticky header; a scrollable link rail preserves small screen space. */
+@media (max-width: 900px) {
+  .header { grid-template-columns: minmax(0, 1fr); }
+  .header .brand { min-width: 0; min-height: 54px; }
+  .header .nav {
+    display: flex;
+    grid-column: 1 / -1;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    border-top: 1px solid rgba(0,0,0,.3);
+  }
+  .header .nav a {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 14px;
+    border-left: 0;
+    border-right: 1px solid rgba(0,0,0,.3);
+  }
+}
+@media (max-width: 420px) {
+  .header .brand small { display: none; }
+}
